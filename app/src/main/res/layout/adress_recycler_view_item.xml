@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_marginBottom="15dp"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textStyle="bold"
+        android:textSize="13.75sp"
+        android:textColor="@color/orange"
+        android:text="Office at city"
+        android:layout_marginBottom="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="12.75sp"
+            android:textColor="@android:color/black"
+            android:text="Email : "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textSize="12.75sp"
+            android:id="@+id/email_text_view"
+            android:textColor="@android:color/black"
+            android:text="shybal@gmail.com"
+            android:layout_width="wrap_content"
+            android:textStyle="bold"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="12.75sp"
+            android:textColor="@android:color/black"
+            android:text="Street : "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textStyle="bold"
+            android:textSize="12.75sp"
+            android:id="@+id/street_text_view"
+            android:textColor="@android:color/black"
+            android:text="Nasser Al Bader St."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="@android:color/black"
+            android:text="Area : "
+            android:textSize="12.75sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textSize="12.75sp"
+            android:textStyle="bold"
+            android:id="@+id/area_text_view"
+            android:textColor="@android:color/black"
+            android:text="Nasser Al Bader St."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="12.75sp"
+            android:textColor="@android:color/black"
+            android:text="Flat : "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textStyle="bold"
+            android:textSize="12.75sp"
+            android:id="@+id/flat_text_view"
+            android:textColor="@android:color/black"
+            android:text="Nasser Al Bader St."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="12.75sp"
+            android:textColor="@android:color/black"
+            android:text="Floor : "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textStyle="bold"
+            android:textSize="12.75sp"
+            android:id="@+id/floor_text_view"
+            android:textColor="@android:color/black"
+            android:text="Nasser Al Bader St."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="12.75sp"
+            android:textColor="@android:color/black"
+            android:text="Phone : "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textStyle="bold"
+            android:textSize="12.75sp"
+            android:id="@+id/phone_text_view"
+            android:textColor="@android:color/black"
+            android:text="Nasser Al Bader St."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:background="@drawable/editbtn"
+            android:layout_marginEnd="5dp"
+            android:text="Edit"
+            android:id="@+id/edit_button"
+            android:layout_width="80dp"
+            android:layout_height="30dp" />
+        <Button
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:text="Delete"
+            android:background="@drawable/dltbtn"
+            android:id="@+id/delete_button"
+            android:layout_width="80dp"
+            android:layout_height="30dp" />
+    </LinearLayout>
+</LinearLayout>

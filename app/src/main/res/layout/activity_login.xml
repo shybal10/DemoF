@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/bg2color"
+    android:paddingTop="24dp"
+    android:paddingStart="24dp"
+    android:paddingEnd="24dp"
+    android:orientation="horizontal"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+    <android.support.v4.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:background="@android:color/transparent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:layout_marginTop="20dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/arabic"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:layout_marginTop="87dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/logo"
+                    android:id="@+id/logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_marginTop="30dp"
+                android:id="@+id/input_layout_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Username"
+                android:textColorHint="@color/orange">
+                <EditText
+                    android:paddingTop="5dp"
+                    android:background="@android:color/transparent"
+                    android:id="@+id/username_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:textSize="14.75dp" />
+                <View
+                    android:layout_marginTop="8dp"
+                    android:background="@color/orange"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_marginTop="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:textColorHint="@color/orange">
+                <EditText
+                    android:paddingTop="5dp"
+                    android:background="@android:color/transparent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:textSize="15.75dp" />
+                <View
+                    android:layout_marginTop="8dp"
+                    android:background="@color/orange"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+            </android.support.design.widget.TextInputLayout>
+            <Button
+                android:textAllCaps="false"
+                android:id="@+id/login_button"
+                android:textSize="17.75sp"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/login_btn_border"
+                android:textColor="#fff"
+                android:text="@string/login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <CheckBox
+                    android:padding="5dp"
+                    android:textSize="13.75sp"
+                    android:button="@drawable/rememberme_checkbox"
+                    android:textColor="@color/blue"
+                    android:layout_alignParentStart="true"
+                    android:text="Remember"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </CheckBox>
+                <TextView
+                    android:textSize="13.75sp"
+                    android:textColor="@color/blue"
+                    android:padding="5dp"
+                    android:layout_alignParentEnd="true"
+                    android:text="Forgot Password ?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/signup_button"
+                android:textSize="17.75sp"
+                android:textAllCaps="false"
+                android:textColor="@color/orange"
+                android:background="@android:color/transparent"
+                android:text="Sign Up"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

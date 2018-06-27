@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@color/bg2color"
+        android:layout_height="match_parent"
+        tools:context=".PackagesActivity">
+
+
+        <RelativeLayout
+            android:background="@color/actionbarcolor"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <TextView
+                android:textSize="16.75sp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold"
+                android:textColor="@color/blue"
+                android:text="Packages"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+        <View
+            android:background="@color/orange"
+            android:layout_width="match_parent"
+            android:layout_height="0.75dp">
+        </View>
+
+
+
+        <android.support.v7.widget.CardView
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            xmlns:card_view="http://schemas.android.com/tools"
+            tool:cardCornerRadius="20dp"
+            card_view:cardUseCompatPadding="true"
+            card_view:elevation="25dp"
+            xmlns:tool="http://schemas.android.com/apk/res-auto">
+
+        </android.support.v7.widget.CardView>
+        <Button
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:id="@+id/lets_start_button_category"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/btnbig"
+            android:text="Create Account"
+            android:textSize="15.75sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
