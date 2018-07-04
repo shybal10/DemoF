@@ -1,5 +1,6 @@
 package com.example.mawaqaamobile.festivity;
 
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
@@ -51,6 +52,21 @@ public class CategoryActivity extends AppCompatActivity {
                 LetStart.setVisibility(View.VISIBLE);
                 categoryGridViewAdapter.makeAllUnselect(position);
                 categoryGridViewAdapter.notifyDataSetChanged();
+            }
+        });
+
+        skip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(CategoryActivity.this,LoginActivity.class));
+
+            }
+        });
+
+        LetStart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(CategoryActivity.this,LoginActivity.class));
             }
         });
     }

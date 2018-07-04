@@ -14,10 +14,10 @@ import com.example.mawaqaamobile.festivity.R;
 
 public class IntoSwipeAdapter extends PagerAdapter {
     private int[] images = {R.drawable.intro1, R.drawable.intro2,R.drawable.intro3, R.drawable.intro4};
-    private String[] text = {"this is the infor about the first functionality of the application festivity, We hope you like it.",
+    private String[] text = {"this is the inform about the first functionality of the application festivity, We hope you like it.",
             "This is a test of the text that has to be written and not the actual text that will go into the application i am just writing more to see how long this can go onwithout causing any problems to the application",
-            "this is the infor about the third functionality of the application festivity, We hope you like it.",
-            "this is the infor about the fourth functionality of the application festivity, We hope you like it."};
+            "this is the inform about the third functionality of the application festivity, We hope you like it.",
+            "this is the inform about the fourth functionality of the application festivity, We hope you like it."};
     private Context context;
     private LayoutInflater layoutInflater;
     public IntoSwipeAdapter(Context context) {

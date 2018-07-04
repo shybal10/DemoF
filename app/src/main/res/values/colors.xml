@@ -12,4 +12,7 @@
     <color name="greencolor">#58c802</color>
     <color name="orangewarning">#ff6b00</color>
     <color name="redwarning">#ff0100</color>
+    <color name="darkshade">#8000</color>
+    <color name="black">#000</color>
+
 </resources>

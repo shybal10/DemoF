@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/bg2color"
+    android:layout_height="match_parent"
+    tools:context=".PackageListingActivity">
+
+    <!--app bar-->
+    <RelativeLayout
+
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/actionbarcolor">
+
+        <RelativeLayout
+            android:id="@+id/birthday_layout"
+            android:layout_marginStart="20dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:layout_width="125dp"
+            android:background="@drawable/birthday_border"
+            android:layout_height="30dp">
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:textSize="12sp"
+                android:textColor="@color/blue"
+                android:text="Birthday"
+                android:id="@+id/birthday_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/dwnaroow"
+                android:layout_width="10dp"
+                android:layout_height="10dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_toEndOf="@+id/birthday_layout"
+            android:layout_marginStart="20dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:layout_width="125dp"
+            android:background="@drawable/birthday_border"
+            android:layout_height="30dp">
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:textSize="12sp"
+                android:textColor="@color/blue"
+                android:text="Kuwait City"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/dwnaroow"
+                android:layout_width="10dp"
+                android:layout_height="10dp" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/cart_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/cart" />
+
+            <ImageView
+                android:id="@+id/menu_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/menu" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.75dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/orange">
+        </View>
+    </RelativeLayout>
+
+    <ImageButton
+        android:background="@android:color/transparent"
+        android:id="@+id/filter_button"
+        android:layout_margin="15dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/filter"
+        android:layout_below="@+id/app_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@+id/filter_button"
+        android:id="@+id/packages_list_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </android.support.v7.widget.RecyclerView>
+</RelativeLayout>
+

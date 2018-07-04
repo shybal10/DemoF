@@ -1,6 +1,7 @@
 package com.example.mawaqaamobile.festivity;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
@@ -16,16 +17,26 @@ import com.jaeger.library.StatusBarUtil;
 
 public class LoginActivity extends AppCompatActivity {
 
-    Button SignUp;
+    Button SignUp,login;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         SignUp = (Button) findViewById(R.id.signup_button);
+        login = (Button) findViewById(R.id.login_button);
         SignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showDialogWelcome();
+                startActivity(new Intent(LoginActivity.this,CreateAccountActivity.class));
+
+            }
+        });
+
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginActivity.this,HomeActivity.class));
+
             }
         });
     }

@@ -5,6 +5,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <ImageView
+        android:layout_margin="15dp"
+        android:src="@drawable/popup_border"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
     <ImageButton
         android:id="@+id/close_dialog"
         android:layout_alignParentTop="true"

@@ -34,13 +34,12 @@ public class AddressRecyclerViewAdapter extends RecyclerView.Adapter<AddressRecy
             else {
                 holder.itemView.setVisibility(View.GONE);
                 holder.itemView.setLayoutParams(new RecyclerView.LayoutParams(0, 0));
-
             }
         }else {
             holder.itemView.setVisibility(View.VISIBLE);
             holder.itemView.setLayoutParams(new RecyclerView.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-         //   animation = AnimationUtils.loadAnimation(mcontext, R.anim.address_slide_animation);
-           // holder.itemView.startAnimation(animation);
+            animation = AnimationUtils.loadAnimation(mcontext, R.anim.address_slide_animation);
+            holder.itemView.startAnimation(animation);
         }
 
     }

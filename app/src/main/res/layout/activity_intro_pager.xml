@@ -8,7 +8,7 @@
     android:orientation="horizontal"
     android:padding="24dp"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".IntroPagerActivity">
 
             <RelativeLayout
                 android:id="@+id/arabic_relative_layout"

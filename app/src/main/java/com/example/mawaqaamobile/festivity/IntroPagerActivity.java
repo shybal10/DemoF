@@ -1,9 +1,12 @@
 package com.example.mawaqaamobile.festivity;
 
+import android.content.Intent;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -17,11 +20,19 @@ public class IntroPagerActivity extends AppCompatActivity {
     private int dotsCount;
     private ImageView[] dots;
     private LinearLayout slideDots;
+    private Button skip;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intro_pager);
         viewPager = (ViewPager) findViewById(R.id.intro_view_pager);
+        skip = (Button) findViewById(R.id.skip_button);
+        skip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(IntroPagerActivity.this,CategoryActivity.class));
+            }
+        });
         intoSwipeAdapter = new IntoSwipeAdapter(IntroPagerActivity.this);
         viewPager.setAdapter(intoSwipeAdapter);
 
