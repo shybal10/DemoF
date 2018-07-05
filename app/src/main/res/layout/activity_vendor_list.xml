@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".ServiceListingActivity">
-
+    tools:context=".VendorListActivity">
     <!--app bar-->
     <RelativeLayout
 
@@ -107,6 +106,7 @@
         </View>
     </RelativeLayout>
 
+    <!--search category-->
     <LinearLayout
         android:layout_below="@+id/app_bar"
         android:id="@+id/edit_text_layout"
@@ -142,6 +142,8 @@
         </RelativeLayout>
 
     </LinearLayout>
+
+    <!--filter-->
     <ImageButton
         android:background="@android:color/transparent"
         android:id="@+id/filter_button"
@@ -153,10 +155,9 @@
         android:layout_height="wrap_content"/>
 
     <android.support.v7.widget.RecyclerView
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/edit_text_layout"
-        android:id="@+id/service_listing_recycler_view"
+        android:id="@+id/vendor_list_rec_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
     </android.support.v7.widget.RecyclerView>
+
 </RelativeLayout>

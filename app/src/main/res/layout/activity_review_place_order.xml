@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".ReviewPlaceOrderActivity">
+    <!--App bar-->
+    <RelativeLayout
+
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/actionbarcolor">
+
+        <TextView
+            android:textSize="16.75sp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:textColor="@color/blue"
+            android:text="Review and Place Order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/cart_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/cart" />
+
+            <ImageView
+                android:id="@+id/menu_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/menu" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.75dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/orange">
+        </View>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--Event address-->
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                xmlns:card_view="http://schemas.android.com/tools"
+                tool:cardCornerRadius="25dp"
+                card_view:cardUseCompatPadding="true"
+                card_view:elevation="25dp"
+                xmlns:tool="http://schemas.android.com/apk/res-auto">
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="50dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginStart="15dp"
+                        android:padding="10dp"
+                        android:textSize="20sp"
+                        android:textColor="@color/orange"
+                        android:text="Event Address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <View
+                        android:background="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.005dp">
+                    </View>
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginStart="15dp"
+                        android:orientation="horizontal"
+                        android:weightSum="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_weight="0.5"
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:text="this is the address of the user where he wants a party.\n please give hime a great one\n\n 9148853405"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <LinearLayout
+                                android:layout_marginTop="15dp"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:padding="2dp"
+                                    android:src="@drawable/edit"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                                <TextView
+                                    android:textSize="12sp"
+                                    android:textColor="@color/orange"
+                                    android:layout_marginEnd="5dp"
+                                    android:layout_marginStart="5dp"
+                                    android:text="Change Address"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_weight="0.5"
+                            android:layout_gravity="center"
+                            android:src="@drawable/eventaddress"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--Services-->
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                xmlns:card_view="http://schemas.android.com/tools"
+                tool:cardCornerRadius="25dp"
+                card_view:cardUseCompatPadding="true"
+                card_view:elevation="25dp"
+                xmlns:tool="http://schemas.android.com/apk/res-auto">
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginStart="15dp"
+                        android:padding="10dp"
+                        android:textSize="20sp"
+                        android:textColor="@color/orange"
+                        android:text="Services"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <View
+                        android:background="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.005dp">
+                    </View>
+                    <android.support.v7.widget.RecyclerView
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:id="@+id/review_service_rec_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </android.support.v7.widget.RecyclerView>
+                    <ImageButton
+                        android:padding="10dp"
+                        android:id="@+id/down_button"
+                        android:layout_marginTop="10dp"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/dwnaroow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--choose payment option-->
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                xmlns:card_view="http://schemas.android.com/tools"
+                tool:cardCornerRadius="25dp"
+                card_view:cardUseCompatPadding="true"
+                card_view:elevation="25dp"
+                xmlns:tool="http://schemas.android.com/apk/res-auto">
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="50dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginStart="15dp"
+                        android:padding="10dp"
+                        android:textSize="20sp"
+                        android:textColor="@color/orange"
+                        android:text="Choose Payment Option"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <View
+                        android:background="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.005dp">
+                    </View>
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginStart="15dp"
+                        android:orientation="horizontal"
+                        android:weightSum="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_weight="0.5"
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+                            <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <RadioButton
+                                    android:textSize="15sp"
+                                    android:textColor="@color/black"
+                                    android:padding="10dp"
+                                    android:text="KNET"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+                                <RadioButton
+                                    android:textSize="15sp"
+                                    android:textColor="@color/black"
+                                    android:padding="10dp"
+                                    android:text="Credit Card"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+                                <RadioButton
+                                    android:textSize="15sp"
+                                    android:textColor="@color/black"
+                                    android:padding="10dp"
+                                    android:text="Pay Later"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="0.5"
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/blue"
+                                android:text="Information"
+                                android:src="@drawable/eventaddress"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:padding="5dp"
+                                android:textSize="12sp"
+                                android:textColor="@color/black"
+                                android:text="To avoid the cancellation, please pay the amount before 48 hours (2 days), of chosen date(s) for each services.\n\nwe will send you online pay lineks to your email."
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!--payment details-->
+            <LinearLayout
+                android:layout_marginTop="15dp"
+                android:baselineAligned="false"
+                android:background="@drawable/amt_bg"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_weight="0.5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:text="Total Amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:text="KD 480.000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/amt_bg"
+                    android:layout_weight="0.5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_marginStart="5dp"
+                        android:textStyle="bold"
+                        android:textSize="10sp"
+                        android:textColor="@color/orangewarning"
+                        android:text="To be Paid After Confirmation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_marginStart="5dp"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:text="KD 240.000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <View
+                        android:background="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.005dp">
+                    </View>
+                    <TextView
+                        android:layout_marginStart="5dp"
+                        android:textStyle="bold"
+                        android:textSize="10sp"
+                        android:textColor="@color/greencolor"
+                        android:text="To be Paid Now"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_marginStart="5dp"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:text="KD 240.000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

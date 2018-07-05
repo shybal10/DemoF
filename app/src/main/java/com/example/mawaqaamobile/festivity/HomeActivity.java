@@ -90,6 +90,9 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(new Intent(HomeActivity.this,ProfilePageActivity.class));
             }
         });
+
+
+        //featured services
         featuredServicesRecyclerView = (RecyclerView) findViewById(R.id.featured_services_recycler_view);
         featuredServicesRecyclerView.setHasFixedSize(true);
 
@@ -100,9 +103,9 @@ public class HomeActivity extends AppCompatActivity {
         featuredServicesRecyclerView.setAdapter(featuredServicesRecyclerViewAdapter);
 
 
+        //most selling
         mostSellingRecyclerView = (RecyclerView) findViewById(R.id.most_selling_recycler_view);
         mostSellingRecyclerView.setHasFixedSize(true);
-
         mostSellingLinearLayoutManager = new LinearLayoutManager(this);
         mostSellingLinearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
         mostSellingRecyclerView.setLayoutManager(mostSellingLinearLayoutManager);

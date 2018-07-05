@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -82,6 +82,7 @@
 
     <!--explore and packages-->
     <ScrollView
+        android:layout_below="@+id/app_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -579,4 +580,15 @@
 
     </LinearLayout>
     </ScrollView>
-</LinearLayout>
+    <ImageButton
+        android:elevation="25dp"
+        android:scaleType="centerInside"
+        android:background="@drawable/servicesbox"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/services"
+        android:layout_margin="16dp" />
+</RelativeLayout>

@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.mawaqaamobile.festivity">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -17,20 +19,27 @@
         <activity android:name=".PackagesActivity" />
         <activity android:name=".ProfilePageActivity" />
         <activity android:name=".HistoryActivity" />
-        <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".HomeActivity" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity android:name=".MenuActivity" />
         <activity android:name=".PackageListingActivity" />
         <activity android:name=".PackageServicesActivity" />
         <activity android:name=".ServiceListingActivity" />
-        <activity android:name=".CartActivity" />
-        <activity android:name=".EventAddressActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".CartActivity">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
-        <activity android:name=".ChooseLocationActivity"></activity>
+        <activity android:name=".EventAddressActivity">
+        </activity>
+        <activity android:name=".ChooseLocationActivity" />
+        <activity android:name=".ReviewPlaceOrderActivity">
+
+        </activity>
+        <activity android:name=".VendorListActivity"></activity>
     </application>
 
 </manifest>
