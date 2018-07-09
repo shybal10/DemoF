@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg2color"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+
+    <!--App bar-->
+    <RelativeLayout
+
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/actionbarcolor">
+
+        <TextView
+            android:textSize="16.75sp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:textColor="@color/blue"
+            android:text="Vendor Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+            <ImageButton
+                android:background="@android:color/transparent"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/cart_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:src="@drawable/cart" />
+
+            <ImageButton
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/transparent"
+                android:id="@+id/menu_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:src="@drawable/menu" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.75dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/orange">
+        </View>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--picture area-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp">
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/view_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <ImageButton
+                    android:background="@android:color/transparent"
+                    android:padding="15dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/heart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <!--shaded area-->
+                <RelativeLayout
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/display_shade"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+
+                    <!--available option-->
+                    <LinearLayout
+                        android:layout_alignParentBottom="true"
+                        android:id="@+id/available_option"
+                        android:layout_margin="15dp"
+                        android:gravity="center"
+                        android:background="@drawable/availablebtn"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:padding="5dp"
+                            android:src="@drawable/availableicowht"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:padding="5dp"
+                            android:textColor="@color/white"
+                            android:textSize="10sp"
+                            android:text="Available"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_alignParentBottom="true"
+                        android:padding="10dp"
+                        android:divider="@drawable/divider"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="15dp"
+                        android:orientation="horizontal"
+                        android:id="@+id/slider_dots"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:background="@color/bg1color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:background="@color/bg1color"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:id="@+id/heading"
+                            android:layout_alignParentStart="true"
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textStyle="bold"
+                                android:textColor="@color/orange"
+                                android:textSize="17.75sp"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="10dp"
+                                android:text="RealScience Show"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:textColor="@color/black"
+                                android:layout_marginTop="5dp"
+                                android:textSize="12sp"
+                                android:layout_marginStart="15dp"
+                                android:text="Salt and popcorn the perfect\naddition to the gathering"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_alignParentEnd="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <!--company name and logo-->
+                            <RelativeLayout
+                                android:padding="10dp"
+                                android:layout_marginEnd="15dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:id="@+id/shop_image"
+                                    android:layout_centerVertical="true"
+                                    android:src="@drawable/shop"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp"
+                                    android:layout_toEndOf="@+id/shop_image"
+                                    android:layout_marginStart="5dp"
+                                    android:text="Gyros Catering"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                            </RelativeLayout>
+
+                            <!--rating-->
+                            <LinearLayout
+                                android:layout_marginEnd="15dp"
+                                android:layout_gravity="end"
+                                android:padding="5dp"
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:padding="5dp"
+                                    android:src="@drawable/star"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                                <TextView
+                                    android:textSize="15sp"
+                                    android:textColor="@color/blue"
+                                    android:text="3.5 /"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                                <TextView
+                                    android:textSize="15sp"
+                                    android:textColor="@color/orange"
+                                    android:text=" 5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.005dp"/>
+                    <android.support.v7.widget.RecyclerView
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="25dp"
+                        android:id="@+id/detail_attributes_rec_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </android.support.v7.widget.RecyclerView>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="-20dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="30dp"
+                android:layout_marginEnd="15dp"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                xmlns:card_view="http://schemas.android.com/tools"
+                tool:cardCornerRadius="25dp"
+                card_view:cardUseCompatPadding="true"
+                card_view:elevation="25dp"
+                xmlns:tool="http://schemas.android.com/apk/res-auto">
+                <LinearLayout
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:textColor="@color/black"
+                            android:id="@+id/area_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:text="12-June-2018"
+                            android:textSize="15sp" />
+
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="5dp"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/calandar" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_below="@+id/area_text_view"
+                            android:layout_marginTop="15dp"
+                            android:background="@color/orange"></View>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:textColor="@color/black"
+                            android:id="@+id/time_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:text="Date"
+                            android:textSize="15sp" />
+
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="5dp"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/clock" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_below="@+id/time_text_view"
+                            android:layout_marginTop="15dp"
+                            android:background="@color/orange"></View>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:textColor="@color/black"
+                            android:id="@+id/kids_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:text="Number Of Kids"
+                            android:textSize="15sp" />
+
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="5dp"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/selectarrow" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_below="@+id/kids_text_view"
+                            android:layout_marginTop="15dp"
+                            android:background="@color/orange">
+                        </View>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:textColor="@color/black"
+                            android:id="@+id/adults_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:text="Number Of Adults"
+                            android:textSize="15sp" />
+
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="5dp"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/selectarrow" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_below="@+id/adults_text_view"
+                            android:layout_marginTop="15dp"
+                            android:background="@color/orange">
+                        </View>
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_marginBottom="10dp"
+                        android:padding="15dp"
+                        android:textSize="12sp"
+                        android:text="Additional information about the data in the attributes"
+                        android:textColor="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+            <View
+                android:background="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="0.002dp"/>
+
+            <RelativeLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/add_to_cart"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="15dp"
+                    android:textSize="17.75sp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:text="Add to Cart"
+                    android:background="@drawable/btnsml"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_margin="15dp"
+                    android:layout_alignParentEnd="true"
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:textColor="@color/blackbold"
+                        android:text="KD 20.000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:textSize="12sp"
+                        android:textColor="@color/black"
+                        android:text="Per Session"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</LinearLayout>

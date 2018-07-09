@@ -1,17 +1,20 @@
 package com.example.mawaqaamobile.festivity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 
 import com.example.mawaqaamobile.festivity.Adapters.AddressRecyclerViewAdapter;
 import com.example.mawaqaamobile.festivity.Adapters.SpecialDatesRecyclerViewAdapter;
 
 public class ProfilePageActivity extends AppCompatActivity {
 
+    LinearLayout upcommingEvents,pastEvents;
     boolean showallAdresses = false;
     ImageButton showAddresses;
     LinearLayoutManager specialDatesLinearLayoutManager,addressLinearLayoutManager;
@@ -22,6 +25,21 @@ public class ProfilePageActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_page);
+
+        pastEvents = (LinearLayout) findViewById(R.id.past_events_layout);
+        upcommingEvents = (LinearLayout) findViewById(R.id.upcomming_events_layout);
+        pastEvents.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ProfilePageActivity.this,HistoryActivity.class));
+            }
+        });
+        upcommingEvents.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ProfilePageActivity.this,HistoryActivity.class));
+            }
+        });
 
         //recycler view for special dates
         specialDatesRecyclerView = (RecyclerView) findViewById(R.id.special_dates_recycler_view);
@@ -49,7 +67,7 @@ public class ProfilePageActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (!showallAdresses) {
                     showallAdresses = true;
-                    showAddresses.setImageResource(R.drawable.arrowleft);
+                    showAddresses.setImageResource(R.drawable.uparrow);
                     addressRecyclerViewAdapter.setShowAllAdresses(showallAdresses);
                     addressRecyclerViewAdapter.notifyDataSetChanged();
 

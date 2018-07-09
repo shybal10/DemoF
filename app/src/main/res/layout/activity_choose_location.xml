@@ -55,10 +55,12 @@
                 android:layout_height="wrap_content" />
         </RelativeLayout>
         <RelativeLayout
+            android:background="@color/actionbarcolor"
             android:layout_weight="0.15"
             android:layout_width="match_parent"
             android:layout_height="0dp">
             <Button
+                android:id="@+id/confirm_address_button"
                 android:textSize="17sp"
                 android:textColor="@color/white"
                 android:textAllCaps="false"

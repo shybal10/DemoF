@@ -35,11 +35,15 @@
             android:orientation="horizontal">
 
             <TextView
+                android:textSize="15sp"
+                android:textColor="@color/blackbold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Hello," />
 
             <TextView
+                android:textSize="15sp"
+                android:textColor="@color/blackbold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
@@ -54,21 +58,22 @@
             android:layout_centerVertical="true"
             android:orientation="horizontal">
 
-            <ImageView
+            <ImageButton
+                android:background="@android:color/transparent"
+                android:layout_gravity="center_vertical"
                 android:id="@+id/cart_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
+                android:padding="10dp"
                 android:src="@drawable/cart" />
 
             <ImageButton
+                android:layout_gravity="center_vertical"
                 android:background="@android:color/transparent"
                 android:id="@+id/menu_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="5dp"
+                android:padding="10dp"
                 android:src="@drawable/menu" />
         </LinearLayout>
 
@@ -116,7 +121,7 @@
                     android:text="Explore"
                     android:textAllCaps="false"
                     android:textColor="@color/orange"
-                    android:textSize="15.75sp" />
+                    android:textSize="17.75sp" />
 
                 <Button
                     android:background="@drawable/switchbg"
@@ -127,7 +132,7 @@
                     android:text="Packages"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
-                    android:textSize="15.75sp" />
+                    android:textSize="17.75sp" />
             </LinearLayout>
 
 
@@ -147,6 +152,7 @@
                     android:orientation="horizontal">
 
                     <TextView
+                        android:textColor="@color/black"
                         android:id="@+id/date_text_view"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -182,6 +188,7 @@
                     android:orientation="horizontal">
 
                     <TextView
+                        android:textColor="@color/black"
                         android:id="@+id/area_text_view"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -216,6 +223,7 @@
                     android:orientation="horizontal">
 
                     <TextView
+                        android:textColor="@color/black"
                         android:id="@+id/occasions_text_view"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -245,6 +253,7 @@
                     android:layout_marginEnd="15dp"
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="15dp"
+                    android:textColor="@color/black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Budget Between" />
@@ -268,7 +277,7 @@
                     android:text="Search"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
-                    android:textSize="17sp" />
+                    android:textSize="17.75sp" />
             </LinearLayout>
 
             <!--explore options-->
@@ -322,6 +331,7 @@
                     android:orientation="horizontal">
 
                     <TextView
+                        android:textColor="@color/black"
                         android:id="@+id/explore_date_text_view"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -344,7 +354,8 @@
                         android:layout_height="2dp"
                         android:layout_below="@+id/explore_date_text_view"
                         android:layout_marginTop="15dp"
-                        android:background="@color/orange"></View>
+                        android:background="@color/orange">
+                    </View>
                 </RelativeLayout>
 
                 <Button
@@ -365,14 +376,14 @@
 
 
         </LinearLayout>
+
         <!--whats new, unpaid bills and inbox-->
         <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:card_view="http://schemas.android.com/tools"
             xmlns:tool="http://schemas.android.com/apk/res-auto"
             android:id="@+id/loyalty_points_cardview"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/profile_layout"
+            android:layout_height="100dp"
             android:layout_marginEnd="15dp"
             android:layout_marginStart="15dp"
             android:layout_marginTop="-40dp"
@@ -381,26 +392,22 @@
             tool:cardCornerRadius="25dp">
 
             <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:weightSum="3">
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="15dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
+
 
                     <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center">
+                        android:layout_margin="15dp"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
 
                         <ImageView
+                            android:layout_centerHorizontal="true"
                             android:id="@+id/whats_new_image"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -408,117 +415,100 @@
                             android:src="@drawable/whatsnew" />
 
                         <TextView
+                            android:layout_marginStart="-10dp"
+                            android:gravity="center"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignEnd="@+id/whats_new_image"
-                            android:layout_margin="-10dp"
+                            android:layout_toEndOf="@+id/whats_new_image"
                             android:background="@drawable/notification"
-                            android:gravity="center"
                             android:text="5"
                             android:textColor="@color/white" />
+
+                        <TextView
+                            android:gravity="center"
+                            android:layout_below="@+id/whats_new_image"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Whats\nNew"
+                            android:textColor="@color/black"
+                            android:textSize="10.75sp" />
                     </RelativeLayout>
 
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="5dp"
-                        android:gravity="center_horizontal"
-                        android:text="Whats new"
-                        android:textColor="@color/blue"
-                        android:textSize="10.75sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="15dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
                     <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center">
+                        android:gravity="center"
+                        android:layout_margin="15dp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
 
                         <ImageView
-                            android:id="@+id/unpaid_bills"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/unpaid_bills_image"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:src="@drawable/unpaidbills" />
 
                         <TextView
+                            android:layout_marginStart="-10dp"
+                            android:gravity="center"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignEnd="@+id/unpaid_bills"
-                            android:layout_margin="-10dp"
+                            android:layout_toEndOf="@+id/unpaid_bills_image"
                             android:background="@drawable/notification"
-                            android:gravity="center"
                             android:text="5"
                             android:textColor="@color/white" />
+
+                        <TextView
+                            android:gravity="center"
+                            android:layout_below="@+id/unpaid_bills_image"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Unpaid\nBills"
+                            android:textColor="@color/black"
+                            android:textSize="10.75sp" />
                     </RelativeLayout>
 
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="5dp"
-                        android:gravity="center_horizontal"
-                        android:text="Unpaid Bills"
-                        android:textColor="@color/blue"
-                        android:textSize="10.75sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="15dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
                     <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center">
+                        android:gravity="center"
+                        android:layout_margin="15dp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
 
                         <ImageView
-                            android:id="@+id/my_inbox_image"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/myinbox_image"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:src="@drawable/myinbox" />
 
                         <TextView
+                            android:layout_marginStart="-10dp"
+                            android:gravity="center"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignEnd="@+id/my_inbox_image"
-                            android:layout_margin="-10dp"
+                            android:layout_toEndOf="@+id/myinbox_image"
                             android:background="@drawable/notification"
-                            android:gravity="center"
                             android:text="5"
                             android:textColor="@color/white" />
+
+                        <TextView
+                            android:gravity="center"
+                            android:layout_below="@+id/myinbox_image"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="My\nInbox"
+                            android:textColor="@color/black"
+                            android:textSize="10.75sp" />
                     </RelativeLayout>
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="5dp"
-                        android:gravity="center_horizontal"
-                        android:text="My inbox"
-                        android:textColor="@color/blue"
-                        android:textSize="10.75sp" />
-                </LinearLayout>
 
 
             </LinearLayout>
@@ -532,7 +522,7 @@
             android:text="Featured Services"
             android:textAllCaps="true"
             android:textColor="@color/orange"
-            android:textSize="15sp"
+            android:textSize="16sp"
             android:textStyle="bold" />
 
         <android.support.v7.widget.RecyclerView
@@ -566,7 +556,7 @@
             android:text="Most Selling"
             android:textAllCaps="true"
             android:textColor="@color/orange"
-            android:textSize="15sp"
+            android:textSize="16sp"
             android:textStyle="bold" />
 
         <android.support.v7.widget.RecyclerView

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
-    android:background="@color/white"
+    android:background="@color/actionbarcolor"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -11,6 +11,8 @@
     android:orientation="vertical"
     android:layout_height="wrap_content"
     tools:context=".MenuActivity">
+
+    <!--app bar-->
     <RelativeLayout
         android:background="@color/actionbarcolor"
         android:layout_width="match_parent"
@@ -27,20 +29,20 @@
             android:layout_height="wrap_content" />
     </RelativeLayout>
     <View
-        android:background="#7d7d7d"
+        android:background="@color/black"
         android:layout_width="match_parent"
         android:layout_height="0.005dp"
         />
 
     <RelativeLayout
-        android:layout_marginBottom="5dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
         <EditText
-            android:textSize="15.75sp"
+            android:textSize="16sp"
             android:background="@android:color/transparent"
             android:textColorHint="@color/black"
             android:hint="Search in Festivity"
@@ -71,7 +73,7 @@
         android:paddingTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white">
+        android:background="@color/actionbarcolor">
 
         <ImageView
             android:id="@+id/user_image"
@@ -79,14 +81,12 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
-            android:layout_marginEnd="20dp"
-            android:layout_marginStart="20dp"
+            android:layout_margin="20dp"
             android:src="@drawable/usersml" />
 
             <TextView
-                android:textSize="15sp"
-                android:textStyle="bold"
-                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textColor="@color/blackbold"
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@+id/user_image"
                 android:layout_width="wrap_content"
@@ -95,14 +95,13 @@
 
 
             <ImageButton
-                android:layout_margin="10dp"
+                android:layout_margin="15dp"
                 android:background="@android:color/transparent"
                 android:layout_centerVertical="true"
                 android:layout_alignParentEnd="true"
                 android:id="@+id/cart_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
                 android:src="@drawable/settings" />
 
     </RelativeLayout>
@@ -110,8 +109,8 @@
     <!--home-->
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:background="@color/bg1color">
+        android:layout_height="50dp"
+        android:background="@color/historyshade">
 
         <ImageView
             android:id="@+id/home_image"
@@ -136,8 +135,8 @@
     <!--arabic-->
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:background="@color/white">
+        android:layout_height="50dp"
+        android:background="@color/actionbarcolor">
 
         <ImageView
             android:id="@+id/arabic_image"
@@ -162,8 +161,8 @@
     <!--FAQ-->
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:background="@color/bg1color">
+        android:layout_height="50dp"
+        android:background="@color/historyshade">
 
         <ImageView
             android:id="@+id/faq_image"
@@ -188,8 +187,8 @@
     <!--about festivity-->
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:background="@color/white">
+        android:layout_height="50dp"
+        android:background="@color/actionbarcolor">
 
         <ImageView
             android:id="@+id/about_image"
@@ -214,8 +213,8 @@
     <!--contact us-->
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:background="@color/bg1color">
+        android:layout_height="50dp"
+        android:background="@color/historyshade">
 
         <ImageView
             android:id="@+id/contact_image"
@@ -240,8 +239,8 @@
     <!--blog-->
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:background="@color/white">
+        android:layout_height="50dp"
+        android:background="@color/actionbarcolor">
 
         <ImageView
             android:id="@+id/blog_image"
@@ -266,8 +265,8 @@
     <!--order history-->
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:background="@color/bg1color">
+        android:layout_height="50dp"
+        android:background="@color/historyshade">
 
         <ImageView
             android:id="@+id/order_history_image"
@@ -292,8 +291,8 @@
     <!--waiting list-->
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:background="@color/white">
+        android:layout_height="50dp"
+        android:background="@color/actionbarcolor">
 
         <ImageView
             android:id="@+id/waiting_list_image"
@@ -318,8 +317,8 @@
     <!--terms and conditions-->
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:background="@color/bg1color">
+        android:layout_height="50dp"
+        android:background="@color/historyshade">
 
         <ImageView
             android:id="@+id/tandc_image"
@@ -343,9 +342,10 @@
 
     <!--logout-->
     <RelativeLayout
+        android:layout_marginBottom="50dp"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:background="@color/white">
+        android:layout_height="50dp"
+        android:background="@color/actionbarcolor">
 
         <ImageView
             android:id="@+id/logout_image"

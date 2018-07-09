@@ -18,12 +18,12 @@ public class HistoryRecyclerviewAdapter extends RecyclerView.Adapter<HistoryRecy
     public void onBindViewHolder(ItemViewHolder holder, int position) {
         if(position %2 == 1)
         {
-            holder.itemView.setBackgroundColor(Color.parseColor("#FFFFFF"));
+            holder.itemView.setBackgroundColor(Color.parseColor("#f6f6f6"));
             //  holder.imageView.setBackgroundColor(Color.parseColor("#FFFFFF"));
         }
         else
         {
-            holder.itemView.setBackgroundColor(Color.parseColor("#FFFAF8FD"));
+            holder.itemView.setBackgroundColor(Color.parseColor("#eeedf1"));
             //  holder.imageView.setBackgroundColor(Color.parseColor("#FFFAF8FD"));
         }
     }

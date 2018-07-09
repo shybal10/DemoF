@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/bg2color"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ThankYouActivity">
+
+    <!--App bar-->
+    <RelativeLayout
+
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/actionbarcolor">
+
+        <TextView
+            android:textSize="16.75sp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:textColor="@color/blue"
+            android:text="Thank You"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+            <ImageButton
+                android:background="@android:color/transparent"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/cart_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:src="@drawable/cart" />
+
+            <ImageButton
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/transparent"
+                android:id="@+id/menu_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:src="@drawable/menu" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.75dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/orange">
+        </View>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginTop="25dp"
+                android:layout_gravity="center"
+                android:src="@drawable/thanku"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:gravity="center"
+                android:textColor="@color/blue"
+                android:text="Thank You For Your Purchase"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textColor="@color/black"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:gravity="center"
+                android:text="A copy of this order confirmation has been emailed to you at customeremail@gmail.com. If you do not recieve a email message shortly, please check your spam, bulk or junk mail\nPlease add our email to your addressbook."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:textSize="15sp"
+                android:textColor="@color/blue"
+                android:text="Festivity wishing you a happy event"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/view_invoice_button"
+                android:layout_margin="30dp"
+                android:textColor="@color/white"
+                android:textSize="17.75sp"
+                android:textAllCaps="false"
+                android:text="View Invoice"
+                android:background="@drawable/btnbig"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!--form-->
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="25dp"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                xmlns:card_view="http://schemas.android.com/tools"
+                tool:cardCornerRadius="25dp"
+                card_view:cardUseCompatPadding="true"
+                card_view:elevation="25dp"
+                xmlns:tool="http://schemas.android.com/apk/res-auto">
+                <LinearLayout
+                    android:layout_marginBottom="55dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_margin="20dp"
+                        android:gravity="center"
+                        android:text="We are happy to know more about your event, if you would like to share about your event, please fill and submit the below form"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <!--Event type name-->
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_layout_event_type"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Event Type"
+                        android:padding="5dp"
+                        android:textColorHint="@android:color/black">
+                        <EditText
+                            android:paddingTop="5dp"
+                            android:background="@android:color/transparent"
+                            android:id="@+id/event_type_edit_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:textSize="15.75dp" />
+                        <View
+                            android:layout_marginTop="8dp"
+                            android:background="@color/orange"
+                            android:layout_width="match_parent"
+                            android:layout_height="1.5dp"/>
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <!--Event Details name-->
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_layout_event_details"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Talk About Your Event"
+                        android:padding="5dp"
+                        android:textColorHint="@android:color/black">
+                        <EditText
+                            android:paddingTop="5dp"
+                            android:background="@android:color/transparent"
+                            android:id="@+id/event_details_edit_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:textSize="15.75dp" />
+                        <View
+                            android:layout_marginTop="8dp"
+                            android:background="@color/orange"
+                            android:layout_width="match_parent"
+                            android:layout_height="1.5dp"/>
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/go_home_button"
+                        android:textAllCaps="false"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginBottom="25dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="17.75sp"
+                        android:text="Go Home"
+                        android:background="@drawable/continueshoppingbtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

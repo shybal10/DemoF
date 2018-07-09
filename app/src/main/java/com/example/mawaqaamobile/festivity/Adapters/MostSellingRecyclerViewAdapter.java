@@ -1,12 +1,13 @@
 package com.example.mawaqaamobile.festivity.Adapters;
 
+import android.graphics.Paint;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.mawaqaamobile.festivity.R;
-
 public class MostSellingRecyclerViewAdapter extends RecyclerView.Adapter<MostSellingRecyclerViewAdapter.ItemViewHolder> {
     @Override
     public ItemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -16,6 +17,7 @@ public class MostSellingRecyclerViewAdapter extends RecyclerView.Adapter<MostSel
 
     @Override
     public void onBindViewHolder(ItemViewHolder holder, int position) {
+        holder.textView.setPaintFlags(Paint.STRIKE_THRU_TEXT_FLAG);
 
     }
 
@@ -25,8 +27,10 @@ public class MostSellingRecyclerViewAdapter extends RecyclerView.Adapter<MostSel
     }
 
     public class ItemViewHolder extends RecyclerView.ViewHolder {
+        TextView textView;
         public ItemViewHolder(View itemView) {
             super(itemView);
+            textView = (TextView) itemView.findViewById(R.id.before_price_text);
         }
     }
 }

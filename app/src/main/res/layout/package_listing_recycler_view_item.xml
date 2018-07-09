@@ -25,18 +25,19 @@
                 <TextView
                     android:id="@+id/birthday_package_text"
                     android:layout_alignParentStart="true"
-                    android:textSize="15sp"
+                    android:textSize="16sp"
                     android:textStyle="bold"
                     android:textColor="@color/orange"
                     android:text="Birthday Package"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
+                    android:padding="5dp"
                     android:textStyle="bold"
                     android:layout_below="@+id/birthday_package_text"
                     android:layout_alignParentStart="true"
-                    android:textSize="10sp"
-                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textColor="@color/blackbold"
                     android:text="Option-A"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
@@ -44,15 +45,16 @@
                     android:id="@+id/price_text_view"
                     android:textStyle="bold"
                     android:layout_alignParentEnd="true"
-                    android:textSize="15sp"
-                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textColor="@color/blackbold"
                     android:text="KD 500.000"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
+                    android:layout_marginEnd="10dp"
                     android:layout_below="@+id/price_text_view"
                     android:layout_alignParentEnd="true"
-                    android:textSize="10sp"
+                    android:textSize="11sp"
                     android:textColor="@color/black"
                     android:text="Package Price"
                     android:layout_width="wrap_content"
@@ -64,12 +66,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="0.005dp"/>
             <RelativeLayout
-
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
+                    android:padding="5dp"
                     android:layout_alignParentStart="true"
                     android:textColor="@color/black"
                     android:text="Package Include (8 services)"
@@ -83,9 +85,9 @@
                     android:background="@drawable/view_all_services_button"
                     android:textSize="10sp"
                     android:textColor="@color/white"
-                    android:text="View All Services"
+                    android:text="View all Services"
                     android:layout_alignParentEnd="true"
-                    android:layout_width="100dp"
+                    android:layout_width="110dp"
                     android:layout_height="25dp" />
             </RelativeLayout>
             <android.support.v7.widget.RecyclerView
@@ -95,8 +97,8 @@
                 android:layout_height="wrap_content">
             </android.support.v7.widget.RecyclerView>
             <Button
-                android:layout_marginTop="5dp"
-                android:textSize="17sp"
+                android:layout_margin="5dp"
+                android:textSize="17.75sp"
                 android:textColor="@color/white"
                 android:background="@drawable/btnbig"
                 android:textAllCaps="false"

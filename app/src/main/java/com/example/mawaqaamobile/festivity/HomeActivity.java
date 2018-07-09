@@ -16,7 +16,7 @@ import com.example.mawaqaamobile.festivity.Adapters.HistoryRecyclerviewAdapter;
 import com.example.mawaqaamobile.festivity.Adapters.MostSellingRecyclerViewAdapter;
 
 public class HomeActivity extends AppCompatActivity {
-    ImageButton menu;
+    ImageButton menu,cart,service;
     Button packagesSearch,exploreSearch,packagesButton,exploreButton;
     RecyclerView featuredServicesRecyclerView,mostSellingRecyclerView;
     FeaturedServicesRecyclerViewAdapter featuredServicesRecyclerViewAdapter;
@@ -31,11 +31,25 @@ public class HomeActivity extends AppCompatActivity {
         exploreOptions = (LinearLayout) findViewById(R.id.explore_options);
         packageOptions = (LinearLayout) findViewById(R.id.packages_options);
         menu = (ImageButton) findViewById(R.id.menu_button);
+        cart = (ImageButton) findViewById(R.id.cart_button);
+        service = (ImageButton) findViewById(R.id.service);
         packagesSearch = (Button) findViewById(R.id.packages_search_button);
         exploreSearch = (Button) findViewById(R.id.explore_search_button);
         exploreButton = (Button) findViewById(R.id.explore_button);
         packagesButton = (Button) findViewById(R.id.packages_button);
+        cart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this,CartActivity.class));
 
+            }
+        });
+        service.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this,ServiceCategoryActivity.class));
+            }
+        });
         exploreSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
