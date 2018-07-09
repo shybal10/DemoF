@@ -8,11 +8,14 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.RelativeLayout;
 
 import com.example.mawaqaamobile.festivity.Adapters.MostSellingRecyclerViewAdapter;
 import com.example.mawaqaamobile.festivity.Adapters.PackageListingRecyclerViewAdapter;
 
 public class PackageListingActivity extends AppCompatActivity {
+
+    RelativeLayout birthdayLayout,cityLayout;
     ImageButton cartButton,menuButton,serviceButton;
     PackageListingRecyclerViewAdapter packageListingRecyclerViewAdapter;
     RecyclerView packageListingRecyclerView;
@@ -43,6 +46,20 @@ public class PackageListingActivity extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(new Intent(PackageListingActivity.this,MenuActivity.class));
 
+            }
+        });
+        birthdayLayout = (RelativeLayout) findViewById(R.id.birthday_layout);
+        birthdayLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(PackageListingActivity.this,AtrributesActivity.class));
+            }
+        });
+        cityLayout = (RelativeLayout) findViewById(R.id.city_layout);
+        cityLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(PackageListingActivity.this,AtrributesActivity.class));
             }
         });
         packageListingRecyclerView = (RecyclerView) findViewById(R.id.packages_list_recycler_view);

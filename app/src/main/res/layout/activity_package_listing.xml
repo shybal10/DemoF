@@ -47,6 +47,7 @@
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/city_layout"
             android:layout_toEndOf="@+id/birthday_layout"
             android:layout_marginStart="20dp"
             android:paddingStart="10dp"

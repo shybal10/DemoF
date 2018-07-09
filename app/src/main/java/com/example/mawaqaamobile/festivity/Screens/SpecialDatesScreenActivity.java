@@ -5,11 +5,11 @@ import android.os.Bundle;
 
 import com.example.mawaqaamobile.festivity.R;
 
-public class ScreenActivity extends AppCompatActivity {
+public class SpecialDatesScreenActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_screen);
+        setContentView(R.layout.activity_special_dates_screen);
     }
 }

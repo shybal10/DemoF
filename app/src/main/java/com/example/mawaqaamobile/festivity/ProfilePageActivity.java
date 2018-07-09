@@ -11,12 +11,12 @@ import android.widget.LinearLayout;
 
 import com.example.mawaqaamobile.festivity.Adapters.AddressRecyclerViewAdapter;
 import com.example.mawaqaamobile.festivity.Adapters.SpecialDatesRecyclerViewAdapter;
+import com.example.mawaqaamobile.festivity.Screens.SpecialDatesScreenActivity;
 
 public class ProfilePageActivity extends AppCompatActivity {
-
     LinearLayout upcommingEvents,pastEvents;
     boolean showallAdresses = false;
-    ImageButton showAddresses;
+    ImageButton showAddresses,addDates;
     LinearLayoutManager specialDatesLinearLayoutManager,addressLinearLayoutManager;
     RecyclerView specialDatesRecyclerView,addressRecyclerView;
     SpecialDatesRecyclerViewAdapter specialDatesRecyclerViewAdapter;
@@ -25,7 +25,13 @@ public class ProfilePageActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_page);
-
+        addDates = (ImageButton) findViewById(R.id.add_dates_button);
+        addDates.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ProfilePageActivity.this, SpecialDatesScreenActivity.class));
+            }
+        });
         pastEvents = (LinearLayout) findViewById(R.id.past_events_layout);
         upcommingEvents = (LinearLayout) findViewById(R.id.upcomming_events_layout);
         pastEvents.setOnClickListener(new View.OnClickListener() {

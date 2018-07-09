@@ -13,29 +13,38 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".SplashActivity"></activity>
+        <activity android:name=".LoginActivity" >
+
+        </activity>
+        <activity android:name=".SplashActivity">
+
+        </activity>
         <activity android:name=".IntroPagerActivity" />
-        <activity android:name=".CategoryActivity" />
+        <activity android:name=".CategoryActivity" >
+
+        </activity>
         <activity android:name=".CreateAccountActivity" />
-        <activity android:name=".PackagesActivity" />
-        <activity android:name=".ProfilePageActivity"></activity>
-        <activity android:name=".HistoryActivity"></activity>
-        <activity android:name=".HomeActivity"></activity>
-        <activity android:name=".MenuActivity"></activity>
-        <activity android:name=".PackageListingActivity" />
+        <activity android:name=".PackagesActivity" >
+
+        </activity>
+        <activity android:name=".ProfilePageActivity" />
+        <activity android:name=".HistoryActivity" />
+        <activity android:name=".HomeActivity">
+        </activity>
+        <activity android:name=".MenuActivity" />
+        <activity android:name=".PackageListingActivity" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity android:name=".PackageServicesActivity" />
-        <activity android:name=".ServiceListingActivity"></activity>
+        <activity android:name=".ServiceListingActivity" />
         <activity android:name=".CartActivity" />
         <activity android:name=".EventAddressActivity" />
         <activity android:name=".ChooseLocationActivity" />
-        <activity android:name=".ReviewPlaceOrderActivity"></activity>
+        <activity android:name=".ReviewPlaceOrderActivity" />
         <activity android:name=".ServiceCategoryActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <meta-data
@@ -43,9 +52,12 @@
             android:value="AIzaSyCihYdWDGa_qSsSTb4E5x4z9776RQiOQYw" />
 
         <activity android:name=".ThankYouActivity" />
-        <activity android:name=".ViewInvoiceActivity"></activity>
-        <activity android:name=".DetailActivity"></activity>
-        <activity android:name=".Screens.ScreenActivity"></activity>
+        <activity android:name=".ViewInvoiceActivity" />
+        <activity android:name=".DetailActivity" />
+        <activity android:name=".Screens.DateScreenActivity" />
+        <activity android:name=".Screens.AreaScreenActivity" />
+        <activity android:name=".Screens.SpecialDatesScreenActivity"></activity>
+        <activity android:name=".AtrributesActivity"></activity>
     </application>
 
 </manifest>

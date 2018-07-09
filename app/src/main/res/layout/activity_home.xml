@@ -144,6 +144,8 @@
                 android:layout_height="wrap_content">
 
                 <RelativeLayout
+                    android:clickable="true"
+                    android:id="@+id/package_area_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="15dp"
@@ -180,6 +182,8 @@
                 </RelativeLayout>
 
                 <RelativeLayout
+                    android:clickable="true"
+                    android:id="@+id/package_date_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="15dp"
@@ -259,9 +263,7 @@
                     android:text="Budget Between" />
 
                 <android.support.v7.widget.AppCompatSeekBar
-                    android:layout_marginEnd="15dp"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_margin="15dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <Button
@@ -282,12 +284,14 @@
 
             <!--explore options-->
             <LinearLayout
-                android:id="@+id/explore_options"
                 android:visibility="gone"
+                android:id="@+id/explore_options"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <RelativeLayout
+                    android:clickable="true"
+                    android:id="@+id/explore_area_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="15dp"
@@ -323,10 +327,13 @@
                 </RelativeLayout>
 
                 <RelativeLayout
+                    android:clickable="true"
+                    android:id="@+id/explore_date_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="15dp"
                     android:layout_marginStart="15dp"
+                    android:layout_marginBottom="15dp"
                     android:layout_marginTop="5dp"
                     android:orientation="horizontal">
 

@@ -132,6 +132,17 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/skip_button"
+                android:textSize="17.75sp"
+                android:textAllCaps="false"
+                android:textColor="@color/orange"
+                android:background="@android:color/transparent"
+                android:text="Skip"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
         </LinearLayout>
 
     </android.support.v4.widget.NestedScrollView>
