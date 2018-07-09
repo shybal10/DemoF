@@ -22,6 +22,11 @@
             android:text="Explore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+        <View
+            android:layout_alignParentBottom="true"
+            android:background="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="0.002dp"/>
 
     </RelativeLayout>
 

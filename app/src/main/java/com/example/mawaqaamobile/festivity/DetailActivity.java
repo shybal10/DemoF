@@ -17,10 +17,14 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import com.example.mawaqaamobile.festivity.Adapters.DetailAttributesRecViewAdapter;
+import com.example.mawaqaamobile.festivity.Screens.DateScreenActivity;
+import com.example.mawaqaamobile.festivity.Screens.TimeActivity;
 
 public class DetailActivity extends AppCompatActivity {
+    RelativeLayout dateLayout,timeLayout;
     DetailAttributesRecViewAdapter detailAttributesRecViewAdapter;
     RecyclerView detailAttributesRecView;
     CustomSwipeAdapter customSwipeAdapter;
@@ -36,6 +40,21 @@ public class DetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detail);
         viewPager = (ViewPager) findViewById(R.id.view_pager);
 
+        dateLayout = (RelativeLayout) findViewById(R.id.date_layout);
+        dateLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(DetailActivity.this, DateScreenActivity.class));
+            }
+        });
+        timeLayout = (RelativeLayout) findViewById(R.id.time_layout);
+        timeLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(DetailActivity.this, TimeActivity.class));
+
+            }
+        });
         AddtoCart = (Button) findViewById(R.id.add_to_cart);
         AddtoCart.setOnClickListener(new View.OnClickListener() {
             @Override
