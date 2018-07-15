@@ -112,32 +112,37 @@
         </View>
     </RelativeLayout>
 
-    <ImageButton
-        android:background="@android:color/transparent"
-        android:id="@+id/filter_button"
-        android:layout_margin="15dp"
-        android:layout_alignParentEnd="true"
-        android:src="@drawable/filter"
-        android:layout_below="@+id/app_bar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
 
-    <android.support.v7.widget.RecyclerView
-        android:layout_below="@+id/filter_button"
-        android:id="@+id/packages_list_recycler_view"
+
+    <RelativeLayout
+        android:layout_below="@+id/app_bar"
+        android:id="@+id/filter_container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    </android.support.v7.widget.RecyclerView>
-    <ImageButton
-        android:elevation="25dp"
-        android:scaleType="centerInside"
-        android:background="@drawable/servicesbox"
-        android:layout_alignParentEnd="true"
-        android:id="@+id/service"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:src="@drawable/services"
-        android:layout_margin="16dp" />
+        android:layout_height="match_parent">
+        <ImageButton
+            android:background="@android:color/transparent"
+            android:id="@+id/filter_button"
+            android:layout_margin="15dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <android.support.v7.widget.RecyclerView
+            android:layout_below="@+id/filter_button"
+            android:id="@+id/packages_list_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </android.support.v7.widget.RecyclerView>
+        <ImageButton
+            android:scaleType="centerInside"
+            android:background="@drawable/servicesbox"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/services"
+            android:layout_margin="16dp" />
+    </RelativeLayout>
 </RelativeLayout>
 

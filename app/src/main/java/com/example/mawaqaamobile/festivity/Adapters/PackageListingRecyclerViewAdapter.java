@@ -13,8 +13,8 @@ import com.example.mawaqaamobile.festivity.PackageServicesActivity;
 import com.example.mawaqaamobile.festivity.R;
 
 public class PackageListingRecyclerViewAdapter extends RecyclerView.Adapter<PackageListingRecyclerViewAdapter.ItemViewHolder> {
-    ServiceInsidePackagesRecyclerViewAdapter serviceInsidePackagesRecyclerViewAdapter;
-    Context mcontext;
+    private ServiceInsidePackagesRecyclerViewAdapter serviceInsidePackagesRecyclerViewAdapter;
+    private Context mcontext;
 
     public PackageListingRecyclerViewAdapter(Context context) {
         this.mcontext = context;

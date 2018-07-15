@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/bg2color"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:baselineAligned="false"
+        android:id="@+id/edit_text_layout"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/search_box"
+            android:layout_weight="0.6"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/search_category"
+                android:textSize="17sp"
+                android:background="@android:color/transparent"
+                android:textColorHint="@color/black"
+                android:hint="Search Filter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/searchbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <View
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/search_category"
+                android:background="@color/orange"
+                android:layout_width="match_parent"
+                android:layout_height="2dp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:contentDescription="filter_button"
+        android:layout_alignParentEnd="true"
+        android:padding="5dp"
+        android:background="@android:color/transparent"
+        android:id="@+id/filter_button"
+        android:layout_margin="15dp"
+        android:src="@drawable/filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:gravity="center"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:text="5"
+        android:layout_margin="10dp"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.plumillonforge.android.chipview.ChipView
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:background="@color/actionbarcolor"
+        android:id="@+id/selected_tags"
+        android:layout_marginTop="15dp"
+        app:chip_background_res="@android:color/transparent"
+        android:layout_below="@+id/edit_text_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/filter_options_rec_view"
+        android:padding="10dp"
+        android:layout_marginBottom="30dp"
+        android:layout_below="@+id/selected_tags"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </android.support.v7.widget.RecyclerView>
+    <LinearLayout
+        android:background="@color/actionbarcolor"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:background="@drawable/btnbig"
+            android:layout_margin="20dp"
+            android:text="Apply Filter"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</RelativeLayout>

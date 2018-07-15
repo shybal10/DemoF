@@ -39,13 +39,13 @@ public class CartActivity extends AppCompatActivity {
             }
         });
         pendingCartRecView = (RecyclerView) findViewById(R.id.pending_cart_rec_view);
-        cartPendingRecViewAdapter = new CartPendingRecViewAdapter();
+        cartPendingRecViewAdapter = new CartPendingRecViewAdapter(this);
         pendingCartRecView.setHasFixedSize(true);
         pendingCartRecView.setLayoutManager(new LinearLayoutManager(this));
         pendingCartRecView.setAdapter(cartPendingRecViewAdapter);
 
         confCartRecView = (RecyclerView) findViewById(R.id.confirmed_cart_rec_view);
-        cartConfRecViewAdapter = new CartConfRecViewAdapter();
+        cartConfRecViewAdapter = new CartConfRecViewAdapter(this);
         confCartRecView.setHasFixedSize(true);
         confCartRecView.setLayoutManager(new LinearLayoutManager(this));
         confCartRecView.setAdapter(cartConfRecViewAdapter);

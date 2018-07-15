@@ -21,7 +21,6 @@ import org.w3c.dom.Text;
 import java.util.List;
 
 public class CategoryActivity extends AppCompatActivity {
-
     private int[] CategoryImages = {
             R.drawable.birthday, R.drawable.award,
             R.drawable.music, R.drawable.teacup,

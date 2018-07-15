@@ -7,8 +7,6 @@
     android:background="@color/bg2color"
     android:orientation="vertical"
     tools:context=".HomeActivity">
-
-
     <!--app bar-->
     <RelativeLayout
         android:id="@+id/app_bar"
@@ -144,6 +142,7 @@
                 android:layout_height="wrap_content">
 
                 <RelativeLayout
+                    android:focusable="true"
                     android:clickable="true"
                     android:id="@+id/package_area_layout"
                     android:layout_width="match_parent"
@@ -182,6 +181,7 @@
                 </RelativeLayout>
 
                 <RelativeLayout
+                    android:focusable="true"
                     android:clickable="true"
                     android:id="@+id/package_date_layout"
                     android:layout_width="match_parent"
@@ -284,12 +284,13 @@
 
             <!--explore options-->
             <LinearLayout
-                android:visibility="gone"
                 android:id="@+id/explore_options"
+                android:visibility="gone"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <RelativeLayout
+                    android:focusable="true"
                     android:clickable="true"
                     android:id="@+id/explore_area_layout"
                     android:layout_width="match_parent"
@@ -327,13 +328,13 @@
                 </RelativeLayout>
 
                 <RelativeLayout
+                    android:focusable="true"
                     android:clickable="true"
                     android:id="@+id/explore_date_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="15dp"
                     android:layout_marginStart="15dp"
-                    android:layout_marginBottom="15dp"
                     android:layout_marginTop="5dp"
                     android:orientation="horizontal">
 

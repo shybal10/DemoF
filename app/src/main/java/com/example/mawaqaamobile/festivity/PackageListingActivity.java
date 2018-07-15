@@ -12,11 +12,12 @@ import android.widget.RelativeLayout;
 
 import com.example.mawaqaamobile.festivity.Adapters.MostSellingRecyclerViewAdapter;
 import com.example.mawaqaamobile.festivity.Adapters.PackageListingRecyclerViewAdapter;
+import com.example.mawaqaamobile.festivity.Fragments.FilterFragment;
 
 public class PackageListingActivity extends AppCompatActivity {
-
+    FilterFragment filterFragment;
     RelativeLayout birthdayLayout,cityLayout;
-    ImageButton cartButton,menuButton,serviceButton;
+    ImageButton cartButton,menuButton,serviceButton,filterButton;
     PackageListingRecyclerViewAdapter packageListingRecyclerViewAdapter;
     RecyclerView packageListingRecyclerView;
     LinearLayoutManager packageListingLayoutManager;
@@ -25,10 +26,13 @@ public class PackageListingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_package_listing);
-
-        serviceButton = (ImageButton) findViewById(R.id.service);
-        cartButton = (ImageButton) findViewById(R.id.cart_button);
-        menuButton = (ImageButton) findViewById(R.id.menu_button);
+        initialiseResources();
+        filterButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openFilterScreen();
+            }
+        });
         serviceButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,23 +52,37 @@ public class PackageListingActivity extends AppCompatActivity {
 
             }
         });
-        birthdayLayout = (RelativeLayout) findViewById(R.id.birthday_layout);
         birthdayLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(PackageListingActivity.this,AtrributesActivity.class));
             }
         });
-        cityLayout = (RelativeLayout) findViewById(R.id.city_layout);
         cityLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(PackageListingActivity.this,AtrributesActivity.class));
             }
         });
+
+        setupPackageListingRecyclerView();
+    }
+    private void openFilterScreen() {
+        filterFragment = new FilterFragment();
+        getFragmentManager().beginTransaction().replace(R.id.filter_container,filterFragment).addToBackStack("FilterFragment").commit();
+
+    }
+    private void initialiseResources() {
+        filterButton = (ImageButton) findViewById(R.id.filter_button);
+        cartButton = (ImageButton) findViewById(R.id.cart_button);
+        menuButton = (ImageButton) findViewById(R.id.menu_button);
+        serviceButton = (ImageButton) findViewById(R.id.service);
+        birthdayLayout = (RelativeLayout) findViewById(R.id.birthday_layout);
+        cityLayout = (RelativeLayout) findViewById(R.id.city_layout);
+    }
+    private void setupPackageListingRecyclerView() {
         packageListingRecyclerView = (RecyclerView) findViewById(R.id.packages_list_recycler_view);
         packageListingRecyclerView.setHasFixedSize(true);
-
         packageListingLayoutManager = new LinearLayoutManager(this);
         packageListingLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         packageListingRecyclerView.setLayoutManager(packageListingLayoutManager);

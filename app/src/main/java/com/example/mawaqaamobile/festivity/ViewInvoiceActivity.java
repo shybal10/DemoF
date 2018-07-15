@@ -19,17 +19,17 @@ public class ViewInvoiceActivity extends AppCompatActivity {
         setContentView(R.layout.activity_view_invoice);
 
         pendingInvoiceRecView = (RecyclerView) findViewById(R.id.pending_invoice_rec_view);
-        invoicePendingRecViewAdapter = new InvoicePendingRecViewAdapter();
+        invoicePendingRecViewAdapter = new InvoicePendingRecViewAdapter(this);
         pendingInvoiceRecView.setHasFixedSize(true);
         pendingInvoiceRecView.setNestedScrollingEnabled(false);
         pendingInvoiceRecView.setLayoutManager(new LinearLayoutManager(this));
         pendingInvoiceRecView.setAdapter(invoicePendingRecViewAdapter);
 
         confInvoiceRecView = (RecyclerView) findViewById(R.id.confirmed_invoice_rec_view);
-        invoiceConfRecViewAdapter = new InvoiceConfRecViewAdapter();
+        invoiceConfRecViewAdapter = new InvoiceConfRecViewAdapter(this);
         confInvoiceRecView.setHasFixedSize(true);
         confInvoiceRecView.setNestedScrollingEnabled(false);
         confInvoiceRecView.setLayoutManager(new LinearLayoutManager(this));
-        confInvoiceRecView.setAdapter(invoicePendingRecViewAdapter);
+        confInvoiceRecView.setAdapter(invoiceConfRecViewAdapter);
     }
 }
