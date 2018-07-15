@@ -13,7 +13,11 @@
         android:theme="@style/AppTheme.NoActionBar">
         <activity android:name=".LoginActivity"></activity>
         <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".IntroPagerActivity" />
         <activity android:name=".CategoryActivity"></activity>
@@ -25,11 +29,7 @@
         </activity>
         <activity android:name=".MenuActivity" />
         <activity android:name=".PackageListingActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".PackageServicesActivity" />
         <activity android:name=".ServiceListingActivity" />
