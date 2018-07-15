@@ -1,7 +1,6 @@
 package com.example.mawaqaamobile.festivity;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -13,9 +12,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import com.example.mawaqaamobile.festivity.Adapters.FeaturedServicesRecyclerViewAdapter;
-import com.example.mawaqaamobile.festivity.Adapters.HistoryRecyclerviewAdapter;
 import com.example.mawaqaamobile.festivity.Adapters.MostSellingRecyclerViewAdapter;
-import com.example.mawaqaamobile.festivity.Screens.AreaScreenActivity;
 import com.example.mawaqaamobile.festivity.Screens.DateScreenActivity;
 
 public class HomeActivity extends AppCompatActivity {
@@ -39,14 +36,12 @@ public class HomeActivity extends AppCompatActivity {
         exploreArea.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(HomeActivity.this, AreaScreenActivity.class));
             }
         });
         packageArea = (RelativeLayout) findViewById(R.id.package_area_layout);
         packageArea.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(HomeActivity.this, AreaScreenActivity.class));
             }
         });
         exploreDate = (RelativeLayout) findViewById(R.id.explore_date_layout);

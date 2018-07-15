@@ -52,7 +52,6 @@
 
         </activity>
         <activity android:name=".Screens.DateScreenActivity" />
-        <activity android:name=".Screens.AreaScreenActivity" />
         <activity android:name=".Screens.SpecialDatesScreenActivity" />
         <activity android:name=".AtrributesActivity" />
         <activity android:name=".Screens.TimeActivity"></activity>
