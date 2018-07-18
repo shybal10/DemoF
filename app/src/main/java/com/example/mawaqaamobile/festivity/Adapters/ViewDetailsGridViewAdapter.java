@@ -32,7 +32,6 @@ public class ViewDetailsGridViewAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        int nextposition = 0;
         View imageView;
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
@@ -47,10 +46,6 @@ public class ViewDetailsGridViewAdapter extends BaseAdapter {
 
             imageView = (View) convertView;
 
-        }
-
-        if ((position %2 == 0)){
-            imageView.setBackgroundResource(R.color.actionbarcolor);
         }
 
         return imageView;

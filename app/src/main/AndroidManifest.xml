@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.mawaqaamobile.festivity">
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,46 +21,43 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".IntroPagerActivity" />
+        <activity android:name=".IntroPagerActivity"></activity>
         <activity android:name=".CategoryActivity"></activity>
-        <activity android:name=".CreateAccountActivity" />
+        <activity android:name=".CreateAccountActivity"></activity>
         <activity android:name=".ProfilePageActivity" />
         <activity android:name=".HistoryActivity" />
-        <activity android:name=".HomeActivity">
-
-        </activity>
-        <activity android:name=".MenuActivity" />
+        <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".MenuActivity"></activity>
         <activity android:name=".PackageListingActivity">
 
         </activity>
-        <activity android:name=".PackageServicesActivity" />
-        <activity android:name=".ServiceListingActivity" />
-        <activity android:name=".CartActivity" >
+        <activity android:name=".PackageServicesActivity" >
 
         </activity>
-        <activity android:name=".EventAddressActivity" />
+        <activity android:name=".ServiceListingActivity">
+
+        </activity>
+        <activity android:name=".CartActivity"></activity>
+        <activity android:name=".EventAddressActivity"></activity>
         <activity android:name=".ChooseLocationActivity" />
-        <activity android:name=".ReviewPlaceOrderActivity" />
+        <activity android:name=".ReviewPlaceOrderActivity"></activity>
         <activity android:name=".ServiceCategoryActivity"></activity>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCihYdWDGa_qSsSTb4E5x4z9776RQiOQYw" />
 
-        <activity android:name=".ThankYouActivity" />
-        <activity android:name=".ViewInvoiceActivity" >
-
-        </activity>
-        <activity android:name=".DetailActivity" >
-
-        </activity>
+        <activity android:name=".ThankYouActivity"></activity>
+        <activity android:name=".ViewInvoiceActivity"></activity>
+        <activity android:name=".DetailActivity"></activity>
         <activity android:name=".Screens.DateScreenActivity" />
-        <activity android:name=".AreaScreenActivity" >
-
-        </activity>
+        <activity android:name=".AreaScreenActivity"></activity>
         <activity android:name=".Screens.SpecialDatesScreenActivity" />
         <activity android:name=".AtrributesActivity" />
-        <activity android:name=".Screens.TimeActivity"></activity>
+        <activity android:name=".Screens.TimeActivity" />
+        <activity android:name=".SearchAgainActivity">
+
+        </activity>
     </application>
 
 </manifest>

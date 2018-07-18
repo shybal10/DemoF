@@ -10,18 +10,18 @@ import android.widget.Button;
 
 import com.example.mawaqaamobile.festivity.R;
 
-public class PackageFragment extends Fragment {
+public class ExploreFragment extends Fragment {
     Button search;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.package_fragment, container, false);
+        return inflater.inflate(R.layout.explore_fragment_layout, container, false);
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        search = (Button) view.findViewById(R.id.packages_search_button);
+        search = (Button) view.findViewById(R.id.explore_search_button);
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

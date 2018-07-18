@@ -52,7 +52,6 @@ public class CartConfRecViewAdapter extends RecyclerView.Adapter<CartConfRecView
     public class ItemViewHolder extends RecyclerView.ViewHolder {
         ViewDetailsGridView viewDetailsGridView;
         LinearLayout viewDetails,closeDetails;
-
         public ItemViewHolder(View itemView) {
             super(itemView);
             viewDetails = (LinearLayout) itemView.findViewById(R.id.view_details_layout);

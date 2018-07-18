@@ -44,7 +44,6 @@ public class VendorListFragment extends Fragment implements VendorListRecViewAda
         vendorListRecView.setLayoutManager(new LinearLayoutManager(getActivity()));
         vendorListRecView.setAdapter(vendorListRecViewAdapter);
         serviceListFragment = new ServiceListFragment();
-
     }
 
     @Override

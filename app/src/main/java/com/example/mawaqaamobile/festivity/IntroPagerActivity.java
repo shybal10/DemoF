@@ -12,7 +12,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.example.mawaqaamobile.festivity.Adapters.IntoSwipeAdapter;
-import com.jaeger.library.StatusBarUtil;
 
 public class IntroPagerActivity extends AppCompatActivity {
     private IntoSwipeAdapter intoSwipeAdapter;
@@ -25,7 +24,8 @@ public class IntroPagerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intro_pager);
-        viewPager = (ViewPager) findViewById(R.id.intro_view_pager);
+
+//        handle button clicks
         skip = (Button) findViewById(R.id.skip_button);
         skip.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,11 +33,13 @@ public class IntroPagerActivity extends AppCompatActivity {
                 startActivity(new Intent(IntroPagerActivity.this,CategoryActivity.class));
             }
         });
+
+//        set up view pager
+        viewPager = (ViewPager) findViewById(R.id.intro_view_pager);
         intoSwipeAdapter = new IntoSwipeAdapter(IntroPagerActivity.this);
         viewPager.setAdapter(intoSwipeAdapter);
-
-        viewPager.setAdapter(intoSwipeAdapter);
         slideDots = (LinearLayout) findViewById(R.id.dot_linear);
+//        add slider dots
         dotsCount = intoSwipeAdapter.getCount();
         dots = new ImageView[dotsCount];
         for (int i = 0; i < dotsCount; i++) {

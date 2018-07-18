@@ -14,8 +14,6 @@ public class ThankYouActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_thank_you);
-        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
-
         viewInvoice = (Button) findViewById(R.id.view_invoice_button);
         viewInvoice.setOnClickListener(new View.OnClickListener() {
             @Override

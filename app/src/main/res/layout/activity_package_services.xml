@@ -72,10 +72,11 @@
                 android:layout_height="wrap_content" />
         </LinearLayout>
         <Button
+            android:onClick="addPackageToCart"
             android:textAllCaps="false"
             android:padding="5dp"
             android:textColor="@color/white"
-            android:textSize="17.75sp"
+            android:textSize="17sp"
             android:text="Add Package to Cart"
             android:layout_marginEnd="15dp"
             android:layout_centerVertical="true"

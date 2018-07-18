@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/bg2color"
@@ -33,6 +33,7 @@
             android:layout_centerVertical="true"
             android:orientation="horizontal">
             <ImageButton
+                android:onClick="ReopenCart"
                 android:background="@android:color/transparent"
                 android:layout_gravity="center_vertical"
                 android:id="@+id/cart_button"
@@ -42,6 +43,7 @@
                 android:src="@drawable/cart" />
 
             <ImageButton
+                android:onClick="showMenu"
                 android:layout_gravity="center_vertical"
                 android:background="@android:color/transparent"
                 android:id="@+id/menu_button"
@@ -60,6 +62,8 @@
     </RelativeLayout>
 
     <android.support.v4.widget.NestedScrollView
+        android:layout_below="@+id/app_bar"
+        android:layout_marginBottom="180dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout
@@ -112,6 +116,8 @@
                                 android:layout_height="wrap_content" />
                         </LinearLayout>
                         <ImageButton
+                            android:onClick="showInfoPopup"
+                            android:id="@+id/confirmed_info_btn"
                             android:background="@android:color/transparent"
                             android:src="@drawable/help"
                             android:layout_centerVertical="true"
@@ -186,6 +192,7 @@
                                 android:layout_height="wrap_content" />
                         </LinearLayout>
                         <ImageButton
+                            android:onClick="showInfoPopup"
                             android:background="@android:color/transparent"
                             android:src="@drawable/help"
                             android:layout_centerVertical="true"
@@ -212,112 +219,118 @@
 
             </android.support.v7.widget.CardView>
 
-            <!--payment details-->
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--payment details-->
+        <LinearLayout
+            android:baselineAligned="false"
+            android:background="@drawable/amt_bg"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_width="match_parent"
+            android:layout_height="120dp">
+
             <LinearLayout
-                android:baselineAligned="false"
-                android:background="@drawable/amt_bg"
-                android:orientation="horizontal"
-                android:weightSum="1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <LinearLayout
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:layout_weight="0.5"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent">
-                    <TextView
-                        android:textColor="@color/black"
-                        android:textSize="12sp"
-                        android:text="Total Amount"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                    <TextView
-                        android:textColor="@color/blackbold"
-                        android:textSize="15sp"
-                        android:textStyle="bold"
-                        android:text="KD 480.000"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                </LinearLayout>
-                <LinearLayout
-                    android:paddingTop="5dp"
-                    android:paddingBottom="5dp"
-                    android:orientation="vertical"
-                    android:background="@drawable/amt_bg"
-                    android:layout_weight="0.5"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:layout_marginStart="5dp"
-                        android:textStyle="bold"
-                        android:textSize="12sp"
-                        android:textColor="@color/orangewarning"
-                        android:text="To be Paid After Confirmation"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                    <TextView
-                        android:layout_marginStart="5dp"
-                        android:textStyle="bold"
-                        android:textSize="14sp"
-                        android:textColor="@color/blackbold"
-                        android:text="KD 240.000"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                    <View
-                        android:background="@color/black"
-                        android:layout_width="match_parent"
-                        android:layout_height="0.005dp">
-                    </View>
-                    <TextView
-                        android:layout_marginStart="5dp"
-                        android:textStyle="bold"
-                        android:textSize="12sp"
-                        android:textColor="@color/greencolor"
-                        android:text="To be Paid Now"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                    <TextView
-                        android:layout_marginStart="5dp"
-                        android:textStyle="bold"
-                        android:textSize="14sp"
-                        android:textColor="@color/blackbold"
-                        android:text="KD 240.000"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <!--buttons-->
-            <LinearLayout
-                android:background="@color/white"
-                android:padding="15dp"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <Button
-                    android:id="@+id/continue_shopping_button"
-                    android:textSize="17sp"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    android:text="Continue Shopping"
-                    android:background="@drawable/continueshoppingbtn"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_weight="0.5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <TextView
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:text="Total Amount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
-                <Button
-                    android:id="@+id/checkout_button"
+                <TextView
+                    android:textColor="@color/blackbold"
                     android:textSize="17sp"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    android:text="Checkout"
+                    android:textStyle="bold"
+                    android:text="KD 480.000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:paddingTop="5dp"
+                android:orientation="vertical"
+                android:background="@drawable/amt_bg"
+                android:layout_weight="0.5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:padding="5dp"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:textColor="@color/orangewarning"
+                    android:text="To be Paid After Confirmation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
                     android:layout_marginStart="5dp"
-                    android:background="@drawable/btnsml"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="@color/blackbold"
+                    android:text="KD 240.000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <View
+                    android:background="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.005dp">
+                </View>
+                <TextView
+                    android:padding="5dp"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:textColor="@color/greencolor"
+                    android:text="To be Paid Now"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginStart="5dp"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="@color/blackbold"
+                    android:text="KD 240.000"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
             </LinearLayout>
         </LinearLayout>
-    </android.support.v4.widget.NestedScrollView>
+        <!--buttons-->
+        <LinearLayout
+            android:background="@color/actionbarcolor"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <Button
+                android:layout_margin="10dp"
+                android:id="@+id/continue_shopping_button"
+                android:textSize="17sp"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:text="Continue Shopping"
+                android:background="@drawable/continueshoppingbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button
+                android:layout_margin="10dp"
+                android:id="@+id/checkout_button"
+                android:textSize="17sp"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:text="Checkout"
+                android:background="@drawable/btnsml"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>

@@ -7,19 +7,18 @@
     android:orientation="vertical"
     android:background="@color/bg2color"
     android:paddingTop="24dp"
-    android:paddingLeft="24dp"
-    android:paddingRight="24dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CategoryActivity">
     <RelativeLayout
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
         android:id="@+id/arabic_relative_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <ImageButton
-            android:layout_marginTop="15dp"
             android:background="@android:color/transparent"
             android:src="@drawable/arabic"
             android:layout_alignParentEnd="true"
@@ -45,22 +44,28 @@
         android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
-
-    <GridView
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginStart="15dp"
-        android:horizontalSpacing="80dp"
-        android:verticalSpacing="40dp"
-        android:id="@+id/category_gridview"
-        android:numColumns="2"
+    <RelativeLayout
         android:layout_marginBottom="60dp"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent">
-    </GridView>
+        <GridView
+            android:gravity="center_horizontal"
+            android:scrollbars="none"
+            android:layout_marginTop="10dp"
+            android:verticalSpacing="50dp"
+            android:id="@+id/category_gridview"
+            android:numColumns="2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </GridView>
+        <View
+            android:layout_alignParentBottom="true"
+            android:background="@color/categorygridshade"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"/>
+    </RelativeLayout>
 </LinearLayout>
     <RelativeLayout
-
         android:layout_marginEnd="15dp"
         android:layout_marginStart="15dp"
         android:background="@color/bg2color"

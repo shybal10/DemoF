@@ -20,7 +20,7 @@
             android:layout_centerHorizontal="true"
             android:textStyle="bold"
             android:textColor="@color/blue"
-            android:text="Choose Area Screen"
+            android:text="Choose Event Area"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </RelativeLayout>
@@ -31,6 +31,8 @@
         />
 
     <RelativeLayout
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
         android:layout_marginBottom="5dp"
         android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"

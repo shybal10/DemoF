@@ -30,17 +30,13 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
         exploreOptions = (LinearLayout) findViewById(R.id.explore_options);
         packageOptions = (LinearLayout) findViewById(R.id.packages_options);
+
+//        explore options
         exploreArea = (RelativeLayout) findViewById(R.id.explore_area_layout);
         exploreArea.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(HomeActivity.this, AreaScreenActivity.class));
-            }
-        });
-        packageArea = (RelativeLayout) findViewById(R.id.package_area_layout);
-        packageArea.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(HomeActivity.this, AreaScreenActivity.class));
@@ -54,40 +50,14 @@ public class HomeActivity extends AppCompatActivity {
 
             }
         });
-        packageDate = (RelativeLayout) findViewById(R.id.package_date_layout);
-        packageDate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(HomeActivity.this, DateScreenActivity.class));
-
-            }
-        });
-        menu = (ImageButton) findViewById(R.id.menu_button);
-        cart = (ImageButton) findViewById(R.id.cart_button);
-        service = (ImageButton) findViewById(R.id.service);
-        packagesSearch = (Button) findViewById(R.id.packages_search_button);
         exploreSearch = (Button) findViewById(R.id.explore_search_button);
-        exploreButton = (Button) findViewById(R.id.explore_button);
-        packagesButton = (Button) findViewById(R.id.packages_button);
-        cart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(HomeActivity.this,CartActivity.class));
-
-            }
-        });
-        service.setOnClickListener(new View.OnClickListener() {
+        exploreSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(HomeActivity.this,ServiceCategoryActivity.class));
             }
         });
-        exploreSearch.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(HomeActivity.this,ServiceListingActivity.class));
-            }
-        });
+        exploreButton = (Button) findViewById(R.id.explore_button);
         exploreButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -101,26 +71,62 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        packagesButton.setOnClickListener(new View.OnClickListener() {
+//        package options
+        packageArea = (RelativeLayout) findViewById(R.id.package_area_layout);
+        packageArea.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                packageOptions.setVisibility(View.VISIBLE);
-                exploreOptions.setVisibility(View.GONE);
-
-                packagesButton.setBackgroundResource(R.drawable.switchbg);
-                packagesButton.setTextColor(HomeActivity.this.getResources().getColor(R.color.white));
-
-                exploreButton.setBackgroundResource(0);
-                exploreButton.setTextColor(HomeActivity.this.getResources().getColor(R.color.orange));
+                startActivity(new Intent(HomeActivity.this, AreaScreenActivity.class));
             }
         });
+        packageDate = (RelativeLayout) findViewById(R.id.package_date_layout);
+        packageDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this, DateScreenActivity.class));
 
+            }
+        });
+        packagesSearch = (Button) findViewById(R.id.packages_search_button);
         packagesSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(HomeActivity.this,PackageListingActivity.class));
             }
         });
+        packagesButton = (Button) findViewById(R.id.packages_button);
+        packagesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                packageOptions.setVisibility(View.VISIBLE);
+                exploreOptions.setVisibility(View.GONE);
+                packagesButton.setBackgroundResource(R.drawable.switchbg);
+                packagesButton.setTextColor(HomeActivity.this.getResources().getColor(R.color.white));
+                exploreButton.setBackgroundResource(0);
+                exploreButton.setTextColor(HomeActivity.this.getResources().getColor(R.color.orange));
+            }
+        });
+
+//        other button options
+        menu = (ImageButton) findViewById(R.id.menu_button);
+        cart = (ImageButton) findViewById(R.id.cart_button);
+        service = (ImageButton) findViewById(R.id.service);
+        cart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this,CartActivity.class));
+
+            }
+        });
+//        opens service categories
+        service.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this,ServiceCategoryActivity.class));
+            }
+        });
+
+
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -128,7 +134,7 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        profile = (LinearLayout) findViewById(R.id.profile_name_layout);
+        profile = (LinearLayout) findViewById(R.id.user_prfile_layout);
         profile.setClickable(true);
         profile.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -137,17 +143,14 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-
         //featured services
         featuredServicesRecyclerView = (RecyclerView) findViewById(R.id.featured_services_recycler_view);
         featuredServicesRecyclerView.setHasFixedSize(true);
-
         featuredServicesLinearLayoutManager = new LinearLayoutManager(this);
         featuredServicesLinearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
         featuredServicesRecyclerView.setLayoutManager(featuredServicesLinearLayoutManager);
         featuredServicesRecyclerViewAdapter = new FeaturedServicesRecyclerViewAdapter();
         featuredServicesRecyclerView.setAdapter(featuredServicesRecyclerViewAdapter);
-
 
         //most selling
         mostSellingRecyclerView = (RecyclerView) findViewById(R.id.most_selling_recycler_view);

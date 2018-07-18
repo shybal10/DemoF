@@ -16,5 +16,6 @@
     <color name="black">#585654</color>
     <color name="blackbold">#2b2b2b</color>
     <color name="historyshade">#eeedf1</color>
-
+    <color name="categorygridshade">#80f7f6f1</color>
+    <color name="vendoritemclickshade">#6Ff99d1c</color>
 </resources>

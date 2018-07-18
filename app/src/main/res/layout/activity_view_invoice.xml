@@ -148,6 +148,7 @@
                                 android:layout_height="wrap_content" />
                         </LinearLayout>
                         <ImageButton
+                            android:onClick="showInfoPopup"
                             android:background="@android:color/transparent"
                             android:src="@drawable/help"
                             android:layout_centerVertical="true"
@@ -221,6 +222,7 @@
                                 android:layout_height="wrap_content" />
                         </LinearLayout>
                         <ImageButton
+                            android:onClick="showInfoPopup"
                             android:background="@android:color/transparent"
                             android:src="@drawable/help"
                             android:layout_centerVertical="true"
@@ -329,7 +331,7 @@
 
             <!--buttons-->
             <RelativeLayout
-                android:background="@color/white"
+                android:background="@color/actionbarcolor"
                 android:paddingTop="10dp"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"

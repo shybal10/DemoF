@@ -41,8 +41,6 @@ public class ServiceCategoryGridAdapter extends BaseAdapter {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         if (convertView == null) {
-
-
             // if it's not recycled, initialize some attributes
             imageView = new View(context);
             imageView = inflater.inflate(R.layout.service_cat_grid_layout, null);

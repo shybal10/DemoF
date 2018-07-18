@@ -17,13 +17,14 @@ import com.jaeger.library.StatusBarUtil;
 
 public class LoginActivity extends AppCompatActivity {
 
-    Button SignUp,login;
+    Button SignUp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+//        handle button clicks
         SignUp = (Button) findViewById(R.id.signup_button);
-        login = (Button) findViewById(R.id.login_button);
         SignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -32,14 +33,9 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(LoginActivity.this,HomeActivity.class));
-
-            }
-        });
     }
+
+//    offer popup dialog
     private void showDialogWelcome() {
         final OfferDialog dialog = new OfferDialog(this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -54,4 +50,7 @@ public class LoginActivity extends AppCompatActivity {
         dialog.getWindow().setAttributes(lp);
     }
 
+    public void showHome(View view) {
+        startActivity(new Intent(LoginActivity.this,HomeActivity.class));
+    }
 }

@@ -17,9 +17,8 @@
         android:background="@color/actionbarcolor">
 
         <RelativeLayout
-            android:focusable="true"
-            android:clickable="true"
             android:id="@+id/birthday_layout"
+            android:onClick="searchAgain"
             android:layout_marginStart="20dp"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
@@ -27,7 +26,7 @@
             android:paddingBottom="5dp"
             android:layout_centerVertical="true"
             android:orientation="horizontal"
-            android:layout_width="125dp"
+            android:layout_width="110dp"
             android:background="@drawable/birthday_border"
             android:layout_height="30dp">
             <TextView
@@ -50,36 +49,37 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:focusable="true"
-            android:clickable="true"
-            android:layout_toEndOf="@+id/birthday_layout"
-            android:layout_marginStart="20dp"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp"
+            android:onClick="searchAgain"
             android:id="@+id/city_layout"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
             android:layout_centerVertical="true"
-            android:orientation="horizontal"
-            android:layout_width="125dp"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/birthday_layout"
             android:background="@drawable/birthday_border"
-            android:layout_height="30dp">
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp">
+
             <TextView
-                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
-                android:textSize="12sp"
-                android:textColor="@color/blue"
-                android:text="Kuwait City"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <ImageView
-                android:padding="5dp"
                 android:layout_centerVertical="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="5dp"
-                android:src="@drawable/bluedown"
+                android:text="Kuwait City"
+                android:textColor="@color/blue"
+                android:textSize="12sp" />
+
+            <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:padding="5dp"
+                android:src="@drawable/bluedown" />
         </RelativeLayout>
 
 
@@ -91,6 +91,7 @@
             android:orientation="horizontal">
 
             <ImageButton
+                android:onClick="showCart"
                 android:background="@android:color/transparent"
                 android:layout_gravity="center_vertical"
                 android:id="@+id/cart_button"
@@ -100,6 +101,7 @@
                 android:src="@drawable/cart" />
 
             <ImageButton
+                android:onClick="showMenu"
                 android:layout_gravity="center_vertical"
                 android:background="@android:color/transparent"
                 android:id="@+id/menu_button"
@@ -118,6 +120,8 @@
     </RelativeLayout>
 
     <LinearLayout
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
         android:layout_below="@+id/app_bar"
         android:id="@+id/edit_text_layout"
         android:orientation="horizontal"
@@ -135,7 +139,7 @@
                 android:textSize="17sp"
                 android:background="@android:color/transparent"
                 android:textColorHint="@color/black"
-                android:hint="Search Category name"
+                android:hint="Search"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <ImageView

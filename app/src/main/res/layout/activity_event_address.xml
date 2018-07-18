@@ -33,6 +33,7 @@
             android:layout_centerVertical="true"
             android:orientation="horizontal">
             <ImageButton
+                android:onClick="showCart"
                 android:background="@android:color/transparent"
                 android:layout_gravity="center_vertical"
                 android:id="@+id/cart_button"
@@ -42,6 +43,7 @@
                 android:src="@drawable/cart" />
 
             <ImageButton
+                android:onClick="showMenu"
                 android:layout_gravity="center_vertical"
                 android:background="@android:color/transparent"
                 android:id="@+id/menu_button"
@@ -63,6 +65,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">

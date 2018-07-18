@@ -15,7 +15,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <ImageButton
-                    android:layout_marginTop="20dp"
                     android:background="@android:color/transparent"
                     android:src="@drawable/arabic"
                     android:layout_alignParentEnd="true"
@@ -33,7 +32,7 @@
             <LinearLayout
                 android:showDividers="middle"
                 android:divider="@drawable/divider"
-                android:layout_marginBottom="100dp"
+                android:layout_marginBottom="60dp"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
                 android:id="@+id/dot_linear"
@@ -42,12 +41,12 @@
                 android:orientation="horizontal">
             </LinearLayout>
     <Button
+        android:gravity="bottom|center"
         android:textColor="@color/orange"
-        android:textSize="17.75sp"
+        android:textSize="17sp"
         android:id="@+id/skip_button"
         android:textAllCaps="false"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="15dp"
         android:layout_alignParentBottom="true"
         android:background="@android:color/transparent"
         android:text="@string/skip"

@@ -17,7 +17,7 @@
 
     <ImageView
         android:id="@+id/swipe_images"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="20dp"
         android:src="@drawable/intro1"
         android:layout_width="match_parent"
         android:layout_height="100dp" />
@@ -35,7 +35,7 @@
         android:gravity="center"
         android:textSize="15.75sp"
         android:id="@+id/swipe_text_info"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="35dp"
         android:layout_marginStart="35dp"
         android:text="This is a test of the text that has to be written and not the actual text that will go into the application i am just writing more to see how long this can go onwithout causing any problems to the application"

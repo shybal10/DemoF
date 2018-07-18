@@ -4,9 +4,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 
 import com.example.mawaqaamobile.festivity.Adapters.InvoiceConfRecViewAdapter;
 import com.example.mawaqaamobile.festivity.Adapters.InvoicePendingRecViewAdapter;
+import com.example.mawaqaamobile.festivity.Popup.InfoDialog;
 
 public class ViewInvoiceActivity extends AppCompatActivity {
 
@@ -31,5 +35,18 @@ public class ViewInvoiceActivity extends AppCompatActivity {
         confInvoiceRecView.setNestedScrollingEnabled(false);
         confInvoiceRecView.setLayoutManager(new LinearLayoutManager(this));
         confInvoiceRecView.setAdapter(invoiceConfRecViewAdapter);
+    }
+
+    public void showInfoPopup(View view) {
+        final InfoDialog dialog = new InfoDialog(this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.info_popup_dialog);
+        dialog.setCanceledOnTouchOutside(true);
+        WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+        //lp.copyFrom(dialog.getWindow().getAttributes());
+        lp.width = WindowManager.LayoutParams.WRAP_CONTENT;
+        lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
+        dialog.show();
+        dialog.getWindow().setAttributes(lp);
     }
 }

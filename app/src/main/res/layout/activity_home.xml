@@ -14,40 +14,45 @@
         android:layout_height="?attr/actionBarSize"
         android:background="@color/actionbarcolor">
 
-        <ImageView
-            android:id="@+id/user_image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="20dp"
-            android:layout_marginStart="20dp"
-            android:src="@drawable/usersml" />
-
         <LinearLayout
-            android:id="@+id/profile_name_layout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
             android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/user_image"
-            android:orientation="horizontal">
-
-            <TextView
-                android:textSize="15sp"
-                android:textColor="@color/blackbold"
+            android:layout_marginStart="20dp"
+            android:layout_alignParentStart="true"
+            android:id="@+id/user_prfile_layout"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/user_image"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hello," />
-
-            <TextView
-                android:textSize="15sp"
-                android:textColor="@color/blackbold"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/usersml" />
+            <LinearLayout
+                android:layout_gravity="center"
+                android:id="@+id/profile_name_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:text="Riyaz Muhammad" />
+                android:orientation="horizontal">
+                <TextView
+                    android:textSize="15sp"
+                    android:textColor="@color/blackbold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hello," />
+
+                <TextView
+                    android:textSize="15sp"
+                    android:textColor="@color/blackbold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:text="Riyaz Muhammad" />
+            </LinearLayout>
         </LinearLayout>
+
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -111,31 +116,32 @@
                 android:weightSum="2">
 
                 <Button
-                    android:background="@android:color/transparent"
+                    android:background="@drawable/switchbg"
                     android:id="@+id/explore_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Explore"
                     android:textAllCaps="false"
-                    android:textColor="@color/orange"
+                    android:textColor="@color/white"
                     android:textSize="17.75sp" />
 
                 <Button
-                    android:background="@drawable/switchbg"
+                    android:textColor="@color/orange"
+                    android:background="@android:color/transparent"
                     android:id="@+id/packages_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Packages"
                     android:textAllCaps="false"
-                    android:textColor="@color/white"
                     android:textSize="17.75sp" />
             </LinearLayout>
 
 
             <!--packages options-->
             <LinearLayout
+                android:visibility="gone"
                 android:id="@+id/packages_options"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
@@ -285,7 +291,6 @@
             <!--explore options-->
             <LinearLayout
                 android:id="@+id/explore_options"
-                android:visibility="gone"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -476,7 +481,7 @@
                             android:layout_alignParentBottom="true"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Unpaid\nBills"
+                            android:text="My\nOrders"
                             android:textColor="@color/black"
                             android:textSize="10.75sp" />
                     </RelativeLayout>

@@ -23,6 +23,7 @@
             android:layout_height="0.002dp"/>
 
         <LinearLayout
+            android:focusable="true"
             android:clickable="true"
             android:id="@+id/view_cart_button"
             android:layout_margin="15dp"
@@ -34,7 +35,7 @@
             <TextView
                 android:textStyle="bold"
                 android:padding="10dp"
-                android:textSize="17.75sp"
+                android:textSize="17sp"
                 android:textColor="@color/white"
                 android:text="1"
                 android:layout_width="wrap_content"
@@ -42,7 +43,7 @@
             <TextView
                 android:textStyle="bold"
                 android:padding="10dp"
-                android:textSize="17.75sp"
+                android:textSize="17sp"
                 android:textColor="@color/white"
                 android:text="View Cart"
                 android:layout_width="wrap_content"
@@ -51,11 +52,11 @@
 
         </LinearLayout>
         <TextView
+            android:layout_toEndOf="@+id/view_cart_button"
             android:layout_margin="15dp"
             android:layout_centerVertical="true"
-            android:layout_alignParentEnd="true"
             android:textColor="@color/blackbold"
-            android:textSize="15sp"
+            android:textSize="16sp"
             android:text="Item Added Into Cart"
             android:textStyle="bold"
             android:layout_width="wrap_content"

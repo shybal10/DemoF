@@ -25,7 +25,6 @@ public class ServiceCategoryActivity extends AppCompatActivity {
         serviceCategoryListFragment = new ServiceCategoryListFragment();
         packageFragment = new PackageFragment();
 
-
         getFragmentManager().beginTransaction().add(R.id.fragment_continer,serviceCategoryListFragment).commit();
 
         explore = (Button) findViewById(R.id.explore_button);

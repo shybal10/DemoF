@@ -60,4 +60,12 @@ public class ReviewPlaceOrderActivity extends AppCompatActivity {
             }
         });
     }
+
+    public void showCart(View view) {
+        startActivity(new Intent(ReviewPlaceOrderActivity.this,CartActivity.class));
+    }
+
+    public void showMenu(View view) {
+        startActivity(new Intent(ReviewPlaceOrderActivity.this,MenuActivity.class));
+    }
 }

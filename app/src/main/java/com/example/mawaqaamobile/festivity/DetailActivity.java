@@ -38,16 +38,17 @@ public class DetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
-        viewPager = (ViewPager) findViewById(R.id.view_pager);
 
+//        handle button clicks
+        AddtoCart = (Button) findViewById(R.id.add_to_cart);
         dateLayout = (RelativeLayout) findViewById(R.id.date_layout);
+        timeLayout = (RelativeLayout) findViewById(R.id.time_layout);
         dateLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(DetailActivity.this, DateScreenActivity.class));
             }
         });
-        timeLayout = (RelativeLayout) findViewById(R.id.time_layout);
         timeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,36 +56,26 @@ public class DetailActivity extends AppCompatActivity {
 
             }
         });
-        AddtoCart = (Button) findViewById(R.id.add_to_cart);
         AddtoCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 DetailActivity.this.finish();
             }
         });
-        menu = (ImageButton) findViewById(R.id.menu_button);
-        menu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(DetailActivity.this,MenuActivity.class));
-            }
-        });
 
-        cart = (ImageButton) findViewById(R.id.cart_button);
-        cart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(DetailActivity.this,CartActivity.class));
-            }
-        });
+//        set attributes recycler view
         detailAttributesRecView = (RecyclerView) findViewById(R.id.detail_attributes_rec_view);
         detailAttributesRecViewAdapter = new DetailAttributesRecViewAdapter();
         detailAttributesRecView.setHasFixedSize(true);
         detailAttributesRecView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
         detailAttributesRecView.setAdapter(detailAttributesRecViewAdapter);
 
+//        set up View Pager
+        viewPager = (ViewPager) findViewById(R.id.view_pager);
         customSwipeAdapter = new CustomSwipeAdapter(this);
         viewPager.setAdapter(customSwipeAdapter);
+
+//        setup slider dots
         slideDots = (LinearLayout) findViewById(R.id.slider_dots);
         dotsCount = customSwipeAdapter.getCount();
         dots = new ImageView[dotsCount];
@@ -92,7 +83,6 @@ public class DetailActivity extends AppCompatActivity {
             dots[i] = new ImageView(this);
             dots[i].setImageDrawable(ContextCompat.getDrawable(this, R.drawable.pagination));
             LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-            //layoutParams.setMargins(8,0,8,0);
             slideDots.addView(dots[i], layoutParams);
         }
         dots[0].setImageDrawable(ContextCompat.getDrawable(this, R.drawable.paginationactive));
@@ -122,6 +112,18 @@ public class DetailActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
+    }
+
+    public void openCart(View view) {
+        startActivity(new Intent(DetailActivity.this,CartActivity.class));
+    }
+
+    public void showMenu(View view) {
+        startActivity(new Intent(DetailActivity.this,MenuActivity.class));
+    }
+
+    public void setAttributes(View view) {
+        startActivity(new Intent(DetailActivity.this,AtrributesActivity.class));
     }
 
     public class CustomSwipeAdapter extends PagerAdapter {

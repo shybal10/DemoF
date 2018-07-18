@@ -15,9 +15,10 @@ public class HistoryActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
+
+//        set up history adapter
         historyRecyclerView = (RecyclerView) findViewById(R.id.history_recycler_view);
         historyRecyclerView.setHasFixedSize(true);
-
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         historyRecyclerView.setLayoutManager(linearLayoutManager);

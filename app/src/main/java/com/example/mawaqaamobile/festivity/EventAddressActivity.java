@@ -15,6 +15,8 @@ public class EventAddressActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event_address);
+
+//        handle button clicks
         addAddress = (Button) findViewById(R.id.add_address);
         chooseLocation = (LinearLayout) findViewById(R.id.choose_location_layout);
         chooseLocation.setOnClickListener(new View.OnClickListener() {
@@ -30,5 +32,13 @@ public class EventAddressActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    public void showCart(View view) {
+        startActivity(new Intent(EventAddressActivity.this,CartActivity.class));
+    }
+
+    public void showMenu(View view) {
+        startActivity(new Intent(EventAddressActivity.this,MenuActivity.class));
     }
 }

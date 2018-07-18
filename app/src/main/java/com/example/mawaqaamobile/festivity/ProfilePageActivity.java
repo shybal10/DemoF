@@ -59,8 +59,6 @@ public class ProfilePageActivity extends AppCompatActivity {
 
         //recycler view for address
         addressRecyclerView = (RecyclerView) findViewById(R.id.addess_reycler_view);
-        //addressRecyclerView.setHasFixedSize(true);
-
         addressLinearLayoutManager = new LinearLayoutManager(this);
         addressLinearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         addressRecyclerView.setLayoutManager(addressLinearLayoutManager);

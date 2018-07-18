@@ -54,12 +54,26 @@ public class CategoryGridViewAdapter extends BaseAdapter {
         return 0;
     }
 
-    public void makeAllUnselect(int position) {
-        hashMapSelected.put(position, true);
-        for (int i = 0; i < hashMapSelected.size(); i++) {
+    public void selectCategories(int position) {
+        if (hashMapSelected.get(position)) {
+            hashMapSelected.put(position, false);
+        }
+        else {
+            hashMapSelected.put(position, true);
+        }
+        //for selecting just one category
+/*        for (int i = 0; i < hashMapSelected.size(); i++) {
             if (i != position)
                 hashMapSelected.put(i, false);
+        }*/
+    }
+
+    public boolean isCategoriesSelected() {
+        for (int i = 0; i < hashMapSelected.size(); i++) {
+            if (hashMapSelected.get(i))
+                return true;
         }
+        return false;
     }
 
     @Override

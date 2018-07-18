@@ -16,7 +16,6 @@ import com.example.mawaqaamobile.festivity.Fragments.FilterFragment;
 
 public class PackageListingActivity extends AppCompatActivity {
     FilterFragment filterFragment;
-    RelativeLayout birthdayLayout,cityLayout;
     ImageButton cartButton,menuButton,serviceButton,filterButton;
     PackageListingRecyclerViewAdapter packageListingRecyclerViewAdapter;
     RecyclerView packageListingRecyclerView;
@@ -27,6 +26,8 @@ public class PackageListingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_package_listing);
         initialiseResources();
+
+//        handle button clicks
         filterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,18 +53,6 @@ public class PackageListingActivity extends AppCompatActivity {
 
             }
         });
-        birthdayLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(PackageListingActivity.this,AtrributesActivity.class));
-            }
-        });
-        cityLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(PackageListingActivity.this,AtrributesActivity.class));
-            }
-        });
 
         setupPackageListingRecyclerView();
     }
@@ -77,8 +66,6 @@ public class PackageListingActivity extends AppCompatActivity {
         cartButton = (ImageButton) findViewById(R.id.cart_button);
         menuButton = (ImageButton) findViewById(R.id.menu_button);
         serviceButton = (ImageButton) findViewById(R.id.service);
-        birthdayLayout = (RelativeLayout) findViewById(R.id.birthday_layout);
-        cityLayout = (RelativeLayout) findViewById(R.id.city_layout);
     }
     private void setupPackageListingRecyclerView() {
         packageListingRecyclerView = (RecyclerView) findViewById(R.id.packages_list_recycler_view);
@@ -88,5 +75,11 @@ public class PackageListingActivity extends AppCompatActivity {
         packageListingRecyclerView.setLayoutManager(packageListingLayoutManager);
         packageListingRecyclerViewAdapter = new PackageListingRecyclerViewAdapter(this);
         packageListingRecyclerView.setAdapter(packageListingRecyclerViewAdapter);
+    }
+
+    public void searchAgain(View view) {
+        Intent i = new Intent(PackageListingActivity.this,SearchAgainActivity.class);
+        i.putExtra("searchPackages",true);
+        startActivity(i);
     }
 }

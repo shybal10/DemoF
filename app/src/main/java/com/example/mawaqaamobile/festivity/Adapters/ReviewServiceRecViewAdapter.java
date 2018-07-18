@@ -5,11 +5,15 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import com.example.mawaqaamobile.festivity.R;
+import com.example.mawaqaamobile.festivity.UIutills.ViewDetailsGridView;
+
 public class ReviewServiceRecViewAdapter extends RecyclerView.Adapter<ReviewServiceRecViewAdapter.ItemViewHolder> {
     private boolean showAllServices;
     private Context mcontext;
+    private ViewDetailsGridViewAdapter viewDetailsGridViewAdapter;
 
     public ReviewServiceRecViewAdapter(Context context, boolean show) {
         this.mcontext = context;
@@ -23,7 +27,11 @@ public class ReviewServiceRecViewAdapter extends RecyclerView.Adapter<ReviewServ
     }
 
     @Override
-    public void onBindViewHolder(ItemViewHolder holder, int position) {
+    public void onBindViewHolder(final ItemViewHolder holder, int position) {
+        //close opened view details
+        holder.viewDetailsGridView.setVisibility(View.GONE);
+        holder.viewDetails.setVisibility(View.VISIBLE);
+        holder.closeDetails.setVisibility(View.GONE);
         if (!showAllServices) {
             if (position == 0||position == 1) {
                 holder.itemView.setVisibility(View.VISIBLE);
@@ -38,6 +46,25 @@ public class ReviewServiceRecViewAdapter extends RecyclerView.Adapter<ReviewServ
             //animation = AnimationUtils.loadAnimation(mcontext, R.anim.address_slide_animation);
             // holder.itemView.startAnimation(animation);
         }
+        viewDetailsGridViewAdapter = new ViewDetailsGridViewAdapter(mcontext);
+        holder.viewDetailsGridView.setAdapter(viewDetailsGridViewAdapter);
+        holder.viewDetailsGridView.setVisibility(View.GONE);
+        holder.viewDetails.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                holder.viewDetailsGridView.setVisibility(View.VISIBLE);
+                holder.viewDetails.setVisibility(View.INVISIBLE);
+                holder.closeDetails.setVisibility(View.VISIBLE);
+            }
+        });
+        holder.closeDetails.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                holder.viewDetailsGridView.setVisibility(View.GONE);
+                holder.viewDetails.setVisibility(View.VISIBLE);
+                holder.closeDetails.setVisibility(View.GONE);
+            }
+        });
     }
     @Override
     public int getItemCount() {
@@ -50,8 +77,13 @@ public class ReviewServiceRecViewAdapter extends RecyclerView.Adapter<ReviewServ
 
 
     public class ItemViewHolder extends RecyclerView.ViewHolder {
+        ViewDetailsGridView viewDetailsGridView;
+        LinearLayout viewDetails,closeDetails;
         public ItemViewHolder(View itemView) {
             super(itemView);
+            viewDetails = (LinearLayout) itemView.findViewById(R.id.view_details_layout);
+            closeDetails = (LinearLayout) itemView.findViewById(R.id.close_view_detail_layout);
+            viewDetailsGridView = (ViewDetailsGridView) itemView.findViewById(R.id.review_service_view_details_grid_view);
         }
     }
 }

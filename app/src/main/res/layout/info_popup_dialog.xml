@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:padding="15dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textStyle="bold"
+        android:textColor="@color/blue"
+        android:padding="5dp"
+        android:textSize="15sp"
+        android:text="Confirmed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:textColor="@color/blue"
+        android:text="Items with the status of Confirmed can be paid for now"
+        android:textSize="12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:textStyle="bold"
+        android:textColor="@color/blue"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:text="Pending Confirmation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:textColor="@color/blue"
+        android:text="Items with the status of Pending Confirmation can be paid for once its confirmed from our side"
+        android:textSize="12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

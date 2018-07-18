@@ -28,6 +28,8 @@ public class ChooseLocationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_location);
+
+//        handle button click
         ConfirmAddressButton = (Button) findViewById(R.id.confirm_address_button);
         ConfirmAddressButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,17 +38,16 @@ public class ChooseLocationActivity extends AppCompatActivity {
                 ChooseLocationActivity.this.finish();
             }
         });
+
+//        initialize map
         mMapView = (MapView) findViewById(R.id.mapView);
         mMapView.onCreate(savedInstanceState);
-
         mMapView.onResume(); // needed to get the map to display immediately
-
         try {
             MapsInitializer.initialize(ChooseLocationActivity.this.getApplicationContext());
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         mMapView.getMapAsync(new OnMapReadyCallback() {
             @Override
             public void onMapReady(GoogleMap mMap) {
@@ -68,10 +69,10 @@ public class ChooseLocationActivity extends AppCompatActivity {
                 }
                 googleMap.setMyLocationEnabled(true);
 
-                // For dropping a marker at a point on the Map
+                // set location on map
                 LatLng sydney = new LatLng(-34, 151);
 
-                // For zooming automatically to the location of the marker
+                // For zooming automatically to the location
                 CameraPosition cameraPosition = new CameraPosition.Builder().target(sydney).zoom(12).build();
                 googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
             }
