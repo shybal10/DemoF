@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import com.example.mawaqaamobile.festivity.R;
 
@@ -26,6 +27,21 @@ public class HistoryRecyclerviewAdapter extends RecyclerView.Adapter<HistoryRecy
             holder.itemView.setBackgroundColor(Color.parseColor("#eeedf1"));
             //  holder.imageView.setBackgroundColor(Color.parseColor("#FFFAF8FD"));
         }
+
+        if (position == 0) {
+            holder.pending.setVisibility(View.GONE);
+            holder.confirmed.setVisibility(View.GONE);
+            holder.cancelled.setVisibility(View.VISIBLE);
+        }else if (position == 1){
+            holder.pending.setVisibility(View.VISIBLE);
+            holder.confirmed.setVisibility(View.GONE);
+            holder.cancelled.setVisibility(View.GONE);
+        }
+        else {
+            holder.pending.setVisibility(View.GONE);
+            holder.confirmed.setVisibility(View.VISIBLE);
+            holder.cancelled.setVisibility(View.GONE);
+        }
     }
 
     @Override
@@ -34,8 +50,12 @@ public class HistoryRecyclerviewAdapter extends RecyclerView.Adapter<HistoryRecy
     }
 
     public class ItemViewHolder extends RecyclerView.ViewHolder {
+        LinearLayout confirmed,pending,cancelled;
         public ItemViewHolder(View itemView) {
             super(itemView);
+            confirmed = (LinearLayout) itemView.findViewById(R.id.confirmed_layout);
+            pending = (LinearLayout) itemView.findViewById(R.id.pending_confirmation_layout);
+            cancelled = (LinearLayout) itemView.findViewById(R.id.cancelled_layout);
         }
     }
 }

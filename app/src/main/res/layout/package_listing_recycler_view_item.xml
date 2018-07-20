@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <android.support.v7.widget.CardView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_marginBottom="15dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        xmlns:card_view="http://schemas.android.com/tools"
-        tool:cardCornerRadius="25dp"
-        card_view:cardUseCompatPadding="true"
-        card_view:elevation="25dp"
-        xmlns:tool="http://schemas.android.com/apk/res-auto">
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginBottom="15dp"
+    android:layout_marginStart="15dp"
+    android:layout_marginEnd="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/tools"
+    tool:cardCornerRadius="25dp"
+    card_view:cardUseCompatPadding="true"
+    card_view:elevation="25dp"
+    xmlns:tool="http://schemas.android.com/apk/res-auto">
         <LinearLayout
             android:layout_marginEnd="15dp"
             android:layout_marginStart="15dp"
@@ -23,15 +22,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
+                    card_view:ignore="MissingPrefix"
+                    fontPath="fonts/opensansbold.ttf"
                     android:id="@+id/birthday_package_text"
                     android:layout_alignParentStart="true"
-                    android:textSize="16sp"
+                    android:textSize="17.75sp"
                     android:textStyle="bold"
                     android:textColor="@color/orange"
                     android:text="Birthday Package"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
+                    card_view:ignore="MissingPrefix"
+                    fontPath="fonts/opensansbold.ttf"
                     android:padding="5dp"
                     android:textStyle="bold"
                     android:layout_below="@+id/birthday_package_text"
@@ -41,27 +44,32 @@
                     android:text="Option-A"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+
                 <TextView
                     android:id="@+id/price_text_view"
-                    android:textStyle="bold"
-                    android:layout_alignParentEnd="true"
-                    android:textSize="16sp"
-                    android:textColor="@color/blackbold"
-                    android:text="KD 500.000"
+                    fontPath="fonts/opensansbold.ttf"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="KD 500.000"
+                    android:textColor="@color/blackbold"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    card_view:ignore="MissingPrefix" />
                 <TextView
+                    android:padding="5dp"
+                    card_view:ignore="MissingPrefix"
+                    fontPath="fonts/opensanssemibold.ttf"
                     android:layout_marginEnd="10dp"
                     android:layout_below="@+id/price_text_view"
                     android:layout_alignParentEnd="true"
-                    android:textSize="11sp"
-                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textColor="@color/blackbold"
                     android:text="Package Price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
             </RelativeLayout>
             <View
-                android:layout_marginTop="5dp"
                 android:background="@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="0.005dp"/>
@@ -74,11 +82,16 @@
                     android:layout_alignParentStart="true"
                     android:textColor="@color/black"
                     android:text="Package Include (8 services)"
-                    android:textSize="12sp"
+                    android:textSize="13.75sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <Button
-                    android:padding="5dp"
+                    card_view:ignore="MissingPrefix"
+                    fontPath="fonts/opensanssemibold.ttf"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingBottom="5dp"
                     android:id="@+id/view_all_services_button"
                     android:layout_centerVertical="true"
                     android:textAllCaps="false"
@@ -87,7 +100,7 @@
                     android:textColor="@color/white"
                     android:text="View all Services"
                     android:layout_alignParentEnd="true"
-                    android:layout_width="110dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="30dp" />
             </RelativeLayout>
             <android.support.v7.widget.RecyclerView
@@ -97,6 +110,8 @@
                 android:layout_height="wrap_content">
             </android.support.v7.widget.RecyclerView>
             <Button
+                card_view:ignore="MissingPrefix"
+                fontPath="fonts/opensanssemibold.ttf"
                 android:layout_margin="5dp"
                 android:textSize="17.75sp"
                 android:textColor="@color/white"
@@ -107,7 +122,4 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </LinearLayout>
-
     </android.support.v7.widget.CardView>
-
-

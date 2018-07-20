@@ -1,11 +1,14 @@
 package com.example.mawaqaamobile.festivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.jaeger.library.StatusBarUtil;
+
+import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -22,5 +25,9 @@ public class SplashActivity extends AppCompatActivity {
                 SplashActivity.this.finish();
             }
         },DISPLAY_TIME);
+    }
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
     }
 }

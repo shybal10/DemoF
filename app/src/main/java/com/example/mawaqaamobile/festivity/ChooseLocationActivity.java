@@ -1,6 +1,7 @@
 package com.example.mawaqaamobile.festivity;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.provider.MediaStore;
@@ -18,6 +19,8 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 
 public class ChooseLocationActivity extends AppCompatActivity {
     Button ConfirmAddressButton;
@@ -78,5 +81,10 @@ public class ChooseLocationActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
     }
 }

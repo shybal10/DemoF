@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
 <LinearLayout
     android:orientation="vertical"
     android:background="@color/bg2color"
@@ -26,6 +26,8 @@
             android:layout_height="wrap_content" />
     </RelativeLayout>
     <TextView
+        tools:ignore="MissingPrefix"
+        fontPath="fonts/opensansbold.ttf"
         android:textColor="@color/blue"
         android:layout_marginTop="10dp"
         android:textStyle="bold"
@@ -73,6 +75,8 @@
         android:layout_width="match_parent"
         android:layout_height="60dp">
         <Button
+            tools:ignore="MissingPrefix"
+            fontPath="fonts/opensanssemibold.ttf"
             android:textAllCaps="false"
             android:textColor="@color/orange"
             android:id="@+id/skip_button_category"
@@ -84,6 +88,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <Button
+            tools:ignore="MissingPrefix"
+            fontPath="fonts/opensanssemibold.ttf"
             android:visibility="gone"
             android:textAllCaps="false"
             android:textColor="@android:color/white"

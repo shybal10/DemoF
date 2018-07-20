@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
@@ -23,6 +24,7 @@ public class ServiceListFragment extends Fragment implements ServiceListingRecVi
     RelativeLayout viewCartLayout;
     LinearLayout viewCartButton;
     static final int ADD_TO_CART = 1;
+    ImageButton filter;
     ServiceListingRecViewAdapter serviceListingRecViewAdapter;
     @Nullable
     @Override
@@ -33,7 +35,14 @@ public class ServiceListFragment extends Fragment implements ServiceListingRecVi
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
+        filter = (ImageButton) view.findViewById(R.id.filter_button);
+        filter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FilterFragment filterFragment = new FilterFragment();
+                getFragmentManager().beginTransaction().replace(R.id.fragment_continer,filterFragment).addToBackStack("filterFragment").commit();
+            }
+        });
         viewCartLayout = (RelativeLayout) view.findViewById(R.id.view_cart_layout);
         viewCartButton = (LinearLayout) view.findViewById(R.id.view_cart_button);
         viewCartButton.setOnClickListener(new View.OnClickListener() {

@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
     <LinearLayout
         android:baselineAligned="false"
         android:id="@+id/edit_text_layout"
@@ -88,6 +89,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <Button
+            tools:ignore="MissingPrefix"
+            fontPath="fonts/opensansbold.ttf"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:background="@drawable/btnbig"

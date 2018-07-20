@@ -41,6 +41,8 @@
                 android:orientation="horizontal">
             </LinearLayout>
     <Button
+        tools:ignore="MissingPrefix"
+        fontPath="fonts/opensansbold.ttf"
         android:gravity="bottom|center"
         android:textColor="@color/orange"
         android:textSize="17sp"

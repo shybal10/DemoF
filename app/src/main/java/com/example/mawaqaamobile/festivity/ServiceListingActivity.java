@@ -1,5 +1,6 @@
 package com.example.mawaqaamobile.festivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,8 +12,11 @@ import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 
 import com.example.mawaqaamobile.festivity.Adapters.ServiceListingRecViewAdapter;
+import com.example.mawaqaamobile.festivity.Fragments.FilterFragment;
 import com.example.mawaqaamobile.festivity.Fragments.ServiceListFragment;
 import com.example.mawaqaamobile.festivity.Fragments.VendorListFragment;
+
+import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 
 public class ServiceListingActivity extends AppCompatActivity {
     ServiceListFragment serviceListFragment;
@@ -48,4 +52,10 @@ public class ServiceListingActivity extends AppCompatActivity {
         startActivity(new Intent(ServiceListingActivity.this,MenuActivity.class));
 
     }
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
+    }
+
+
 }

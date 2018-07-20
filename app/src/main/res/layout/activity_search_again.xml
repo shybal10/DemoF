@@ -13,6 +13,8 @@
         android:layout_height="?attr/actionBarSize">
 
         <TextView
+            tools:ignore="MissingPrefix"
+            fontPath="fonts/opensansbold.ttf"
             android:id="@+id/title"
             android:textSize="16.75sp"
             android:layout_centerVertical="true"
@@ -40,9 +42,11 @@
         android:weightSum="2">
 
         <Button
-            android:id="@+id/explore_button"
             android:onClick="openExploreFragment"
+            tools:ignore="MissingPrefix"
+            fontPath="fonts/opensanssemibold.ttf"
             android:background="@drawable/switchbg"
+            android:id="@+id/explore_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -52,9 +56,11 @@
             android:textSize="17.75sp" />
 
         <Button
-            android:id="@+id/packages_button"
             android:onClick="openPackagesFragment"
+            tools:ignore="MissingPrefix"
+            fontPath="fonts/opensanssemibold.ttf"
             android:background="@android:color/transparent"
+            android:id="@+id/packages_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -63,7 +69,6 @@
             android:textColor="@color/orange"
             android:textSize="17.75sp" />
     </LinearLayout>
-
     <FrameLayout
         android:id="@+id/search_again_container"
         android:layout_width="match_parent"

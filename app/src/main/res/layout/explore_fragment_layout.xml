@@ -1,9 +1,9 @@
-<LinearLayout
-    android:id="@+id/explore_options"
+<LinearLayout android:id="@+id/explore_options"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
     <RelativeLayout
         android:focusable="true"
         android:clickable="true"
@@ -82,6 +82,8 @@
     </RelativeLayout>
 
     <Button
+        tools:ignore="MissingPrefix"
+        fontPath="fonts/opensanssemibold.ttf"
         android:layout_marginEnd="15dp"
         android:layout_marginStart="15dp"
         android:id="@+id/explore_search_button"

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:layout_marginBottom="15dp"
+<LinearLayout android:layout_marginBottom="15dp"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <!--free delivery line-->
     <RelativeLayout
@@ -29,6 +29,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
+                    tools:ignore="MissingPrefix"
+                    fontPath="fonts/opensanssemibold.ttf"
                     android:textSize="12sp"
                     android:text="Edit"
                     android:layout_width="wrap_content"
@@ -47,6 +49,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
+                    tools:ignore="MissingPrefix"
+                    fontPath="fonts/opensanssemibold.ttf"
                     android:textSize="12sp"
                     android:text="Remove"
                     android:layout_width="wrap_content"
@@ -68,6 +72,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <TextView
+                tools:ignore="MissingPrefix"
+                fontPath="fonts/opensanssemibold.ttf"
                 android:textColor="@color/greencolor"
                 android:textSize="12sp"
                 android:text="Free Delivery"
@@ -88,6 +94,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <TextView
+                tools:ignore="MissingPrefix"
+                fontPath="fonts/opensanssemibold.ttf"
                 android:textColor="@color/greencolor"
                 android:textSize="12sp"
                 android:text="Delivery Charge: 5.00 KD"
@@ -110,9 +118,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content">
             <TextView
+                tools:ignore="MissingPrefix"
+                fontPath="fonts/opensansbold.ttf"
                 android:id="@+id/package_title"
                 android:textStyle="bold"
-                android:textSize="15sp"
+                android:textSize="16sp"
                 android:textColor="@color/orange"
                 android:text="Title needs to occupy two lines that is"
                 android:layout_width="match_parent"
@@ -122,15 +132,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
+                    tools:ignore="MissingPrefix"
+                    fontPath="fonts/opensanssemibold.ttf"
                     android:layout_marginEnd="2dp"
                     android:textColor="@color/black"
-                    android:textSize="12sp"
+                    android:textSize="13.75sp"
                     android:text="From"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
+                    tools:ignore="MissingPrefix"
+                    fontPath="fonts/opensanssemibold.ttf"
                     android:textStyle="bold"
-                    android:textSize="12sp"
+                    android:textSize="13.75sp"
                     android:text="Birthday Services"
                     android:textColor="@color/blue"
                     android:layout_width="wrap_content"
@@ -142,18 +156,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
-
+                    tools:ignore="MissingPrefix"
+                    fontPath="fonts/opensanssemibold.ttf"
                     android:layout_marginEnd="2dp"
                     android:textColor="@color/black"
-                    android:textSize="12sp"
+                    android:textSize="13.75sp"
                     android:text="Date:"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
+                    tools:ignore="MissingPrefix"
+                    fontPath="fonts/opensanssemibold.ttf"
                     android:textStyle="bold"
-                    android:textSize="12sp"
+                    android:textSize="13.75sp"
                     android:text="24 April, 2018"
-                    android:textColor="@color/black"
+                    android:textColor="@color/blackbold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
             </LinearLayout>
@@ -162,18 +179,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
-
+                    tools:ignore="MissingPrefix"
+                    fontPath="fonts/opensanssemibold.ttf"
                     android:layout_marginEnd="2dp"
                     android:textColor="@color/black"
-                    android:textSize="10sp"
+                    android:textSize="13.75sp"
                     android:text="Timing:"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
+                    tools:ignore="MissingPrefix"
+                    fontPath="fonts/opensanssemibold.ttf"
                     android:textStyle="bold"
-                    android:textSize="12sp"
+                    android:textSize="13.75sp"
                     android:text="09:00 AM"
-                    android:textColor="@color/black"
+                    android:textColor="@color/blackbold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
             </LinearLayout>
@@ -198,6 +218,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
+                    tools:ignore="MissingPrefix"
+                    fontPath="fonts/opensansbold.ttf"
                     android:layout_marginEnd="5dp"
                     android:textStyle="bold"
                     android:textColor="@android:color/black"
@@ -206,6 +228,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
+                    tools:ignore="MissingPrefix"
+                    fontPath="fonts/opensansbold.ttf"
                     android:textStyle="bold"
                     android:textColor="@android:color/black"
                     android:textSize="17sp"
@@ -230,8 +254,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
-                    android:textColor="@android:color/black"
-                    android:textSize="15sp"
+                    tools:ignore="MissingPrefix"
+                    fontPath="fonts/opensanssemibold.ttf"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
                     android:text="View Details"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
@@ -271,10 +297,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <TextView
+            tools:ignore="MissingPrefix"
+            fontPath="fonts/opensanssemibold.ttf"
             android:layout_gravity="center"
-            android:textColor="@android:color/black"
-            android:textSize="15sp"
-            android:text="Close"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:text="Hide Details"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 

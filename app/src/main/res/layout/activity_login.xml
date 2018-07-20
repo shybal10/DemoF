@@ -57,7 +57,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
-                    android:textSize="14.75dp" />
+                    android:textSize="16dp" />
                 <View
                     android:layout_marginTop="8dp"
                     android:background="@color/orange"
@@ -79,7 +79,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
-                    android:textSize="15.75dp" />
+                    android:textSize="16dp" />
                 <View
                     android:layout_marginTop="8dp"
                     android:background="@color/orange"
@@ -87,9 +87,11 @@
                     android:layout_height="1dp"/>
             </android.support.design.widget.TextInputLayout>
             <Button
+                tools:ignore="MissingPrefix"
+                fontPath="fonts/opensanssemibold.ttf"
                 android:onClick="showHome"
                 android:textAllCaps="false"
-                android:textSize="17.75sp"
+                android:textSize="17sp"
                 android:layout_marginTop="35dp"
                 android:background="@drawable/login_btn_border"
                 android:textColor="#fff"
@@ -117,7 +119,7 @@
                     android:padding="5dp"
                     android:gravity="top|center"
                     android:id="@+id/skip_button"
-                    android:textSize="13.75sp"
+                    android:textSize="15sp"
                     android:textAllCaps="false"
                     android:textColor="@color/orange"
                     android:background="@android:color/transparent"
@@ -126,7 +128,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
-                    android:textSize="13.75sp"
+                    android:textSize="15sp"
                     android:textColor="@color/blue"
                     android:padding="5dp"
                     android:layout_alignParentEnd="true"
@@ -136,9 +138,11 @@
             </RelativeLayout>
 
             <Button
+                tools:ignore="MissingPrefix"
+                fontPath="fonts/opensanssemibold.ttf"
                 android:id="@+id/signup_button"
                 android:onClick="showHome"
-                android:textSize="17.75sp"
+                android:textSize="17sp"
                 android:textAllCaps="false"
                 android:textColor="@color/orange"
                 android:background="@android:color/transparent"

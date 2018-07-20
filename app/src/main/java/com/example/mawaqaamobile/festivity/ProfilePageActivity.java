@@ -1,5 +1,6 @@
 package com.example.mawaqaamobile.festivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,6 +13,8 @@ import android.widget.LinearLayout;
 import com.example.mawaqaamobile.festivity.Adapters.AddressRecyclerViewAdapter;
 import com.example.mawaqaamobile.festivity.Adapters.SpecialDatesRecyclerViewAdapter;
 import com.example.mawaqaamobile.festivity.Screens.SpecialDatesScreenActivity;
+
+import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 
 public class ProfilePageActivity extends AppCompatActivity {
     LinearLayout upcommingEvents,pastEvents;
@@ -86,5 +89,9 @@ public class ProfilePageActivity extends AppCompatActivity {
             }
         });
 
+    }
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
     }
 }

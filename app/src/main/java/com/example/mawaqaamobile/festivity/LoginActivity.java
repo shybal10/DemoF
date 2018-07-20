@@ -1,6 +1,7 @@
 package com.example.mawaqaamobile.festivity;
 
 import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -14,6 +15,8 @@ import android.widget.TextView;
 
 import com.example.mawaqaamobile.festivity.Popup.OfferDialog;
 import com.jaeger.library.StatusBarUtil;
+
+import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -52,5 +55,9 @@ public class LoginActivity extends AppCompatActivity {
 
     public void showHome(View view) {
         startActivity(new Intent(LoginActivity.this,HomeActivity.class));
+    }
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
     }
 }

@@ -6,6 +6,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="fontPath">fonts/ta/noto_sans_tamil/noto_sans_tamilui_bold.ttf</item>
 
     </style>
 
@@ -13,7 +14,7 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:radioButtonStyle">@style/RadioButton</item>
-
+        <item name="fontPath">fonts/ta/noto_sans_tamil/noto_sans_tamilui_bold.ttf</item>
     </style>
 
     <style name="RadioButton" parent="@android:style/Widget.CompoundButton.RadioButton">

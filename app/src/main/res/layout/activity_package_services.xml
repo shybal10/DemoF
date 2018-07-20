@@ -15,6 +15,8 @@
         android:layout_height="?attr/actionBarSize">
 
         <TextView
+            tools:ignore="MissingPrefix"
+            fontPath="fonts/opensansbold.ttf"
             android:textSize="16.75sp"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
@@ -58,6 +60,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <TextView
+                tools:ignore="MissingPrefix"
+                fontPath="fonts/opensansbold.ttf"
                 android:textColor="@color/blackbold"
                 android:textStyle="bold"
                 android:textSize="17sp"
@@ -65,13 +69,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <TextView
+                tools:ignore="MissingPrefix"
+                fontPath="fonts/opensanssemibold.ttf"
+                android:textColor="@color/blackbold"
                 android:textSize="12sp"
-                android:textColor="@color/black"
                 android:text="Package Price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </LinearLayout>
         <Button
+            tools:ignore="MissingPrefix"
+            fontPath="fonts/opensanssemibold.ttf"
             android:onClick="addPackageToCart"
             android:textAllCaps="false"
             android:padding="5dp"

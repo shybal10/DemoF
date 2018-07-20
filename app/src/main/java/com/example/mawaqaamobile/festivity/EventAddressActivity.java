@@ -1,11 +1,14 @@
 package com.example.mawaqaamobile.festivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+
+import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 
 public class EventAddressActivity extends AppCompatActivity {
 
@@ -40,5 +43,9 @@ public class EventAddressActivity extends AppCompatActivity {
 
     public void showMenu(View view) {
         startActivity(new Intent(EventAddressActivity.this,MenuActivity.class));
+    }
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
     }
 }

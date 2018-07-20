@@ -1,5 +1,6 @@
 package com.example.mawaqaamobile.festivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,6 +11,8 @@ import android.widget.Button;
 import android.widget.ImageButton;
 
 import com.example.mawaqaamobile.festivity.Adapters.ReviewServiceRecViewAdapter;
+
+import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 
 public class ReviewPlaceOrderActivity extends AppCompatActivity {
     boolean showAllServices = false;
@@ -67,5 +70,9 @@ public class ReviewPlaceOrderActivity extends AppCompatActivity {
 
     public void showMenu(View view) {
         startActivity(new Intent(ReviewPlaceOrderActivity.this,MenuActivity.class));
+    }
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
     }
 }

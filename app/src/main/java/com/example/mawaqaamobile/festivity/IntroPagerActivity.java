@@ -1,5 +1,6 @@
 package com.example.mawaqaamobile.festivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
@@ -12,6 +13,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.example.mawaqaamobile.festivity.Adapters.IntoSwipeAdapter;
+
+import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 
 public class IntroPagerActivity extends AppCompatActivity {
     private IntoSwipeAdapter intoSwipeAdapter;
@@ -71,5 +74,9 @@ public class IntroPagerActivity extends AppCompatActivity {
 
             }
         });
+    }
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
     }
 }

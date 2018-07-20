@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    android:layout_margin="15dp"
+<RelativeLayout android:layout_margin="15dp"
     android:background="@drawable/offer"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
     <ImageView
         android:layout_margin="15dp"
         android:src="@drawable/popup_border"
@@ -20,8 +20,10 @@
         android:layout_width="40dp"
         android:layout_height="40dp" />
     <Button
+        tools:ignore="MissingPrefix"
+        fontPath="fonts/opensansbold.ttf"
         android:textAllCaps="false"
-        android:textSize="19.75sp"
+        android:textSize="17sp"
         android:textColor="@color/white"
         android:text="Book Now"
         android:layout_marginBottom="30dp"

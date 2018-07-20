@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:weightSum="3"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="70dp">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:weightSum="3"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="70dp">
         <LinearLayout
             android:padding="10dp"
             android:gravity="center"
@@ -18,16 +18,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:textColor="@android:color/black"
-                    android:textSize="10sp"
+                    tools:ignore="MissingPrefix"
+                    fontPath="fonts/opensanssemibold.ttf"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
                     android:text="ID: "
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
+                    tools:ignore="MissingPrefix"
+                    fontPath="fonts/opensanssemibold.ttf"
                     android:textStyle="bold"
-                    android:textColor="@android:color/black"
-                    android:textSize="10sp"
-                    android:text="#192555441244444"
+                    android:textColor="@color/blackbold"
+                    android:textSize="12sp"
+                    android:text="#192555441244"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
             </LinearLayout>
@@ -36,23 +40,29 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:textColor="@android:color/black"
-                    android:textSize="10sp"
+                    tools:ignore="MissingPrefix"
+                    fontPath="fonts/opensanssemibold.ttf"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
                     android:text="Date: "
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
+                    tools:ignore="MissingPrefix"
+                    fontPath="fonts/opensanssemibold.ttf"
                     android:textStyle="bold"
-                    android:textColor="@android:color/black"
-                    android:textSize="10sp"
+                    android:textColor="@color/blackbold"
+                    android:textSize="12sp"
                     android:text="24 April, 2018"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
             </LinearLayout>
         </LinearLayout>
+
+    <!--pending-->
         <LinearLayout
-            android:id="@+id/pending_confirmation_layout"
             android:visibility="gone"
+            android:id="@+id/pending_confirmation_layout"
             android:padding="10dp"
             android:gravity="center"
             android:orientation="vertical"
@@ -70,18 +80,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
+                    tools:ignore="MissingPrefix"
+                    fontPath="fonts/opensansbold.ttf"
                     android:padding="2dp"
                     android:textStyle="bold"
-                    android:textColor="@android:color/black"
+                    android:textColor="@color/orangewarning"
                     android:textSize="14sp"
                     android:text="Pending Confirmation"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
             </LinearLayout>
         </LinearLayout>
+
+    <!--cancelled-->
         <LinearLayout
             android:id="@+id/cancelled_layout"
-            android:visibility="gone"
             android:padding="10dp"
             android:gravity="center"
             android:orientation="vertical"
@@ -99,6 +112,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
+                    tools:ignore="MissingPrefix"
+                    fontPath="fonts/opensansbold.ttf"
                     android:padding="2dp"
                     android:textStyle="bold"
                     android:textColor="@color/redwarning"
@@ -108,7 +123,10 @@
                     android:layout_height="wrap_content" />
             </LinearLayout>
         </LinearLayout>
+
+    <!--confirmed-->
         <LinearLayout
+            android:visibility="gone"
             android:id="@+id/confirmed_layout"
             android:padding="10dp"
             android:gravity="center"
@@ -127,6 +145,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
+                    tools:ignore="MissingPrefix"
+                    fontPath="fonts/opensansbold.ttf"
                     android:padding="2dp"
                     android:textStyle="bold"
                     android:textColor="@color/greencolor"
@@ -145,16 +165,20 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content">
             <TextView
+                tools:ignore="MissingPrefix"
+                fontPath="fonts/opensansbold.ttf"
                 android:layout_marginEnd="5dp"
                 android:textStyle="bold"
-                android:textColor="@android:color/black"
+                android:textColor="@color/blackbold"
                 android:textSize="18.75sp"
                 android:text="KD"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <TextView
+                tools:ignore="MissingPrefix"
+                fontPath="fonts/opensansbold.ttf"
                 android:textStyle="bold"
-                android:textColor="@android:color/black"
+                android:textColor="@color/blackbold"
                 android:textSize="18.75sp"
                 android:text="20.000"
                 android:layout_width="wrap_content"

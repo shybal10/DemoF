@@ -15,6 +15,8 @@
         android:background="@color/actionbarcolor">
 
         <TextView
+            tools:ignore="MissingPrefix"
+            fontPath="fonts/opensansbold.ttf"
             android:textSize="16.75sp"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
@@ -60,8 +62,10 @@
             android:layout_width="match_parent"
             android:layout_height="0dp">
             <Button
+                tools:ignore="MissingPrefix"
+                fontPath="fonts/opensanssemibold.ttf"
                 android:id="@+id/confirm_address_button"
-                android:textSize="17sp"
+                android:textSize="17.75sp"
                 android:textColor="@color/white"
                 android:textAllCaps="false"
                 android:text="Confirm Address"

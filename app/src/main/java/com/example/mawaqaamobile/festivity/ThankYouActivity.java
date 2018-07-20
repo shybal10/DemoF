@@ -1,11 +1,14 @@
 package com.example.mawaqaamobile.festivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+
+import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 
 public class ThankYouActivity extends AppCompatActivity {
 
@@ -30,5 +33,9 @@ public class ThankYouActivity extends AppCompatActivity {
                 ThankYouActivity.this.finish();
             }
         });
+    }
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
     }
 }

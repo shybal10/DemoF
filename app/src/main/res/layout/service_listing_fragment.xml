@@ -1,9 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:id="@+id/edit_text_layout"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_weight="0.6"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/search_category"
+                android:textSize="17sp"
+                android:background="@android:color/transparent"
+                android:textColorHint="@color/black"
+                android:hint="Search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/searchbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <View
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/search_category"
+                android:background="@color/orange"
+                android:layout_width="match_parent"
+                android:layout_height="2dp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:padding="5dp"
+        android:background="@android:color/transparent"
+        android:id="@+id/filter_button"
+        android:layout_margin="15dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/filter"
+        android:layout_below="@+id/app_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
     <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/edit_text_layout"
         android:id="@+id/service_listing_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -33,7 +83,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <TextView
-                android:textStyle="bold"
+                tools:ignore="MissingPrefix"
+                fontPath="fonts/opensanssemibold.ttf"
                 android:padding="10dp"
                 android:textSize="17sp"
                 android:textColor="@color/white"
@@ -41,7 +92,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <TextView
-                android:textStyle="bold"
+                tools:ignore="MissingPrefix"
+                fontPath="fonts/opensanssemibold.ttf"
                 android:padding="10dp"
                 android:textSize="17sp"
                 android:textColor="@color/white"
@@ -52,11 +104,13 @@
 
         </LinearLayout>
         <TextView
+            tools:ignore="MissingPrefix"
+            fontPath="fonts/opensansbold.ttf"
             android:layout_toEndOf="@+id/view_cart_button"
             android:layout_margin="15dp"
             android:layout_centerVertical="true"
             android:textColor="@color/blackbold"
-            android:textSize="16sp"
+            android:textSize="15sp"
             android:text="Item Added Into Cart"
             android:textStyle="bold"
             android:layout_width="wrap_content"

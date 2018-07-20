@@ -21,6 +21,8 @@
         android:layout_height="?attr/actionBarSize">
 
         <TextView
+            tools:ignore="MissingPrefix"
+            fontPath="fonts/opensansbold.ttf"
             android:textSize="16.75sp"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
@@ -44,7 +46,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
         <EditText
-            android:textSize="16sp"
+            android:textSize="16.75sp"
             android:background="@android:color/transparent"
             android:textColorHint="@color/black"
             android:hint="Search in Festivity"
@@ -87,8 +89,10 @@
             android:src="@drawable/usersml" />
 
             <TextView
+                tools:ignore="MissingPrefix"
+                fontPath="fonts/opensansbold.ttf"
                 android:textSize="16sp"
-                android:textColor="@color/blackbold"
+                android:textColor="@color/black"
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@+id/user_image"
                 android:layout_width="wrap_content"

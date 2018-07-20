@@ -1,5 +1,6 @@
 package com.example.mawaqaamobile.festivity;
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +11,8 @@ import android.widget.TextView;
 import com.example.mawaqaamobile.festivity.Adapters.ServiceCategoryGridAdapter;
 import com.example.mawaqaamobile.festivity.Fragments.PackageFragment;
 import com.example.mawaqaamobile.festivity.Fragments.ServiceCategoryListFragment;
+
+import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 
 public class ServiceCategoryActivity extends AppCompatActivity {
     ServiceCategoryListFragment serviceCategoryListFragment;
@@ -61,5 +64,9 @@ public class ServiceCategoryActivity extends AppCompatActivity {
         });
 
         getFragmentManager().beginTransaction().replace(R.id.fragment_continer,serviceCategoryListFragment).commit();
+    }
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
     }
 }

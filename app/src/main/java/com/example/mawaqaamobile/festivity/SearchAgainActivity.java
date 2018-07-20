@@ -1,5 +1,6 @@
 package com.example.mawaqaamobile.festivity;
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -7,6 +8,8 @@ import android.widget.Button;
 
 import com.example.mawaqaamobile.festivity.Fragments.ExploreFragment;
 import com.example.mawaqaamobile.festivity.Fragments.PackageFragment;
+
+import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 
 public class SearchAgainActivity extends AppCompatActivity {
     Button packages,explore;
@@ -55,5 +58,9 @@ public class SearchAgainActivity extends AppCompatActivity {
 
         packages.setBackgroundResource(0);
         packages.setTextColor(SearchAgainActivity.this.getResources().getColor(R.color.orange));
+    }
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
     }
 }

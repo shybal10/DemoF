@@ -1,5 +1,6 @@
 package com.example.mawaqaamobile.festivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,6 +10,8 @@ import android.widget.Button;
 import android.widget.GridView;
 
 import com.example.mawaqaamobile.festivity.Adapters.CategoryGridViewAdapter;
+
+import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 
 
 public class CategoryActivity extends AppCompatActivity {
@@ -69,5 +72,9 @@ public class CategoryActivity extends AppCompatActivity {
                 startActivity(new Intent(CategoryActivity.this,LoginActivity.class));
             }
         });
+    }
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
     }
 }

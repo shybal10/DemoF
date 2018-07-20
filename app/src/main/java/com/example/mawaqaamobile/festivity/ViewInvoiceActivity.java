@@ -1,5 +1,6 @@
 package com.example.mawaqaamobile.festivity;
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -11,6 +12,8 @@ import android.view.WindowManager;
 import com.example.mawaqaamobile.festivity.Adapters.InvoiceConfRecViewAdapter;
 import com.example.mawaqaamobile.festivity.Adapters.InvoicePendingRecViewAdapter;
 import com.example.mawaqaamobile.festivity.Popup.InfoDialog;
+
+import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 
 public class ViewInvoiceActivity extends AppCompatActivity {
 
@@ -48,5 +51,9 @@ public class ViewInvoiceActivity extends AppCompatActivity {
         lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
         dialog.show();
         dialog.getWindow().setAttributes(lp);
+    }
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
     }
 }

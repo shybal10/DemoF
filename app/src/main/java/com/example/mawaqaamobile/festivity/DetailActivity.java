@@ -23,6 +23,8 @@ import com.example.mawaqaamobile.festivity.Adapters.DetailAttributesRecViewAdapt
 import com.example.mawaqaamobile.festivity.Screens.DateScreenActivity;
 import com.example.mawaqaamobile.festivity.Screens.TimeActivity;
 
+import io.github.inflationx.viewpump.ViewPumpContextWrapper;
+
 public class DetailActivity extends AppCompatActivity {
     RelativeLayout dateLayout,timeLayout;
     DetailAttributesRecViewAdapter detailAttributesRecViewAdapter;
@@ -157,5 +159,9 @@ public class DetailActivity extends AppCompatActivity {
         public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
             return (view==(LinearLayout)object);
         }
+    }
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
     }
 }

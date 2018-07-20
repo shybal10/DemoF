@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:layout_marginBottom="15dp"
+<LinearLayout android:layout_marginBottom="15dp"
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
     <TextView
+        tools:ignore="MissingPrefix"
+        fontPath="fonts/opensansbold.ttf"
         android:textStyle="bold"
         android:textSize="13.75sp"
         android:textColor="@color/orange"
@@ -24,6 +26,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <TextView
+            tools:ignore="MissingPrefix"
+            fontPath="fonts/opensanssemibold.ttf"
             android:textSize="12.75sp"
             android:id="@+id/email_text_view"
             android:textColor="@android:color/black"
@@ -43,6 +47,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <TextView
+            tools:ignore="MissingPrefix"
+            fontPath="fonts/opensanssemibold.ttf"
             android:textStyle="bold"
             android:textSize="12.75sp"
             android:id="@+id/street_text_view"
@@ -62,6 +68,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <TextView
+            tools:ignore="MissingPrefix"
+            fontPath="fonts/opensanssemibold.ttf"
             android:textSize="12.75sp"
             android:textStyle="bold"
             android:id="@+id/area_text_view"
@@ -83,6 +91,8 @@
         <TextView
             android:textStyle="bold"
             android:textSize="12.75sp"
+            tools:ignore="MissingPrefix"
+            fontPath="fonts/opensanssemibold.ttf"
             android:id="@+id/flat_text_view"
             android:textColor="@android:color/black"
             android:text="Nasser Al Bader St."
@@ -102,6 +112,8 @@
         <TextView
             android:textStyle="bold"
             android:textSize="12.75sp"
+            tools:ignore="MissingPrefix"
+            fontPath="fonts/opensanssemibold.ttf"
             android:id="@+id/floor_text_view"
             android:textColor="@android:color/black"
             android:text="Nasser Al Bader St."
@@ -119,6 +131,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <TextView
+            tools:ignore="MissingPrefix"
+            fontPath="fonts/opensanssemibold.ttf"
             android:textStyle="bold"
             android:textSize="12.75sp"
             android:id="@+id/phone_text_view"
@@ -135,6 +149,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
         <Button
+            tools:ignore="MissingPrefix"
+            fontPath="fonts/opensanssemibold.ttf"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:background="@drawable/editbtn"
@@ -144,6 +160,8 @@
             android:layout_width="80dp"
             android:layout_height="30dp" />
         <Button
+            tools:ignore="MissingPrefix"
+            fontPath="fonts/opensanssemibold.ttf"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:text="Delete"

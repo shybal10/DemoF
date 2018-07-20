@@ -15,6 +15,8 @@
         android:background="@color/actionbarcolor">
 
         <TextView
+            tools:ignore="MissingPrefix"
+            fontPath="fonts/opensansbold.ttf"
             android:textSize="16.75sp"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
@@ -87,10 +89,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
                     <TextView
+                        tools:ignore="MissingPrefix"
+                        fontPath="fonts/opensanslight.ttf"
                         android:layout_marginEnd="15dp"
                         android:layout_marginStart="15dp"
                         android:padding="10dp"
-                        android:textSize="20sp"
+                        android:textSize="22sp"
                         android:textColor="@color/orange"
                         android:text="Event Address"
                         android:layout_width="match_parent"
@@ -114,7 +118,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content">
                             <TextView
-                                android:textColor="@color/black"
+                                android:textColor="@color/introscreenblack"
                                 android:textSize="15sp"
                                 android:text="this is the address of the user where he wants a party.\n please give hime a great one\n\n 9148853405"
                                 android:layout_width="match_parent"
@@ -130,6 +134,8 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content" />
                                 <TextView
+                                    tools:ignore="MissingPrefix"
+                                    fontPath="fonts/opensanssemibold.ttf"
                                     android:textSize="12sp"
                                     android:textColor="@color/orange"
                                     android:layout_marginEnd="5dp"
@@ -172,10 +178,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
                     <TextView
+                        tools:ignore="MissingPrefix"
+                        fontPath="fonts/opensanslight.ttf"
                         android:layout_marginEnd="15dp"
                         android:layout_marginStart="15dp"
                         android:padding="10dp"
-                        android:textSize="20sp"
+                        android:textSize="22sp"
                         android:textColor="@color/orange"
                         android:text="Services"
                         android:layout_width="match_parent"
@@ -226,10 +234,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
                     <TextView
+                        tools:ignore="MissingPrefix"
+                        fontPath="fonts/opensanslight.ttf"
                         android:layout_marginEnd="15dp"
                         android:layout_marginStart="15dp"
                         android:padding="10dp"
-                        android:textSize="20sp"
+                        android:textSize="22sp"
                         android:textColor="@color/orange"
                         android:text="Choose Payment Option"
                         android:layout_width="match_parent"
@@ -257,21 +267,21 @@
                                 android:layout_height="wrap_content">
                                 <RadioButton
                                     android:textSize="15sp"
-                                    android:textColor="@color/black"
+                                    android:textColor="@color/introscreenblack"
                                     android:padding="10dp"
                                     android:text="KNET"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content" />
                                 <RadioButton
                                     android:textSize="15sp"
-                                    android:textColor="@color/black"
+                                    android:textColor="@color/introscreenblack"
                                     android:padding="10dp"
                                     android:text="Credit Card"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content" />
                                 <RadioButton
                                     android:textSize="15sp"
-                                    android:textColor="@color/black"
+                                    android:textColor="@color/introscreenblack"
                                     android:padding="10dp"
                                     android:text="Pay Later"
                                     android:layout_width="match_parent"
@@ -286,6 +296,8 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content">
                             <TextView
+                                tools:ignore="MissingPrefix"
+                                fontPath="fonts/opensanssemibold.ttf"
                                 android:textSize="15sp"
                                 android:textStyle="bold"
                                 android:textColor="@color/blue"
@@ -296,7 +308,7 @@
                             <TextView
                                 android:padding="5dp"
                                 android:textSize="12sp"
-                                android:textColor="@color/black"
+                                android:textColor="@color/introscreenblack"
                                 android:text="To avoid the cancellation, please pay the amount before 48 hours (2 days), of chosen date(s) for each services.\n\nwe will send you online pay lineks to your email."
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content" />
@@ -323,14 +335,18 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent">
                     <TextView
+                        tools:ignore="MissingPrefix"
+                        fontPath="fonts/opensanssemibold.ttf"
                         android:textColor="@color/black"
-                        android:textSize="12sp"
+                        android:textSize="15sp"
                         android:text="Total Amount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
                     <TextView
+                        tools:ignore="MissingPrefix"
+                        fontPath="fonts/opensansbold.ttf"
                         android:textColor="@color/blackbold"
-                        android:textSize="15sp"
+                        android:textSize="17sp"
                         android:textStyle="bold"
                         android:text="KD 480.000"
                         android:layout_width="wrap_content"
@@ -346,6 +362,8 @@
                     android:layout_height="wrap_content">
 
                     <TextView
+                        tools:ignore="MissingPrefix"
+                        fontPath="fonts/opensanssemibold.ttf"
                         android:layout_marginStart="5dp"
                         android:textStyle="bold"
                         android:textSize="12sp"
@@ -354,6 +372,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
                     <TextView
+                        tools:ignore="MissingPrefix"
+                        fontPath="fonts/opensansbold.ttf"
                         android:layout_marginStart="5dp"
                         android:textStyle="bold"
                         android:textSize="14sp"
@@ -367,6 +387,8 @@
                         android:layout_height="0.005dp">
                     </View>
                     <TextView
+                        tools:ignore="MissingPrefix"
+                        fontPath="fonts/opensanssemibold.ttf"
                         android:layout_marginStart="5dp"
                         android:textStyle="bold"
                         android:textSize="12sp"
@@ -375,6 +397,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
                     <TextView
+                        tools:ignore="MissingPrefix"
+                        fontPath="fonts/opensansbold.ttf"
                         android:layout_marginStart="5dp"
                         android:textStyle="bold"
                         android:textSize="14sp"
@@ -392,6 +416,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <Button
+                    tools:ignore="MissingPrefix"
+                    fontPath="fonts/opensanssemibold.ttf"
                     android:layout_centerHorizontal="true"
                     android:id="@+id/place_order_button"
                     android:textAllCaps="false"

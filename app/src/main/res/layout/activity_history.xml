@@ -19,6 +19,8 @@
             android:layout_height="?attr/actionBarSize">
 
             <TextView
+                tools:ignore="MissingPrefix"
+                fontPath="fonts/opensansbold.ttf"
                 android:textSize="16.75sp"
                 android:layout_centerVertical="true"
                 android:layout_centerHorizontal="true"
@@ -41,6 +43,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
+                tools:ignore="MissingPrefix"
+                fontPath="fonts/opensansbold.ttf"
                 android:padding="10dp"
                 android:textSize="16.75sp"
                 android:textStyle="bold"
@@ -52,6 +56,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content" />
             <TextView
+                tools:ignore="MissingPrefix"
+                fontPath="fonts/opensansbold.ttf"
                 android:padding="10dp"
                 android:textSize="16.75sp"
                 android:textStyle="bold"
@@ -63,6 +69,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content" />
             <TextView
+                tools:ignore="MissingPrefix"
+                fontPath="fonts/opensansbold.ttf"
                 android:padding="10dp"
                 android:textSize="16.75sp"
                 android:textStyle="bold"

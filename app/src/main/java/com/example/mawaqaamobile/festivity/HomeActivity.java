@@ -1,5 +1,6 @@
 package com.example.mawaqaamobile.festivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,6 +15,8 @@ import android.widget.RelativeLayout;
 import com.example.mawaqaamobile.festivity.Adapters.FeaturedServicesRecyclerViewAdapter;
 import com.example.mawaqaamobile.festivity.Adapters.MostSellingRecyclerViewAdapter;
 import com.example.mawaqaamobile.festivity.Screens.DateScreenActivity;
+
+import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -160,6 +163,11 @@ public class HomeActivity extends AppCompatActivity {
         mostSellingRecyclerView.setLayoutManager(mostSellingLinearLayoutManager);
         mostSellingRecyclerViewAdapter = new MostSellingRecyclerViewAdapter();
         mostSellingRecyclerView.setAdapter(mostSellingRecyclerViewAdapter);
+    }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
     }
 
 }

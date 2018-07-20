@@ -1,5 +1,6 @@
 package com.example.mawaqaamobile.festivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
@@ -13,6 +14,8 @@ import android.widget.RelativeLayout;
 import com.example.mawaqaamobile.festivity.Adapters.MostSellingRecyclerViewAdapter;
 import com.example.mawaqaamobile.festivity.Adapters.PackageListingRecyclerViewAdapter;
 import com.example.mawaqaamobile.festivity.Fragments.FilterFragment;
+
+import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 
 public class PackageListingActivity extends AppCompatActivity {
     FilterFragment filterFragment;
@@ -81,5 +84,10 @@ public class PackageListingActivity extends AppCompatActivity {
         Intent i = new Intent(PackageListingActivity.this,SearchAgainActivity.class);
         i.putExtra("searchPackages",true);
         startActivity(i);
+    }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
     }
 }

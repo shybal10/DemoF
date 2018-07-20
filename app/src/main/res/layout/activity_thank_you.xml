@@ -17,6 +17,8 @@
         android:background="@color/actionbarcolor">
 
         <TextView
+            tools:ignore="MissingPrefix"
+            fontPath="fonts/opensansbold.ttf"
             android:textSize="16.75sp"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
@@ -75,6 +77,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <TextView
+                tools:ignore="MissingPrefix"
+                fontPath="fonts/opensansbold.ttf"
                 android:padding="10dp"
                 android:textStyle="bold"
                 android:textSize="17sp"
@@ -92,6 +96,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <TextView
+                tools:ignore="MissingPrefix"
+                fontPath="fonts/opensanssemibold.ttf"
                 android:gravity="center"
                 android:layout_gravity="center"
                 android:layout_marginEnd="20dp"
@@ -103,6 +109,8 @@
                 android:layout_height="wrap_content" />
 
             <Button
+                tools:ignore="MissingPrefix"
+                fontPath="fonts/opensanssemibold.ttf"
                 android:id="@+id/view_invoice_button"
                 android:layout_margin="30dp"
                 android:textColor="@color/white"
@@ -133,6 +141,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
+                        tools:ignore="MissingPrefix"
+                        fontPath="fonts/opensanssemibold.ttf"
                         android:layout_margin="20dp"
                         android:gravity="center"
                         android:text="We are happy to know more about your event, if you would like to share about your event, please fill and submit the below form"
@@ -149,7 +159,7 @@
                         android:layout_height="wrap_content"
                         android:hint="Event Type"
                         android:padding="5dp"
-                        android:textColorHint="@android:color/black">
+                        android:textColorHint="@color/black">
                         <EditText
                             android:paddingTop="5dp"
                             android:background="@android:color/transparent"
@@ -176,7 +186,7 @@
                         android:layout_height="wrap_content"
                         android:hint="Talk About Your Event"
                         android:padding="5dp"
-                        android:textColorHint="@android:color/black">
+                        android:textColorHint="@color/black">
                         <EditText
                             android:paddingTop="5dp"
                             android:background="@android:color/transparent"
@@ -195,6 +205,8 @@
                     </android.support.design.widget.TextInputLayout>
 
                     <Button
+                        tools:ignore="MissingPrefix"
+                        fontPath="fonts/opensanssemibold.ttf"
                         android:id="@+id/go_home_button"
                         android:textAllCaps="false"
                         android:layout_marginTop="25dp"

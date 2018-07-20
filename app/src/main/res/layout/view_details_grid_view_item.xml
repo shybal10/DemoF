@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:padding="5dp"
+<LinearLayout android:padding="5dp"
     android:paddingTop="5dp"
     android:paddingEnd="5dp"
     android:paddingStart="15dp"
     android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <TextView
+        tools:ignore="MissingPrefix"
+        fontPath="fonts/opensansbold.ttf"
         android:padding="2dp"
         android:textStyle="bold"
         android:textSize="12sp"
@@ -17,6 +20,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <TextView
+        tools:ignore="MissingPrefix"
+        fontPath="fonts/opensansbold.ttf"
         android:padding="2dp"
         android:textStyle="bold"
         android:textSize="12sp"

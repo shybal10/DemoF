@@ -17,10 +17,11 @@
         android:background="@color/actionbarcolor">
 
         <TextView
+            tools:ignore="MissingPrefix"
+            fontPath="fonts/opensansbold.ttf"
             android:textSize="16.75sp"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
-            android:textStyle="bold"
             android:textColor="@color/blue"
             android:text="Cart"
             android:layout_width="wrap_content"
@@ -108,9 +109,10 @@
                                 android:layout_height="wrap_content" />
                             <TextView
                                 android:padding="2dp"
-                                android:textStyle="bold"
+                                android:textSize="13.75sp"
+                                tools:ignore="MissingPrefix"
+                                fontPath="fonts/opensansbold.ttf"
                                 android:textColor="@color/greencolor"
-                                android:textSize="12sp"
                                 android:text="Confirmed"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content" />
@@ -183,10 +185,12 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content" />
                             <TextView
+                                android:textSize="13.75sp"
+                                tools:ignore="MissingPrefix"
+                                fontPath="fonts/opensansbold.ttf"
                                 android:padding="2dp"
                                 android:textStyle="bold"
                                 android:textColor="@color/orangewarning"
-                                android:textSize="12sp"
                                 android:text="Pending Confirmation"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content" />
@@ -244,64 +248,81 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent">
                 <TextView
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
+                    tools:ignore="MissingPrefix"
+                    fontPath="fonts/opensanssemibold.ttf"
+                    android:textColor="@color/blackbold"
+                    android:textSize="13.75sp"
                     android:text="Total Amount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
                     android:textColor="@color/blackbold"
                     android:textSize="17sp"
-                    android:textStyle="bold"
+                    tools:ignore="MissingPrefix"
+                    fontPath="fonts/opensansbold.ttf"
                     android:text="KD 480.000"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
             </LinearLayout>
             <LinearLayout
-                android:paddingTop="5dp"
                 android:orientation="vertical"
                 android:background="@drawable/amt_bg"
                 android:layout_weight="0.5"
                 android:layout_width="0dp"
                 android:layout_height="match_parent">
-
-                <TextView
-                    android:padding="5dp"
-                    android:textStyle="bold"
-                    android:textSize="12sp"
-                    android:textColor="@color/orangewarning"
-                    android:text="To be Paid After Confirmation"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-                <TextView
-                    android:layout_marginStart="5dp"
-                    android:textStyle="bold"
-                    android:textSize="14sp"
-                    android:textColor="@color/blackbold"
-                    android:text="KD 240.000"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp">
+                    <TextView
+                        tools:ignore="MissingPrefix"
+                        android:paddingStart="5dp"
+                        fontPath="fonts/opensanssemibold.ttf"
+                        android:textSize="12sp"
+                        android:textColor="@color/orangewarning"
+                        android:text="To be Paid After Confirmation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_marginStart="5dp"
+                        tools:ignore="MissingPrefix"
+                        fontPath="fonts/opensansbold.ttf"
+                        android:textSize="13.75sp"
+                        android:textColor="@color/blackbold"
+                        android:text="KD 240.000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
                 <View
                     android:background="@color/black"
                     android:layout_width="match_parent"
                     android:layout_height="0.005dp">
                 </View>
-                <TextView
-                    android:padding="5dp"
-                    android:textStyle="bold"
-                    android:textSize="12sp"
-                    android:textColor="@color/greencolor"
-                    android:text="To be Paid Now"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-                <TextView
-                    android:layout_marginStart="5dp"
-                    android:textStyle="bold"
-                    android:textSize="14sp"
-                    android:textColor="@color/blackbold"
-                    android:text="KD 240.000"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp">
+                    <TextView
+                        android:paddingStart="5dp"
+                        tools:ignore="MissingPrefix"
+                        fontPath="fonts/opensanssemibold.ttf"
+                        android:textSize="12sp"
+                        android:textColor="@color/greencolor"
+                        android:text="To be Paid Now"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        tools:ignore="MissingPrefix"
+                        fontPath="fonts/opensansbold.ttf"
+                        android:layout_marginStart="5dp"
+                        android:textSize="13.75sp"
+                        android:textColor="@color/blackbold"
+                        android:text="KD 240.000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
         <!--buttons-->
@@ -311,6 +332,8 @@
             android:layout_width="match_parent"
             android:layout_height="60dp">
             <Button
+                tools:ignore="MissingPrefix"
+                fontPath="fonts/opensanssemibold.ttf"
                 android:layout_margin="10dp"
                 android:id="@+id/continue_shopping_button"
                 android:textSize="17sp"
@@ -321,6 +344,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <Button
+                tools:ignore="MissingPrefix"
+                fontPath="fonts/opensanssemibold.ttf"
                 android:layout_margin="10dp"
                 android:id="@+id/checkout_button"
                 android:textSize="17sp"

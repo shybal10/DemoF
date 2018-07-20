@@ -1,10 +1,13 @@
 package com.example.mawaqaamobile.festivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 
 public class CreateAccountActivity extends AppCompatActivity {
     Button createAccount;
@@ -22,5 +25,9 @@ public class CreateAccountActivity extends AppCompatActivity {
                 CreateAccountActivity.this.finish();
             }
         });
+    }
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
     }
 }

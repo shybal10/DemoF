@@ -15,10 +15,11 @@
         android:layout_height="?attr/actionBarSize">
 
         <TextView
+            tools:ignore="MissingPrefix"
+            fontPath="fonts/opensansbold.ttf"
             android:textSize="16.75sp"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
-            android:textStyle="bold"
             android:textColor="@color/blue"
             android:text="Choose Event Area"
             android:layout_width="wrap_content"
@@ -40,10 +41,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
         <EditText
-            android:textSize="16sp"
+            android:textSize="16.75sp"
             android:background="@android:color/transparent"
-            android:textColorHint="@color/blackbold"
+            android:textColorHint="@color/black"
             android:hint="Search Area"
+            android:textColor="@color/blackbold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <ImageView

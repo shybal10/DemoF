@@ -1,5 +1,6 @@
 package com.example.mawaqaamobile.festivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -15,6 +16,8 @@ import android.widget.Button;
 import com.example.mawaqaamobile.festivity.Adapters.CartConfRecViewAdapter;
 import com.example.mawaqaamobile.festivity.Adapters.CartPendingRecViewAdapter;
 import com.example.mawaqaamobile.festivity.Popup.InfoDialog;
+
+import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 
 public class CartActivity extends AppCompatActivity {
 
@@ -79,5 +82,9 @@ public class CartActivity extends AppCompatActivity {
 
     public void showMenu(View view) {
         startActivity(new Intent(CartActivity.this,MenuActivity.class));
+    }
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
     }
 }
