@@ -18,10 +18,7 @@
 
         </activity>
         <activity android:name=".SplashActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
         <activity android:name=".IntroPagerActivity">
 
@@ -39,7 +36,10 @@
 
         </activity>
         <activity android:name=".HomeActivity">
-
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".MenuActivity">
 
@@ -70,12 +70,9 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCihYdWDGa_qSsSTb4E5x4z9776RQiOQYw" />
-
         <activity android:name=".ThankYouActivity">
-
         </activity>
         <activity android:name=".ViewInvoiceActivity">
-
         </activity>
         <activity android:name=".DetailActivity">
 
@@ -86,7 +83,6 @@
         </activity>
         <activity android:name=".Screens.SpecialDatesScreenActivity" />
         <activity android:name=".AtrributesActivity" >
-
         </activity>
         <activity android:name=".Screens.TimeActivity" />
         <activity android:name=".SearchAgainActivity">

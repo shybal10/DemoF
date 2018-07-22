@@ -18,7 +18,7 @@ import com.example.mawaqaamobile.festivity.Screens.DateScreenActivity;
 
 import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity implements FeaturedServicesRecyclerViewAdapter.FeaturedServicesListItemClickListener,MostSellingRecyclerViewAdapter.MostSellingListItemClickListener {
 
     RelativeLayout exploreArea,exploreDate,packageArea,packageDate;
     ImageButton menu,cart,service;
@@ -152,7 +152,7 @@ public class HomeActivity extends AppCompatActivity {
         featuredServicesLinearLayoutManager = new LinearLayoutManager(this);
         featuredServicesLinearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
         featuredServicesRecyclerView.setLayoutManager(featuredServicesLinearLayoutManager);
-        featuredServicesRecyclerViewAdapter = new FeaturedServicesRecyclerViewAdapter();
+        featuredServicesRecyclerViewAdapter = new FeaturedServicesRecyclerViewAdapter(this,this);
         featuredServicesRecyclerView.setAdapter(featuredServicesRecyclerViewAdapter);
 
         //most selling
@@ -161,7 +161,7 @@ public class HomeActivity extends AppCompatActivity {
         mostSellingLinearLayoutManager = new LinearLayoutManager(this);
         mostSellingLinearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
         mostSellingRecyclerView.setLayoutManager(mostSellingLinearLayoutManager);
-        mostSellingRecyclerViewAdapter = new MostSellingRecyclerViewAdapter();
+        mostSellingRecyclerViewAdapter = new MostSellingRecyclerViewAdapter(this,this);
         mostSellingRecyclerView.setAdapter(mostSellingRecyclerViewAdapter);
     }
 
@@ -170,4 +170,8 @@ public class HomeActivity extends AppCompatActivity {
         super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
     }
 
+    @Override
+    public void onListItemClick(int clickedItemIndex) {
+        startActivity(new Intent(HomeActivity.this,DetailActivity.class));
+    }
 }
