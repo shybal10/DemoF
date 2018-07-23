@@ -25,9 +25,9 @@
             android:paddingBottom="5dp"
             android:layout_centerVertical="true"
             android:orientation="horizontal"
-            android:layout_width="110dp"
+            android:layout_width="wrap_content"
             android:background="@drawable/birthday_border"
-            android:layout_height="30dp">
+            android:layout_height="wrap_content">
             <TextView
                 tools:ignore="MissingPrefix"
                 fontPath="fonts/opensanssemibold.ttf"
@@ -40,9 +40,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <ImageView
+                android:layout_toEndOf="@+id/birthday_button"
                 android:padding="5dp"
                 android:layout_centerVertical="true"
-                android:layout_alignParentEnd="true"
                 android:layout_marginStart="5dp"
                 android:src="@drawable/bluedown"
                 android:layout_width="wrap_content"

@@ -3,12 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/splash_bg"
     android:background="@color/bg1color"
     android:layout_height="match_parent"
     tools:context=".SplashActivity">
     <ImageView
+        android:id="@+id/splash_logo"
         android:layout_gravity="center"
-        android:src="@drawable/logo"
+        android:src="@drawable/splashlogo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
