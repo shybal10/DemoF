@@ -31,7 +31,7 @@ public class CategoryActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_category);
+        setContentView(R.layout .activity_category);
 
 //        initialize grids
         categoryGridViewAdapter = new CategoryGridViewAdapter(CategoryActivity.this,CategoryImages,CategoryText);
@@ -62,7 +62,6 @@ public class CategoryActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(CategoryActivity.this,LoginActivity.class));
-
             }
         });
 

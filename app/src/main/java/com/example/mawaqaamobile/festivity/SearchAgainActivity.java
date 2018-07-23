@@ -23,13 +23,8 @@ public class SearchAgainActivity extends AppCompatActivity {
         packages = (Button) findViewById(R.id.packages_button);
         explore = (Button) findViewById(R.id.explore_button);
 
-        searchPackages = getIntent().getBooleanExtra("searchPackages",true);
-        if (searchPackages) {
-            showPackages();
-        }
-        else {
             showExplore();
-        }
+
     }
 
     public void openPackagesFragment(View view) {

@@ -28,6 +28,8 @@ dependencies {
     implementation 'com.github.Plumillon:ChipView:1.2.0'
     implementation 'io.github.inflationx:calligraphy3:3.0.0'
     implementation 'io.github.inflationx:viewpump:1.0.0'
+    implementation 'com.orhanobut:dialogplus:1.11@aar'
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'

@@ -42,6 +42,7 @@ public class IntroPagerActivity extends AppCompatActivity {
         intoSwipeAdapter = new IntoSwipeAdapter(IntroPagerActivity.this);
         viewPager.setAdapter(intoSwipeAdapter);
         slideDots = (LinearLayout) findViewById(R.id.dot_linear);
+
 //        add slider dots
         dotsCount = intoSwipeAdapter.getCount();
         dots = new ImageView[dotsCount];

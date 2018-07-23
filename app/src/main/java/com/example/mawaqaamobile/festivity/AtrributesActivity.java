@@ -20,5 +20,7 @@ public class AtrributesActivity extends AppCompatActivity {
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
+
+
     }
 }

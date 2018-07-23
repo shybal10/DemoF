@@ -121,7 +121,7 @@
                     android:id="@+id/skip_button"
                     android:textSize="15sp"
                     android:textAllCaps="false"
-                    android:textColor="@color/orange"
+                    android:textColor="@color/blue"
                     android:background="@android:color/transparent"
                     android:text="Skip"
                     android:layout_gravity="center_horizontal"
@@ -136,7 +136,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
             </RelativeLayout>
-
             <Button
                 tools:ignore="MissingPrefix"
                 fontPath="fonts/opensanssemibold.ttf"
@@ -151,7 +150,6 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-
         </LinearLayout>
 
     </android.support.v4.widget.NestedScrollView>

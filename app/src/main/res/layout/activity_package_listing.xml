@@ -14,6 +14,7 @@
         android:layout_height="?attr/actionBarSize"
         android:background="@color/actionbarcolor">
 
+        <!--filter list-->
         <RelativeLayout
             android:id="@+id/birthday_layout"
             android:onClick="searchAgain"
@@ -34,7 +35,7 @@
                 android:layout_alignParentStart="true"
                 android:textSize="12sp"
                 android:textColor="@color/blue"
-                android:text="Birthday"
+                android:text="Filter List"
                 android:id="@+id/birthday_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -48,41 +49,6 @@
                 android:layout_height="wrap_content" />
         </RelativeLayout>
 
-        <RelativeLayout
-            android:onClick="searchAgain"
-            android:id="@+id/city_layout"
-            android:layout_width="110dp"
-            android:layout_height="30dp"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="10dp"
-            android:layout_toEndOf="@+id/birthday_layout"
-            android:background="@drawable/birthday_border"
-            android:orientation="horizontal"
-            android:paddingBottom="5dp"
-            android:paddingEnd="10dp"
-            android:paddingStart="10dp"
-            android:paddingTop="5dp">
-
-            <TextView
-                tools:ignore="MissingPrefix"
-                fontPath="fonts/opensanssemibold.ttf"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_centerVertical="true"
-                android:text="Kuwait City"
-                android:textColor="@color/blue"
-                android:textSize="12sp" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="5dp"
-                android:padding="5dp"
-                android:src="@drawable/bluedown" />
-        </RelativeLayout>
 
 
         <LinearLayout
