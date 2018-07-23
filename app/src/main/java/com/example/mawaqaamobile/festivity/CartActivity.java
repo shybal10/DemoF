@@ -39,7 +39,6 @@ public class CartActivity extends AppCompatActivity {
                 startActivity(new Intent(CartActivity.this,HomeActivity.class));
             }
         });
-
         checkout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
