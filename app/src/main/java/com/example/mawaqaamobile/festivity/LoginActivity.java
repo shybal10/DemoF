@@ -1,6 +1,5 @@
 package com.example.mawaqaamobile.festivity;
 
-import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -11,10 +10,8 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.TextView;
 
 import com.example.mawaqaamobile.festivity.Popup.OfferDialog;
-import com.jaeger.library.StatusBarUtil;
 
 import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 

@@ -33,6 +33,7 @@ public class PackageListingActivity extends AppCompatActivity {
     RecyclerView packageListingRecyclerView;
     LinearLayoutManager packageListingLayoutManager;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
