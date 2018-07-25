@@ -88,20 +88,9 @@
                 android:padding="10dp"
                 android:textSize="17sp"
                 android:textColor="@color/white"
-                android:text="1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <TextView
-                tools:ignore="MissingPrefix"
-                fontPath="fonts/opensanssemibold.ttf"
-                android:padding="10dp"
-                android:textSize="17sp"
-                android:textColor="@color/white"
                 android:text="View Cart"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-
+                android:layout_height="wrap_content"/>
         </LinearLayout>
         <TextView
             tools:ignore="MissingPrefix"
@@ -111,11 +100,10 @@
             android:layout_centerVertical="true"
             android:textColor="@color/blackbold"
             android:textSize="15sp"
-            android:text="Item Added Into Cart"
+            android:text="Item Added"
             android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </RelativeLayout>
-
 
 </RelativeLayout>

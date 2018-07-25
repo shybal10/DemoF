@@ -44,8 +44,7 @@ public class AddressRecyclerViewAdapter extends RecyclerView.Adapter<AddressRecy
     }
 
     public void setShowAllAdresses(boolean showAllAdresses) {
-        this.showAllAdresses = showAllAdresses;
-    }
+        this.showAllAdresses = showAllAdresses; }
 
     @Override
     public int getItemCount() {

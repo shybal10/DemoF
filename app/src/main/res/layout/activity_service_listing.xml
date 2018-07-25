@@ -124,8 +124,6 @@
         </View>
     </RelativeLayout>
 
-
-
     <LinearLayout
         android:layout_below="@+id/app_bar"
         android:layout_width="match_parent"

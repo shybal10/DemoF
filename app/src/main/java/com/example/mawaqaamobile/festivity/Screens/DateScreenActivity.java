@@ -1,14 +1,11 @@
 package com.example.mawaqaamobile.festivity.Screens;
 
-import android.app.DatePickerDialog;
 import android.content.Context;
 import android.os.Handler;
-import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.DatePicker;
 import android.widget.GridView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -17,11 +14,10 @@ import android.widget.Toast;
 import com.example.mawaqaamobile.festivity.Adapters.CalendarAdapter;
 import com.example.mawaqaamobile.festivity.R;
 
-
 import java.text.DateFormat;
+import java.text.DateFormatSymbols;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.Locale;
 
@@ -38,7 +34,7 @@ public class DateScreenActivity extends AppCompatActivity {
     public ArrayList items; // container to store calendar items which
     // needs showing the event marker
 
-    private TextView day,monthYear;
+    private TextView day,monthtext,year;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,12 +55,12 @@ public class DateScreenActivity extends AppCompatActivity {
         TextView title = (TextView) findViewById(R.id.title);
         title.setText(android.text.format.DateFormat.format("MMMM-yyyy", month));
         day = (TextView) findViewById(R.id.day_text);
-        monthYear = (TextView) findViewById(R.id.month_year_text);
+        monthtext = (TextView) findViewById(R.id.month_text);
+        year = (TextView)  findViewById(R.id.year_txt);
 
         RelativeLayout previous = (RelativeLayout) findViewById(R.id.previous);
 
         previous.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
                 setPreviousMonth();
@@ -74,7 +70,6 @@ public class DateScreenActivity extends AppCompatActivity {
 
         RelativeLayout next = (RelativeLayout) findViewById(R.id.next);
         next.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
                 setNextMonth();
@@ -100,11 +95,19 @@ public class DateScreenActivity extends AppCompatActivity {
                     setNextMonth();
                     refreshCalendar();
                 }
-                ((CalendarAdapter) parent.getAdapter()).setSelected(v);
-                //showToast(selectedGridDate);
 
+                ((CalendarAdapter) parent.getAdapter()).setSelected(v);
+
+
+                day.setText(separatedTime[2]);
+                monthtext.setText(getMonth(Integer.parseInt(separatedTime[1])));
+                year.setText(separatedTime[0]);
             }
         });
+    }
+
+    public String getMonth(int month) {
+        return new DateFormatSymbols().getMonths()[month-1];
     }
 
     protected void setNextMonth() {
@@ -175,4 +178,7 @@ public class DateScreenActivity extends AppCompatActivity {
         super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
     }
 
+    public void addDate(View view) {
+        DateScreenActivity.this.finish();
+    }
 }

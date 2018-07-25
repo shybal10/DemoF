@@ -24,12 +24,13 @@ import com.example.mawaqaamobile.festivity.R;
 
 public class CalendarAdapter extends BaseAdapter {
     private Context mContext;
-
+    TextView dayView;
+    ImageView selectedImage;
     private java.util.Calendar month;
     public GregorianCalendar pmonth; // calendar instance for previous month
     /**
      * calendar instance for previous month for getting complete view
-     */
+     * */
     public GregorianCalendar pmonthmaxset;
     private GregorianCalendar selectedDate;
     int firstDay;
@@ -59,8 +60,7 @@ public class CalendarAdapter extends BaseAdapter {
         this.items = new ArrayList();
         df = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
         curentDateString = df.format(selectedDate.getTime());
-        System.out
-                .println(":::::::::::::::::CURRENT DATE STRING::::::::::::::;"
+        System.out.println(":::::::::::::::::CURRENT DATE STRING::::::::::::::;"
                         + curentDateString);
         refreshDays();
     }
@@ -89,7 +89,7 @@ public class CalendarAdapter extends BaseAdapter {
     // create a new view for each item referenced by the Adapter
     public View getView(int position, View convertView, ViewGroup parent) {
         View v = convertView;
-        TextView dayView;
+
         if (convertView == null) { // if it's not recycled, initialize some
             // attributes
             LayoutInflater vi = (LayoutInflater) mContext
@@ -97,7 +97,9 @@ public class CalendarAdapter extends BaseAdapter {
             v = vi.inflate(R.layout.calendar_item, null);
 
         }
+        selectedImage = (ImageView) v.findViewById(R.id.selected_image);
         dayView = (TextView) v.findViewById(R.id.date);
+
         // separates daystring into parts.
         String[] separatedTime = dayString.get(position).split("-");
         // taking last part of date. ie; 2 from 2012-12-02
@@ -109,27 +111,27 @@ public class CalendarAdapter extends BaseAdapter {
         if ((Integer.parseInt(gridvalue) > 1) && (position < firstDay)) {
             // setting offdays to white color.
             dayView.setTextColor(Color.parseColor("#CECECE"));
+            selectedImage.setVisibility(View.INVISIBLE);
             dayView.setClickable(false);
             dayView.setFocusable(false);
         } else if ((Integer.parseInt(gridvalue) < 7) && (position > 28)) {
             dayView.setTextColor(Color.parseColor("#CECECE"));
+            selectedImage.setVisibility(View.INVISIBLE);
             dayView.setClickable(false);
             dayView.setFocusable(false);
         } else {
-            // setting curent month's days in blue color.
+//            dates in the current month
             if (dayString.get(position).equals(curentDateString)) {
-                dayView.setTextColor(Color.parseColor("#CECECE"));
+                dayView.setTextColor(Color.WHITE);
+                selectedImage.setVisibility(View.VISIBLE);
+                setSelected(v);
+                previousView = v;
             } else {
-                dayView.setTextColor(Color.parseColor("#D41016"));
+                dayView.setTextColor(Color.parseColor("#343434"));
+                selectedImage.setVisibility(View.INVISIBLE);
             }
         }
 
-        if (dayString.get(position).equals(curentDateString)) {
-            setSelected(v);
-            previousView = v;
-        } else {
-            v.setBackgroundResource(R.drawable.bandsdj);
-        }
         dayView.setText(gridvalue);
 
         // create date string for comparison
@@ -143,24 +145,21 @@ public class CalendarAdapter extends BaseAdapter {
         if (monthStr.length() == 1) {
             monthStr = "0" + monthStr;
         }
-
-        // show icon if date is not empty and it exists in the items array
-        ImageView iw = (ImageView) v.findViewById(R.id.date_icon);
-        if (date.length() > 0 && items != null && items.contains(date)) {
-            iw.setVisibility(View.VISIBLE);
-        } else {
-            iw.setVisibility(View.INVISIBLE);
-        }
         return v;
     }
 
     public View setSelected(View view) {
         if (previousView != null) {
-            previousView.setBackgroundResource(R.drawable.bandsdj);
+            previousView.findViewById(R.id.selected_image).setVisibility(View.INVISIBLE);
+           TextView previoustext = (TextView) previousView.findViewById(R.id.date);
+            previoustext.setTextColor(Color.parseColor("#343434"));
+
+            TextView text = (TextView) view.findViewById(R.id.date);
+            text.setTextColor(Color.WHITE);
+            view.findViewById(R.id.selected_image).setVisibility(View.VISIBLE);
         }
         previousView = view;
-        view.setBackgroundResource(R.drawable.cal_select);
-        return view;
+    return view;
     }
 
     public void refreshDays() {
@@ -186,16 +185,13 @@ public class CalendarAdapter extends BaseAdapter {
          * setting the start date as previous month's required date.
          */
         pmonthmaxset.set(GregorianCalendar.DAY_OF_MONTH, calMaxP);
-
         /**
          * filling calendar gridview.
          */
         for (int n = 0; n < mnthlength; n++) {
-
             itemvalue = df.format(pmonthmaxset.getTime());
             pmonthmaxset.add(GregorianCalendar.DATE, 1);
             dayString.add(itemvalue);
-
         }
     }
 

@@ -50,12 +50,14 @@ public class CartActivity extends AppCompatActivity {
         pendingCartRecView = (RecyclerView) findViewById(R.id.pending_cart_rec_view);
         cartPendingRecViewAdapter = new CartPendingRecViewAdapter(this);
         pendingCartRecView.setHasFixedSize(true);
+        pendingCartRecView.setNestedScrollingEnabled(false);
         pendingCartRecView.setLayoutManager(new LinearLayoutManager(this));
         pendingCartRecView.setAdapter(cartPendingRecViewAdapter);
 
 //        conf cart items
         confCartRecView = (RecyclerView) findViewById(R.id.confirmed_cart_rec_view);
         cartConfRecViewAdapter = new CartConfRecViewAdapter(this);
+        confCartRecView.setNestedScrollingEnabled(false);
         confCartRecView.setHasFixedSize(true);
         confCartRecView.setLayoutManager(new LinearLayoutManager(this));
         confCartRecView.setAdapter(cartConfRecViewAdapter);

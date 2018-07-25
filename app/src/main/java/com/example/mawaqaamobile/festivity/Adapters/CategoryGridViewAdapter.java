@@ -88,8 +88,8 @@ public class CategoryGridViewAdapter extends BaseAdapter {
 
         } else
             viewHolder = (ViewHolder) convertView.getTag();
-        viewHolder.textView.setText(headers[position]);
-        viewHolder.imageView.setImageResource(images[position]);
+            viewHolder.textView.setText(headers[position]);
+            viewHolder.imageView.setImageResource(images[position]);
 
 
         if (hashMapSelected.get(position)) {

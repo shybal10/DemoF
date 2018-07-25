@@ -9,12 +9,6 @@
     tools:context=".Screens.DateScreenActivity">
 
 
-    <!--<ImageView-->
-    <!--android:src="@drawable/calendar_screen"-->
-    <!--android:scaleType="fitXY"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent" />-->
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize">
@@ -70,7 +64,7 @@
 
             <TextView
                 android:id="@+id/title"
-                fontPath="fonts/opensansbold.ttf"
+                fontPath="fonts/opensanssemibold.ttf"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
@@ -183,13 +177,12 @@
 
         <GridView
             android:id="@+id/calender_gridview"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:listSelector="@android:color/transparent"
             android:numColumns="7"
             android:stretchMode="columnWidth"/>
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -200,6 +193,7 @@
             android:textSize="15sp" />
 
         <LinearLayout
+            android:padding="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -209,22 +203,38 @@
                 android:id="@+id/day_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
                 android:text="8"
                 android:textColor="@color/blue"
                 android:textSize="30sp" />
+            <LinearLayout
+                android:layout_gravity="bottom"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/month_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="June"
+                    android:textColor="@color/orange"
+                    android:textSize="15sp" />
+                <TextView
+                    android:id="@+id/year_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="2018"
+                    android:textColor="@color/orange"
+                    android:textSize="15sp" />
+            </LinearLayout>
 
-            <TextView
-                android:id="@+id/month_year_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:text="June 2018"
-                android:textColor="@color/orange"
-                android:textSize="15sp" />
+
         </LinearLayout>
 
         <Button
+            android:onClick="addDate"
+            android:layout_gravity="bottom"
             android:id="@+id/tv_select"
             fontPath="fonts/opensanssemibold.ttf"
             android:layout_width="match_parent"
