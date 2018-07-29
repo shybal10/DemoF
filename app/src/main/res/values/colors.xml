@@ -17,6 +17,6 @@
     <color name="introscreenblack">#252323</color>
     <color name="blackbold">#343434</color>
     <color name="historyshade">#eeedf1</color>
-    <color name="categorygridshade">#80f7f6f1</color>
+    <color name="categorygridshade">#90f7f6f1</color>
     <color name="vendoritemclickshade">#6Ff99d1c</color>
 </resources>

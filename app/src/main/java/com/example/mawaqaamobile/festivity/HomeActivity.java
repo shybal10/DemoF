@@ -21,13 +21,13 @@ import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 public class HomeActivity extends AppCompatActivity implements FeaturedServicesRecyclerViewAdapter.FeaturedServicesListItemClickListener,MostSellingRecyclerViewAdapter.MostSellingListItemClickListener {
 
     RelativeLayout exploreArea,exploreDate,packageArea,packageDate;
-    ImageButton menu,cart,service;
+    ImageButton menu,cart;
     Button packagesSearch,exploreSearch,packagesButton,exploreButton;
     RecyclerView featuredServicesRecyclerView,mostSellingRecyclerView;
     FeaturedServicesRecyclerViewAdapter featuredServicesRecyclerViewAdapter;
     MostSellingRecyclerViewAdapter mostSellingRecyclerViewAdapter;
     LinearLayoutManager featuredServicesLinearLayoutManager,mostSellingLinearLayoutManager;
-    LinearLayout profile,exploreOptions,packageOptions;
+    LinearLayout profile,exploreOptions,packageOptions,service;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -113,7 +113,7 @@ public class HomeActivity extends AppCompatActivity implements FeaturedServicesR
 //        other button options
         menu = (ImageButton) findViewById(R.id.menu_button);
         cart = (ImageButton) findViewById(R.id.cart_button);
-        service = (ImageButton) findViewById(R.id.service);
+        service = (LinearLayout) findViewById(R.id.service);
         cart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -126,9 +126,9 @@ public class HomeActivity extends AppCompatActivity implements FeaturedServicesR
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(HomeActivity.this,ServiceCategoryActivity.class));
+                overridePendingTransition( R.anim.slide_in_up, R.anim.stay);
             }
         });
-
 
         menu.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -42,6 +42,8 @@ public class ChooseLocationActivity extends AppCompatActivity {
             }
         });
 
+
+
 //        initialize map
         mMapView = (MapView) findViewById(R.id.mapView);
         mMapView.onCreate(savedInstanceState);

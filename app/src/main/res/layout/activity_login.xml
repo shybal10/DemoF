@@ -13,8 +13,6 @@
     android:orientation="horizontal"
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
-
-
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"

@@ -2,6 +2,8 @@ package com.example.mawaqaamobile.festivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -28,6 +30,7 @@ public class CategoryActivity extends AppCompatActivity {
     Button skip,LetStart;
     GridView categoryGridview;
     CategoryGridViewAdapter categoryGridViewAdapter;
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +57,7 @@ public class CategoryActivity extends AppCompatActivity {
                 }
             }
         });
+
 
 //        handle button clicks
         skip = (Button) findViewById(R.id.skip_button_category);

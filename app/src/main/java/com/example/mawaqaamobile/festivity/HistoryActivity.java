@@ -25,7 +25,7 @@ public class HistoryActivity extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         historyRecyclerView.setLayoutManager(linearLayoutManager);
-        historyRecyclerviewAdapter = new HistoryRecyclerviewAdapter();
+        historyRecyclerviewAdapter = new HistoryRecyclerviewAdapter(this);
         historyRecyclerView.setAdapter(historyRecyclerviewAdapter);
 
     }

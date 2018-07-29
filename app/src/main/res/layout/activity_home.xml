@@ -2,6 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg2color"
@@ -94,7 +96,7 @@
 
     <!--explore and packages-->
     <ScrollView
-        android:focusableInTouchMode="true"
+
         android:layout_below="@+id/app_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -112,6 +114,7 @@
 
             <!--packages and Explore button-->
             <LinearLayout
+                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -128,7 +131,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Explore"
+                    android:text="Plan Your Event"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
                     android:textSize="17.75sp" />
@@ -147,6 +150,17 @@
                     android:textSize="17.75sp" />
             </LinearLayout>
 
+            <TextView
+                tools:ignore="MissingPrefix"
+                fontPath="fonts/opensansbold.ttf"
+                android:layout_marginTop="15dp"
+                android:padding="10dp"
+                android:layout_gravity="center"
+                android:textSize="22sp"
+                android:textColor="@color/blue"
+                android:text="Plan Your Event"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
             <!--packages options-->
             <LinearLayout
@@ -155,6 +169,7 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
 
                 <RelativeLayout
                     android:focusable="true"
@@ -313,7 +328,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="15dp"
                     android:layout_marginStart="15dp"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
                     android:orientation="horizontal">
 
                     <TextView
@@ -350,9 +366,7 @@
                     android:id="@+id/explore_date_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="15dp"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="5dp"
+                    android:layout_margin="15dp"
                     android:orientation="horizontal">
 
                     <TextView
@@ -392,8 +406,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
-                    android:layout_marginBottom="65dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="85dp"
+                    android:layout_marginTop="40dp"
                     android:background="@drawable/btnbig"
                     android:text="Search"
                     android:textAllCaps="false"
@@ -410,12 +424,13 @@
             xmlns:tool="http://schemas.android.com/apk/res-auto"
             android:id="@+id/loyalty_points_cardview"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="120dp"
             android:layout_marginEnd="15dp"
             android:layout_marginStart="15dp"
             android:layout_marginTop="-40dp"
             card_view:cardUseCompatPadding="true"
-            card_view:elevation="25dp"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="5dp"
             tool:cardCornerRadius="25dp">
 
             <LinearLayout
@@ -424,10 +439,8 @@
                 android:layout_height="match_parent"
                 android:weightSum="3">
 
-
-
                     <RelativeLayout
-                        android:layout_margin="15dp"
+                        android:layout_margin="20dp"
                         android:layout_weight="1"
                         android:layout_gravity="center"
                         android:layout_width="0dp"
@@ -467,7 +480,7 @@
 
                     <RelativeLayout
                         android:gravity="center"
-                        android:layout_margin="15dp"
+                        android:layout_margin="20dp"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1">
@@ -506,7 +519,7 @@
 
                     <RelativeLayout
                         android:gravity="center"
-                        android:layout_margin="15dp"
+                        android:layout_margin="20dp"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1">
@@ -548,23 +561,24 @@
         </android.support.v7.widget.CardView>
 
         <TextView
+            android:padding="5dp"
             tools:ignore="MissingPrefix"
             fontPath="fonts/opensansbold.ttf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="25dp"
             android:text="Featured Services"
             android:textAllCaps="true"
             android:textColor="@color/orange"
-            android:textSize="17sp"
+            android:textSize="17.75sp"
             android:textStyle="bold" />
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/featured_services_recycler_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="15dp"
             android:orientation="vertical">
         </android.support.v7.widget.RecyclerView>
 
@@ -584,12 +598,13 @@
         </android.support.v7.widget.CardView>
 
         <TextView
+            android:padding="5dp"
             tools:ignore="MissingPrefix"
             fontPath="fonts/opensansbold.ttf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="20dp"
             android:text="Most Selling"
             android:textAllCaps="true"
             android:textColor="@color/orange"
@@ -600,22 +615,52 @@
             android:id="@+id/most_selling_recycler_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="15sp"
             android:orientation="vertical">
         </android.support.v7.widget.RecyclerView>
 
 
     </LinearLayout>
     </ScrollView>
-    <ImageButton
-        android:elevation="25dp"
-        android:scaleType="centerInside"
-        android:background="@drawable/servicesbox"
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/tools"
+        xmlns:tool="http://schemas.android.com/apk/res-auto"
+        android:layout_margin="16dp"
+        card_view:cardUseCompatPadding="true"
+        app:cardElevation="15dp"
+        app:cardMaxElevation="5dp"
+        app:cardBackgroundColor="@color/orange"
         android:layout_alignParentEnd="true"
-        android:id="@+id/service"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:src="@drawable/services"
-        android:layout_margin="16dp" />
+        android:layout_width="wrap_content"
+        tool:cardCornerRadius="15dp"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:focusable="true"
+            android:clickable="true"
+            android:id="@+id/service"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:paddingTop="5dp"
+                android:paddingEnd="5dp"
+                android:paddingStart="5dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/services"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:padding="5dp"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:text="Services"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
 </RelativeLayout>

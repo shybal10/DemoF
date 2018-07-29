@@ -50,6 +50,7 @@ public class ProfilePageActivity extends AppCompatActivity {
             }
         });
 
+
         //recycler view for special dates
         specialDatesRecyclerView = (RecyclerView) findViewById(R.id.special_dates_recycler_view);
         specialDatesRecyclerView.setHasFixedSize(true);

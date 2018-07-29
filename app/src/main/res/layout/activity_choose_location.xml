@@ -8,7 +8,6 @@
     tools:context=".ChooseLocationActivity">
 
     <RelativeLayout
-
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
@@ -75,7 +74,7 @@
                 android:layout_centerHorizontal="true"
                 android:background="@drawable/btnbig"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"/>
         </RelativeLayout>
 
     </LinearLayout>
