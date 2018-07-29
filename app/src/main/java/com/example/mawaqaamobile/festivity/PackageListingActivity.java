@@ -1,7 +1,6 @@
 package com.example.mawaqaamobile.festivity;
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.media.Image;
@@ -33,7 +32,6 @@ public class PackageListingActivity extends AppCompatActivity {
     RecyclerView packageListingRecyclerView;
     LinearLayoutManager packageListingLayoutManager;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,7 +61,6 @@ public class PackageListingActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(PackageListingActivity.this,MenuActivity.class));
-
             }
         });
 
@@ -133,7 +130,6 @@ public class PackageListingActivity extends AppCompatActivity {
                             case R.id.packages_search_button:
                                 dialog.dismiss();
                                 break;
-
                         }
                     }
                 })

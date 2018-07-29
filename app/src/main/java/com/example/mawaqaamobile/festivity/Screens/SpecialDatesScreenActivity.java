@@ -151,14 +151,13 @@ public class SpecialDatesScreenActivity extends AppCompatActivity {
 
     public void showSpecialDatesPopup() {
         final SpecialDatesPopup dialog = new SpecialDatesPopup(this);
-        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.special_dates_popup_dialog);
         dialog.setCanceledOnTouchOutside(true);
         WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
-        //lp.copyFrom(dialog.getWindow().getAttributes());
         lp.width = WindowManager.LayoutParams.MATCH_PARENT;
-        lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
+        lp.height = WindowManager.LayoutParams.MATCH_PARENT;
         dialog.show();
+        dialog.getWindow().setBackgroundDrawableResource(R.color.darkshade);
         dialog.getWindow().setAttributes(lp);
     }
 
@@ -233,5 +232,6 @@ public class SpecialDatesScreenActivity extends AppCompatActivity {
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
     }
+
 
 }
