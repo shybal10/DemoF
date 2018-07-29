@@ -30,7 +30,9 @@
         <activity android:name=".PackageListingActivity"></activity>
         <activity android:name=".PackageServicesActivity"></activity>
         <activity android:name=".ServiceListingActivity"></activity>
-        <activity android:name=".CartActivity"></activity>
+        <activity android:name=".CartActivity">
+
+        </activity>
         <activity android:name=".EventAddressActivity"></activity>
         <activity android:name=".ChooseLocationActivity" />
         <activity android:name=".ReviewPlaceOrderActivity"></activity>

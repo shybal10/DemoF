@@ -31,6 +31,7 @@
             android:layout_height="0.002dp"/>
 
     </RelativeLayout>
+
     <!--packages and Explore button-->
     <LinearLayout
         android:visibility="gone"

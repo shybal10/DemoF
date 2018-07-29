@@ -333,9 +333,12 @@
             android:layout_width="match_parent"
             android:layout_height="60dp">
             <Button
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
                 tools:ignore="MissingPrefix"
                 fontPath="fonts/opensanssemibold.ttf"
-                android:layout_margin="10dp"
                 android:id="@+id/continue_shopping_button"
                 android:textSize="17sp"
                 android:textAllCaps="false"
@@ -345,16 +348,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <Button
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="10dp"
                 tools:ignore="MissingPrefix"
                 fontPath="fonts/opensanssemibold.ttf"
-                android:layout_margin="10dp"
                 android:id="@+id/checkout_button"
                 android:textSize="17sp"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:text="Checkout"
-                android:background="@drawable/btnsml"
-                android:layout_width="wrap_content"
+                android:background="@drawable/checkout_btn"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </LinearLayout>
     </LinearLayout>
