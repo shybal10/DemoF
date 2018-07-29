@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageButton;
@@ -16,7 +18,9 @@ import android.widget.Toast;
 
 import com.example.mawaqaamobile.festivity.Adapters.CalendarAdapter;
 import com.example.mawaqaamobile.festivity.Adapters.SpecialDatesMonthRecViewAdapter;
+import com.example.mawaqaamobile.festivity.Popup.SpecialDatesPopup;
 import com.example.mawaqaamobile.festivity.R;
+import com.example.mawaqaamobile.festivity.UIutills.ViewDetailsGridView;
 
 import java.text.DateFormat;
 import java.text.DateFormatSymbols;
@@ -84,14 +88,14 @@ public class SpecialDatesScreenActivity extends AppCompatActivity {
         items = new ArrayList();
         adapter = new CalendarAdapter(this, month);
 
-        GridView gridview = (GridView) findViewById(R.id.calender_gridview);
+        ViewDetailsGridView gridview = (ViewDetailsGridView) findViewById(R.id.fixed_calender_gridview);
         gridview.setAdapter(adapter);
 
         handler = new Handler();
         handler.post(calendarUpdater);
 
         TextView title = (TextView) findViewById(R.id.title);
-        title.setText(android.text.format.DateFormat.format("MMMM-yyyy", month));
+        title.setText(android.text.format.DateFormat.format("mmmm-yyyy", month));
         day = (TextView) findViewById(R.id.day_text);
         monthtext = (TextView) findViewById(R.id.month_text);
         year = (TextView)  findViewById(R.id.year_txt);
@@ -137,11 +141,25 @@ public class SpecialDatesScreenActivity extends AppCompatActivity {
                 ((CalendarAdapter) parent.getAdapter()).setSelected(v);
 
 
-                day.setText(separatedTime[2]);
-                monthtext.setText(getMonth(Integer.parseInt(separatedTime[1])));
-                year.setText(separatedTime[0]);
+                showSpecialDatesPopup();
+//                day.setText(separatedTime[2]);
+//                monthtext.setText(getMonth(Integer.parseInt(separatedTime[1])));
+//                year.setText(separatedTime[0]);
             }
         });
+    }
+
+    public void showSpecialDatesPopup() {
+        final SpecialDatesPopup dialog = new SpecialDatesPopup(this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.special_dates_popup_dialog);
+        dialog.setCanceledOnTouchOutside(true);
+        WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+        //lp.copyFrom(dialog.getWindow().getAttributes());
+        lp.width = WindowManager.LayoutParams.MATCH_PARENT;
+        lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
+        dialog.show();
+        dialog.getWindow().setAttributes(lp);
     }
 
     public String getMonth(int month) {

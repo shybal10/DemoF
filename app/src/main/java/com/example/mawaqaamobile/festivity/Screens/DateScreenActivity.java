@@ -167,7 +167,6 @@ public class DateScreenActivity extends AppCompatActivity {
                 items.add("2012-11-30");
                 items.add("2012-11-28");
             }
-
             adapter.setItems(items);
             adapter.notifyDataSetChanged();
         }

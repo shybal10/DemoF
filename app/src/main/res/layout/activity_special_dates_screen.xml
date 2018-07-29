@@ -220,7 +220,7 @@
             android:paddingStart="10dp" />
 
         <com.example.mawaqaamobile.festivity.UIutills.ViewDetailsGridView
-            android:id="@+id/calender_gridview"
+            android:id="@+id/fixed_calender_gridview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
