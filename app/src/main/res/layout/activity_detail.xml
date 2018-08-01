@@ -78,10 +78,20 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
                 <ImageButton
+                    android:onClick="addToLikes"
+                    android:id="@+id/like_btn"
                     android:background="@android:color/transparent"
-                    android:padding="15dp"
+                    android:padding="10dp"
                     android:layout_alignParentEnd="true"
-                    android:src="@drawable/heart"
+                    android:src="@drawable/like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageButton
+                    android:layout_below="@+id/like_btn"
+                    android:background="@android:color/transparent"
+                    android:padding="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/share"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <!--shaded area-->
@@ -118,8 +128,8 @@
                     <LinearLayout
                         android:layout_alignParentBottom="true"
                         android:padding="10dp"
-                        android:divider="@drawable/divider"
-                        android:layout_centerHorizontal="true"
+                        android:showDividers="middle"
+                        android:divider="@drawable/divider"                        android:layout_centerHorizontal="true"
                         android:layout_marginBottom="15dp"
                         android:orientation="horizontal"
                         android:id="@+id/slider_dots"
@@ -152,7 +162,7 @@
                                 tools:ignore="MissingPrefix"
                                 fontPath="fonts/opensansbold.ttf"
                                 android:textColor="@color/orange"
-                                android:textSize="17sp"
+                                android:textSize="20sp"
                                 android:layout_marginStart="15dp"
                                 android:layout_marginTop="10dp"
                                 android:text="Real Science Show"
@@ -198,6 +208,9 @@
 
                             <!--rating-->
                             <LinearLayout
+                                android:focusable="true"
+                                android:clickable="true"
+                                android:id="@+id/rating_layout"
                                 android:layout_marginEnd="15dp"
                                 android:layout_gravity="end"
                                 android:padding="5dp"
@@ -210,13 +223,13 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content" />
                                 <TextView
-                                    android:textSize="15sp"
+                                    android:textSize="16.75sp"
                                     android:textColor="@color/blue"
                                     android:text="3.5 /"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content" />
                                 <TextView
-                                    android:textSize="15sp"
+                                    android:textSize="16.75sp"
                                     android:textColor="@color/orange"
                                     android:text=" 5"
                                     android:layout_width="wrap_content"
@@ -246,6 +259,9 @@
             </RelativeLayout>
 
             <android.support.v7.widget.CardView
+                tool:cardBackgroundColor="@color/cartcardcolour"
+                app:cardElevation="6dp"
+                app:cardMaxElevation="5dp"
                 android:layout_marginTop="-20dp"
                 android:layout_marginStart="15dp"
                 android:layout_marginBottom="30dp"
@@ -299,7 +315,8 @@
                             android:layout_height="2dp"
                             android:layout_below="@+id/area_text_view"
                             android:layout_marginTop="15dp"
-                            android:background="@color/orange"></View>
+                            android:background="@color/orange">
+                        </View>
                     </RelativeLayout>
 
                     <RelativeLayout

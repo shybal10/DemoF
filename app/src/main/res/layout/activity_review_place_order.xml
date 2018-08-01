@@ -68,8 +68,13 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
+
             <!--Event address-->
             <android.support.v7.widget.CardView
+                tool:cardBackgroundColor="@color/cartcardcolour"
+                app:cardElevation="6dp"
+                app:cardMaxElevation="5dp"
                 android:layout_marginTop="20dp"
                 android:background="@color/white"
                 android:layout_marginStart="15dp"
@@ -160,6 +165,9 @@
 
             <!--Services-->
             <android.support.v7.widget.CardView
+                tool:cardBackgroundColor="@color/cartcardcolour"
+                app:cardElevation="6dp"
+                app:cardMaxElevation="5dp"
                 android:background="@color/white"
                 android:layout_marginTop="20dp"
                 android:layout_marginStart="15dp"
@@ -215,6 +223,9 @@
 
             <!--choose payment option-->
             <android.support.v7.widget.CardView
+                tool:cardBackgroundColor="@color/cartcardcolour"
+                app:cardElevation="6dp"
+                app:cardMaxElevation="5dp"
                 android:background="@color/white"
                 android:layout_marginTop="20dp"
                 android:layout_marginStart="15dp"
@@ -410,7 +421,7 @@
             </LinearLayout>
             <!--place order button-->
             <RelativeLayout
-                android:background="@color/actionbarcolor"
+                android:background="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <Button
@@ -423,7 +434,7 @@
                     android:layout_marginBottom="25dp"
                     android:textColor="@color/white"
                     android:text="Place Order"
-                    android:layout_margin="15dp"
+                    android:layout_margin="10dp"
                     android:background="@drawable/btnbig"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />

@@ -25,7 +25,6 @@ import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 
 public class DateScreenActivity extends AppCompatActivity {
 
-
     public GregorianCalendar month, itemmonth;// calendar instances.
 
     public CalendarAdapter adapter;// adapter instance

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:background="@color/bg2color"
+    android:background="#f5f4f8"
     android:layout_height="match_parent"
     tools:context=".ViewInvoiceActivity">
 
@@ -14,7 +14,7 @@
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/actionbarcolor">
+        android:background="#f5f4f8">
 
         <TextView
             tools:ignore="MissingPrefix"
@@ -30,7 +30,7 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="0.005dp"
+            android:layout_height="1dp"
             android:layout_alignParentBottom="true"
             android:background="@color/black">
         </View>
@@ -111,6 +111,9 @@
 
             <!--confirmed-->
             <android.support.v7.widget.CardView
+                tool:cardBackgroundColor="@color/cartcardcolour"
+                app:cardElevation="6dp"
+                app:cardMaxElevation="5dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"
@@ -185,6 +188,9 @@
 
             <!--pending confirmation-->
             <android.support.v7.widget.CardView
+                tool:cardBackgroundColor="@color/cartcardcolour"
+                app:cardElevation="6dp"
+                app:cardMaxElevation="5dp"
                 android:layout_marginBottom="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginStart="15dp"
@@ -353,7 +359,7 @@
 
             <!--buttons-->
             <RelativeLayout
-                android:background="@color/actionbarcolor"
+                android:background="@color/white"
                 android:paddingTop="10dp"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"

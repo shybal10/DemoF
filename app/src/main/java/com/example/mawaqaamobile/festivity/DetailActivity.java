@@ -2,6 +2,7 @@ package com.example.mawaqaamobile.festivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.PagerAdapter;
@@ -13,13 +14,19 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RatingBar;
 import android.widget.RelativeLayout;
+import android.widget.ToggleButton;
 
 import com.example.mawaqaamobile.festivity.Adapters.DetailAttributesRecViewAdapter;
+import com.example.mawaqaamobile.festivity.Popup.RatingDialog;
 import com.example.mawaqaamobile.festivity.Screens.DateScreenActivity;
 import com.example.mawaqaamobile.festivity.Screens.TimeActivity;
 
@@ -31,15 +38,33 @@ public class DetailActivity extends AppCompatActivity {
     RecyclerView detailAttributesRecView;
     CustomSwipeAdapter customSwipeAdapter;
     Button AddtoCart;
-    LinearLayout slideDots;
+    LinearLayout slideDots,rating;
     ViewPager viewPager;
     ImageButton menu,cart;
     private int dotsCount;
     private ImageView[] dots;
+    ImageButton like;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
+        like = (ImageButton) findViewById(R.id.like_btn);
+        rating = (LinearLayout) findViewById(R.id.rating_layout);
+        rating.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final RatingDialog dialog = new RatingDialog(DetailActivity.this);
+                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                dialog.setContentView(R.layout.rating_layout);
+                dialog.setCanceledOnTouchOutside(true);
+                WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+                //lp.copyFrom(dialog.getWindow().getAttributes());
+                lp.width = WindowManager.LayoutParams.WRAP_CONTENT;
+                lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
+                dialog.show();
+                dialog.getWindow().setAttributes(lp);
+            }
+        });
 
 //        handle button clicks
         AddtoCart = (Button) findViewById(R.id.add_to_cart);
@@ -62,6 +87,25 @@ public class DetailActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 DetailActivity.this.finish();
+            }
+        });
+        like.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean isFavourite = readStae();
+
+                if (isFavourite) {
+                    like.setImageDrawable(getResources().getDrawable(R.drawable.like));
+                    isFavourite = false;
+                    saveStae(isFavourite);
+
+                } else {
+                    like.setImageDrawable(getResources().getDrawable(R.drawable.coloredlike));
+                    isFavourite = true;
+                    saveStae(isFavourite);
+
+                }
+
             }
         });
 
@@ -111,6 +155,21 @@ public class DetailActivity extends AppCompatActivity {
         });
     }
 
+    private void saveStae(boolean isFavourite) {
+        SharedPreferences aSharedPreferenes = this.getSharedPreferences(
+                "Favourite", Context.MODE_PRIVATE);
+        SharedPreferences.Editor aSharedPreferenesEdit = aSharedPreferenes
+                .edit();
+        aSharedPreferenesEdit.putBoolean("State", isFavourite);
+        aSharedPreferenesEdit.commit();
+    }
+
+    private boolean readStae() {
+        SharedPreferences aSharedPreferenes = this.getSharedPreferences(
+                "Favourite", Context.MODE_PRIVATE);
+        return aSharedPreferenes.getBoolean("State", true);
+    }
+
     @Override
     public void onBackPressed() {
         super.onBackPressed();
@@ -126,6 +185,9 @@ public class DetailActivity extends AppCompatActivity {
 
     public void setAttributes(View view) {
         startActivity(new Intent(DetailActivity.this,AtrributesActivity.class));
+    }
+
+    public void addToLikes(View view) {
     }
 
     public class CustomSwipeAdapter extends PagerAdapter {

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/actionbarcolor"
+    android:background="#f5f4f8"
     android:orientation="vertical"
     tools:context=".Screens.DateScreenActivity">
 
@@ -34,6 +34,7 @@
 
 
     <LinearLayout
+        android:background="#f5f4f8"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -98,6 +99,7 @@
             android:paddingStart="10dp" />
 
         <LinearLayout
+            android:background="#f5f4f8"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="10dp"
@@ -176,6 +178,7 @@
             android:paddingStart="10dp" />
 
         <GridView
+            android:background="#f5f4f8"
             android:id="@+id/calender_gridview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -183,6 +186,12 @@
             android:listSelector="@android:color/transparent"
             android:numColumns="7"
             android:stretchMode="columnWidth"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.05dp"
+            android:background="@color/black"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -205,9 +214,9 @@
                 android:layout_height="wrap_content"
                 android:text="8"
                 android:textColor="@color/blue"
-                android:textSize="30sp" />
+                android:textSize="40sp" />
             <LinearLayout
-                android:layout_gravity="bottom"
+                android:layout_gravity="center_vertical"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -218,7 +227,7 @@
                     android:padding="5dp"
                     android:text="June"
                     android:textColor="@color/orange"
-                    android:textSize="15sp" />
+                    android:textSize="17.75sp" />
                 <TextView
                     android:id="@+id/year_txt"
                     android:layout_width="wrap_content"
@@ -226,7 +235,7 @@
                     android:padding="5dp"
                     android:text="2018"
                     android:textColor="@color/orange"
-                    android:textSize="15sp" />
+                    android:textSize="17.75sp" />
             </LinearLayout>
 
 

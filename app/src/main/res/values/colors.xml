@@ -19,4 +19,5 @@
     <color name="historyshade">#eeedf1</color>
     <color name="categorygridshade">#90f7f6f1</color>
     <color name="vendoritemclickshade">#6Ff99d1c</color>
+    <color name="cartcardcolour">#f4f4ff</color>
 </resources>

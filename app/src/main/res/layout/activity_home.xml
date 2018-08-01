@@ -366,7 +366,9 @@
                     android:id="@+id/explore_date_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="15dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="10dp"
                     android:orientation="horizontal">
 
                     <TextView
@@ -424,6 +426,7 @@
             xmlns:tool="http://schemas.android.com/apk/res-auto"
             android:id="@+id/loyalty_points_cardview"
             android:layout_width="match_parent"
+            tool:cardBackgroundColor="@color/cartcardcolour"
             android:layout_height="120dp"
             android:layout_marginEnd="15dp"
             android:layout_marginStart="15dp"
@@ -440,7 +443,10 @@
                 android:weightSum="3">
 
                     <RelativeLayout
-                        android:layout_margin="20dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
                         android:layout_weight="1"
                         android:layout_gravity="center"
                         android:layout_width="0dp"
@@ -480,7 +486,10 @@
 
                     <RelativeLayout
                         android:gravity="center"
-                        android:layout_margin="20dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1">
@@ -519,7 +528,10 @@
 
                     <RelativeLayout
                         android:gravity="center"
-                        android:layout_margin="20dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1">
@@ -567,7 +579,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="20dp"
             android:text="Featured Services"
             android:textAllCaps="true"
             android:textColor="@color/orange"
@@ -604,7 +616,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="15dp"
             android:text="Most Selling"
             android:textAllCaps="true"
             android:textColor="@color/orange"

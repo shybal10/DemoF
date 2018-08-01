@@ -78,9 +78,9 @@
             android:id="@+id/view_cart_button"
             android:layout_margin="15dp"
             android:gravity="center"
-            android:background="@drawable/btnsml"
+            android:background="@drawable/checkout_btn"
             android:orientation="horizontal"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content">
             <TextView
                 tools:ignore="MissingPrefix"

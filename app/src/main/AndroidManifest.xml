@@ -15,17 +15,20 @@
         android:theme="@style/AppTheme.NoActionBar">
         <activity android:name=".LoginActivity"></activity>
         <activity android:name=".SplashActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
         <activity android:name=".IntroPagerActivity"></activity>
         <activity android:name=".CategoryActivity"></activity>
-        <activity android:name=".CreateAccountActivity"></activity>
-        <activity android:name=".ProfilePageActivity"></activity>
+        <activity android:name=".CreateAccountActivity">
+
+        </activity>
+        <activity android:name=".ProfilePageActivity">
+
+        </activity>
         <activity android:name=".HistoryActivity"></activity>
-        <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".HomeActivity">
+
+        </activity>
         <activity android:name=".MenuActivity"></activity>
         <activity android:name=".PackageListingActivity"></activity>
         <activity android:name=".PackageServicesActivity"></activity>
@@ -33,22 +36,38 @@
         <activity android:name=".CartActivity">
 
         </activity>
-        <activity android:name=".EventAddressActivity"></activity>
+        <activity android:name=".EventAddressActivity">
+
+        </activity>
         <activity android:name=".ChooseLocationActivity" />
-        <activity android:name=".ReviewPlaceOrderActivity"></activity>
+        <activity android:name=".ReviewPlaceOrderActivity">
+
+        </activity>
         <activity android:name=".ServiceCategoryActivity"></activity>
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCihYdWDGa_qSsSTb4E5x4z9776RQiOQYw"/>
-        <activity android:name=".ThankYouActivity"></activity>
-        <activity android:name=".ViewInvoiceActivity"></activity>
-        <activity android:name=".DetailActivity"></activity>
-        <activity android:name=".Screens.DateScreenActivity" />
-        <activity android:name=".AreaScreenActivity"></activity>
-        <activity android:name=".Screens.SpecialDatesScreenActivity" >
+        <activity android:name=".ThankYouActivity">
 
         </activity>
-        <activity android:name=".AtrributesActivity"></activity>
+        <activity android:name=".ViewInvoiceActivity">
+
+        </activity>
+        <activity android:name=".DetailActivity">
+
+        </activity>
+        <activity android:name=".Screens.DateScreenActivity" >
+
+        </activity>
+        <activity android:name=".AreaScreenActivity"></activity>
+        <activity android:name=".Screens.SpecialDatesScreenActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AtrributesActivity">
+        </activity>
         <activity android:name=".Screens.TimeActivity" />
         <activity android:name=".SearchAgainActivity"></activity>
     </application>
