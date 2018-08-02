@@ -27,7 +27,8 @@ public class FilterOptionsRecViewAdapter extends RecyclerView.Adapter<FilterOpti
     @Override
     public ItemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.filter_options_rec_view_item,parent,false);
-        return new FilterOptionsRecViewAdapter.ItemViewHolder(v);     }
+        return new FilterOptionsRecViewAdapter.ItemViewHolder(v);
+    }
 
     @Override
     public void onBindViewHolder(ItemViewHolder holder, final int position) {

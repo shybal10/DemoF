@@ -25,7 +25,7 @@
                 android:layout_centerHorizontal="true"
                 android:textStyle="bold"
                 android:textColor="@color/blue"
-                android:text="History"
+                android:text="My Orders"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 

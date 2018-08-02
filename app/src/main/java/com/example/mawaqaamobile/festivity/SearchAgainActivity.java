@@ -24,7 +24,6 @@ public class SearchAgainActivity extends AppCompatActivity {
         explore = (Button) findViewById(R.id.explore_button);
 
             showExplore();
-
     }
 
     public void openPackagesFragment(View view) {

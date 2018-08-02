@@ -39,6 +39,8 @@ public class VendorListFragment extends Fragment implements VendorListRecViewAda
                 startActivity(new Intent(getActivity(), ServiceCategoryActivity.class));
             }
         });
+
+
         vendorListRecViewAdapter = new VendorListRecViewAdapter(this,getActivity());
         vendorListRecView.setHasFixedSize(true);
         vendorListRecView.setLayoutManager(new LinearLayoutManager(getActivity()));

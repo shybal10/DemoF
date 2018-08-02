@@ -112,7 +112,7 @@
                     android:onClick="showHome"
                     android:padding="5dp"
                     android:gravity="top|center"
-                    android:id="@+id/skip_button"
+                    android:id="@+id/signup_button"
                     android:textSize="15sp"
                     android:textAllCaps="false"
                     android:textColor="@color/blue"
@@ -133,7 +133,7 @@
             <Button
                 tools:ignore="MissingPrefix"
                 fontPath="fonts/opensanssemibold.ttf"
-                android:id="@+id/signup_button"
+                android:id="@+id/skip_button"
                 android:onClick="showHome"
                 android:textSize="17sp"
                 android:textAllCaps="false"

@@ -52,7 +52,7 @@ public class DateScreenActivity extends AppCompatActivity {
         handler.post(calendarUpdater);
 
         TextView title = (TextView) findViewById(R.id.title);
-        title.setText(android.text.format.DateFormat.format("MMMM-yyyy", month));
+        title.setText(android.text.format.DateFormat.format("MMMM yyyy", month));
         day = (TextView) findViewById(R.id.day_text);
         monthtext = (TextView) findViewById(R.id.month_text);
         year = (TextView)  findViewById(R.id.year_txt);

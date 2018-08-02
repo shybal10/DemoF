@@ -34,6 +34,7 @@ public class HomeActivity extends AppCompatActivity implements FeaturedServicesR
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+
         exploreOptions = (LinearLayout) findViewById(R.id.explore_options);
         packageOptions = (LinearLayout) findViewById(R.id.packages_options);
 
