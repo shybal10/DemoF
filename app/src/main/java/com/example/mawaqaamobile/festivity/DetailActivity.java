@@ -43,12 +43,10 @@ public class DetailActivity extends AppCompatActivity {
     ImageButton menu,cart;
     private int dotsCount;
     private ImageView[] dots;
-    ImageButton like;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
-        like = (ImageButton) findViewById(R.id.like_btn);
         rating = (LinearLayout) findViewById(R.id.rating_layout);
         rating.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,25 +85,6 @@ public class DetailActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 DetailActivity.this.finish();
-            }
-        });
-        like.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                boolean isFavourite = readStae();
-
-                if (isFavourite) {
-                    like.setImageDrawable(getResources().getDrawable(R.drawable.like));
-                    isFavourite = false;
-                    saveStae(isFavourite);
-
-                } else {
-                    like.setImageDrawable(getResources().getDrawable(R.drawable.coloredlike));
-                    isFavourite = true;
-                    saveStae(isFavourite);
-
-                }
-
             }
         });
 

@@ -21,7 +21,6 @@ import android.widget.TextView;
 
 import com.example.mawaqaamobile.festivity.R;
 
-
 public class CalendarAdapter extends BaseAdapter {
     private Context mContext;
     TextView dayView;

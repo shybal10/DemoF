@@ -101,7 +101,7 @@
 <!--                <CheckBox
                     android:padding="5dp"
                     android:textSize="13.75sp"
-                    android:button="@drawable/rememberme_checkbox"
+                    android:button="@drawable/like_checkbox"
                     android:textColor="@color/blue"
                     android:layout_alignParentStart="true"
                     android:text="Remember"

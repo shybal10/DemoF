@@ -16,7 +16,7 @@ public class CreateAccountActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_account);
 
-//        handle button click
+//        handle button click1
         createAccount = (Button) findViewById(R.id.create_account_btn);
         createAccount.setOnClickListener(new View.OnClickListener() {
             @Override

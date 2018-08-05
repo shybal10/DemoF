@@ -1,14 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/actionbarcolor"
+    android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".Screens.TimeActivity">
-    <ImageView
-        android:src="@drawable/time_screen"
-        android:scaleType="fitXY"
+    tools:context=".Screens.TimeActivity" >
+    <RelativeLayout
+        android:id="@+id/app_bar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-</android.support.constraint.ConstraintLayout>
+        android:layout_height="?attr/actionBarSize">
+        <TextView
+            fontPath="fonts/opensansbold.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Choose Event Date"
+            android:textColor="@color/blue"
+            android:textSize="16.75sp"
+            android:textStyle="bold"
+            tools:ignore="MissingPrefix" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_below="@+id/app_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TimePicker
+            android:id="@+id/timePicker1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/set_button"
+            android:layout_centerHorizontal="true"/>
+    </LinearLayout>
+
+    <Button
+        android:textAllCaps="false"
+        android:layout_margin="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:textSize="17.75sp"
+        android:textColor="@color/white"
+        android:background="@drawable/btnbig"
+        android:id="@+id/set_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="setTime"
+        android:text="Done" />
+
+</RelativeLayout>

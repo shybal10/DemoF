@@ -29,6 +29,7 @@ public class HomeActivity extends AppCompatActivity implements FeaturedServicesR
     LinearLayoutManager featuredServicesLinearLayoutManager,mostSellingLinearLayoutManager;
     LinearLayout profile,exploreOptions,packageOptions,service;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

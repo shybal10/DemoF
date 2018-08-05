@@ -14,10 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
         <activity android:name=".LoginActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
         <activity android:name=".SplashActivity">
 
@@ -58,7 +55,10 @@
         <activity android:name=".ViewInvoiceActivity">
         </activity>
         <activity android:name=".DetailActivity">
-
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".Screens.DateScreenActivity" >
 
@@ -69,7 +69,9 @@
         </activity>
         <activity android:name=".AtrributesActivity">
         </activity>
-        <activity android:name=".Screens.TimeActivity" />
+        <activity android:name=".Screens.TimeActivity" >
+
+        </activity>
         <activity android:name=".SearchAgainActivity"></activity>
     </application>
 

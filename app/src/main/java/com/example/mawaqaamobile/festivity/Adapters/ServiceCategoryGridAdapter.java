@@ -50,7 +50,6 @@ public class ServiceCategoryGridAdapter extends BaseAdapter {
 
         }
         else {
-
             imageView = (View) convertView;
 
         }
